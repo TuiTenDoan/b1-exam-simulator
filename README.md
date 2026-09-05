@@ -1,7 +1,18 @@
 # Luyện thi B1 — Anh văn chuẩn đầu ra
 
 Web thi thử đủ bốn kỹ năng cho kỳ thi Anh văn chuẩn đầu ra trình độ B1, dựng theo đúng
-cấu trúc trong tài liệu ôn thi (`TÀI LIỆU ÔN THI B1 - CÓ ĐÁP ÁN.pdf`).
+cấu trúc đề cương của trường.
+
+**Bản chạy thử: https://tuitendoan.github.io/b1-exam-simulator/**
+
+Không cần API key, không gọi dịch vụ ngoài nào. Toàn bộ audio được sinh sẵn bằng
+[edge-tts](https://github.com/rany2/edge-tts) và nằm ngay trong repo.
+
+> **Về phần "Đề nghe Cambridge Prepare":** phần này đọc file nghe và ảnh đề từ
+> `public/prepare/`, và những file đó **không đi kèm repo** vì là giáo trình có bản quyền
+> của Cambridge University Press. Trên bản chạy thử, mục đó sẽ báo thiếu tài liệu.
+> Nếu bạn có giáo trình, xem [public/prepare/README.md](public/prepare/README.md)
+> để biết cách tự thả file vào. Bốn phần thi chính chạy đầy đủ, không cần gì thêm.
 
 ## Chạy
 
