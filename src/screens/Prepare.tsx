@@ -241,20 +241,34 @@ export function Prepare({ onExit }: Props) {
 
             {sheetMissing && (
               <p className="alert">
-                Chưa thấy tài liệu cho bài này. Thả{' '}
+                Phần này cần file nghe và ảnh đề của giáo trình Cambridge Prepare, mà những file
+                đó không đi kèm mã nguồn vì lý do bản quyền. Nếu bạn có giáo trình, thả{' '}
                 <code>{task.audio}.mp3</code> vào <code>public/prepare/audio/</code> và{' '}
-                <code>{task.image}.png</code> vào <code>public/prepare/q/</code> — hai thư mục
-                này không đi kèm khi tải mã nguồn về.
+                <code>{task.image}.png</code> vào <code>public/prepare/q/</code>. Bốn phần thi
+                chính vẫn chạy đầy đủ.
               </p>
             )}
 
-            <AudioPlayer src={task.audio} dir="prepare/audio" maxPlays={0} label={task.part} />
+            <AudioPlayer
+              src={task.audio}
+              dir="prepare/audio"
+              maxPlays={0}
+              label={task.part}
+              missingHint={
+                <>
+                  Chưa có file nghe cho bài này. Đây là tài liệu Cambridge Prepare, không đi kèm
+                  mã nguồn — xem <code>public/prepare/README.md</code> để biết cách tự thả file
+                  vào.
+                </>
+              }
+            />
 
+            {/* Not lazy: the sheet is the point of the screen, and lazy loading
+                suppresses the onError we rely on to detect missing files. */}
             <img
               className="prepareSheet"
               src={`${import.meta.env.BASE_URL}prepare/q/${task.image}.png`}
               alt={`Đề bài: ${task.title}`}
-              loading="lazy"
               hidden={sheetMissing}
               onError={() => setMissingSheet((s) => new Set(s).add(task.id))}
             />

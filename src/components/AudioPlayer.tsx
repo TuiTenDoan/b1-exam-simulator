@@ -9,6 +9,8 @@ type Props = {
   /** Plays allowed before the button locks. 0 means unlimited. */
   maxPlays?: number
   label?: string
+  /** Shown instead of the default hint when the file will not load. */
+  missingHint?: React.ReactNode
 }
 
 function PlayIcon() {
@@ -28,7 +30,7 @@ function PauseIcon() {
   )
 }
 
-export function AudioPlayer({ src, dir = 'audio', maxPlays = 0, label }: Props) {
+export function AudioPlayer({ src, dir = 'audio', maxPlays = 0, label, missingHint }: Props) {
   const ref = useRef<HTMLAudioElement | null>(null)
   const [playing, setPlaying] = useState(false)
   const [time, setTime] = useState(0)
@@ -61,8 +63,12 @@ export function AudioPlayer({ src, dir = 'audio', maxPlays = 0, label }: Props) 
     return (
       <div className="alert" role="status">
         <span>
-          Không phát được file <code>{src}.mp3</code>. Chạy <code>npm run audio</code> để tạo lại
-          phần âm thanh.
+          {missingHint ?? (
+            <>
+              Không phát được file <code>{src}.mp3</code>. Chạy <code>npm run audio</code> để tạo
+              lại phần âm thanh.
+            </>
+          )}
         </span>
       </div>
     )
