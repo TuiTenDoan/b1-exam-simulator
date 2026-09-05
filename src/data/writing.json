@@ -1,0 +1,108 @@
+{
+  "sectionId": "writing",
+  "title": "Writing",
+  "totalMarks": 10,
+  "durationSeconds": 2700,
+  "rubric": [
+    "Viết 08 câu theo tình huống cho sẵn (4đ)",
+    "Viết 01 bài luận 120–180 từ (6đ)"
+  ],
+  "part1": {
+    "title": "Part 1 — Sentence completion",
+    "vi": "Hoàn thành câu",
+    "note": "Trong phòng thi bạn phải CHÉP LẠI ĐỀ rồi mới viết tiếp phần trả lời. Ở đây bạn chỉ cần viết phần tiếp theo.",
+    "marksEach": 0.5,
+    "items": [
+      { "id": "W1Q1", "stem": "It is raining so", "sample": "we don't go to the cinema.", "grammar": "so + kết quả" },
+      { "id": "W1Q2", "stem": "I do not want to go to the movies because", "sample": "I don't like that film.", "grammar": "because + lý do" },
+      { "id": "W1Q3", "stem": "Although she tried very hard,", "sample": "she didn't pass the exam.", "grammar": "Although + mệnh đề nhượng bộ" },
+      { "id": "W1Q4", "stem": "My wife loves cats but", "sample": "she hates dogs.", "grammar": "but + ý tương phản" },
+      { "id": "W1Q5", "stem": "I will not talk to her though", "sample": "I meet her every day.", "grammar": "though = although" },
+      { "id": "W1Q6", "stem": "John said nothing when", "sample": "he heard the bad news.", "grammar": "when + quá khứ đơn" },
+      { "id": "W1Q7", "stem": "When he appeared on the stage,", "sample": "everyone clapped and smiled at him.", "grammar": "when + mệnh đề chính quá khứ" },
+      { "id": "W1Q8", "stem": "Because the security guard slept,", "sample": "the door stayed open all night.", "grammar": "Because + nguyên nhân" },
+      { "id": "W1Q9", "stem": "Whenever she watches that movie,", "sample": "she always cries.", "grammar": "Whenever + hiện tại đơn" },
+      { "id": "W1Q10", "stem": "Before you go to the beach,", "sample": "you should learn to swim.", "grammar": "Before + lời khuyên" },
+      { "id": "W1Q11", "stem": "Whenever I have money,", "sample": "I go shopping with my friends.", "grammar": "Whenever + thói quen" },
+      { "id": "W1Q12", "stem": "After I graduate from university,", "sample": "I will find a job.", "grammar": "After + will (tương lai)" },
+      { "id": "W1Q13", "stem": "In case it rains,", "sample": "I will take an umbrella.", "grammar": "In case + phòng khi" },
+      { "id": "W1Q14", "stem": "As soon as the exam is over,", "sample": "I will take a holiday.", "grammar": "As soon as + hiện tại, will + V" },
+      { "id": "W1Q15", "stem": "Lina listens to music whenever", "sample": "she has free time.", "grammar": "whenever ở giữa câu" },
+      { "id": "W1Q16", "stem": "My parents were very happy when", "sample": "I passed my B1 exam.", "grammar": "when + quá khứ đơn" },
+      { "id": "W1Q17", "stem": "I will not get married until", "sample": "I am thirty years old.", "grammar": "until + hiện tại đơn" },
+      { "id": "W1Q18", "stem": "As soon as the weather gets better,", "sample": "I'll go on a picnic.", "grammar": "As soon as + will" },
+      { "id": "W1Q19", "stem": "Whenever I feel tired,", "sample": "I take a nap.", "grammar": "Whenever + thói quen" },
+      { "id": "W1Q20", "stem": "If only I had a lot of money,", "sample": "I would help the poor.", "grammar": "If only + quá khứ, would + V (điều kiện loại 2)" }
+    ]
+  },
+  "part2": {
+    "title": "Part 2 — Essay",
+    "vi": "Bài luận 120–180 từ",
+    "minWords": 120,
+    "maxWords": 180,
+    "structure": [
+      { "label": "Mở bài", "hint": "Nhắc lại đề bài bằng lời của bạn + nêu bạn sẽ bàn mấy ý." },
+      { "label": "Thân bài 1", "hint": "Ý thứ nhất + giải thích + ví dụ cụ thể." },
+      { "label": "Thân bài 2", "hint": "Ý thứ hai + giải thích + ví dụ cụ thể." },
+      { "label": "Kết bài", "hint": "Tóm tắt lại hai ý đã nêu. Bắt đầu bằng \"To conclude\" hoặc \"In conclusion\"." }
+    ],
+    "usefulPhrases": [
+      "Nowadays, ... has become an important part of our life.",
+      "There are two main problems which people usually deal with.",
+      "The first advantage is ... The second advantage is ...",
+      "Moreover, ... / Furthermore, ... / In addition, ...",
+      "The solution suggested to overcome this problem is ...",
+      "To conclude, ... / In conclusion, ..."
+    ],
+    "topics": [
+      {
+        "id": "W2T1",
+        "prompt": "The Internet has brought many benefits to human life, but it also created many problems. In your opinion, what are the most serious problems associated with the Internet and your solutions?",
+        "vi": "Internet mang lại nhiều lợi ích nhưng cũng tạo ra nhiều vấn đề. Theo bạn, đâu là những vấn đề nghiêm trọng nhất và giải pháp là gì?",
+        "sampleTitle": "Benefits and problems of the Internet",
+        "outline": [
+          "Vấn đề 1: tốn thời gian (time consuming) — chơi game, chat, xem video → giải pháp: lập thời gian biểu nghiêm ngặt.",
+          "Vấn đề 2: mất thông tin cá nhân — hacker đánh cắp tài khoản ngân hàng → giải pháp: cài phần mềm bảo mật.",
+          "Kết: hai vấn đề nổi bật, khắc phục bằng thời gian biểu và lớp bảo mật."
+        ]
+      },
+      {
+        "id": "W2T2",
+        "prompt": "Today, many people prefer going on holiday by motorbike to going by car or plane. What are the advantages and disadvantages of this trend? Use specific details and examples in your answer.",
+        "vi": "Nhiều người thích đi du lịch bằng xe máy hơn ô tô hay máy bay. Ưu và nhược điểm của xu hướng này là gì?",
+        "sampleTitle": "The pros and cons of travelling by motorbike",
+        "outline": [
+          "Ưu điểm 1: tiết kiệm thời gian — không phải chờ xe buýt hay máy bay.",
+          "Ưu điểm 2: chủ động dừng lại chụp ảnh, cắm trại, ở lại nơi mình thích.",
+          "Nhược điểm 1: nguy cơ tai nạn giao thông.",
+          "Nhược điểm 2: mệt mỏi khi đi đường dài (ví dụ Sài Gòn – Đà Nẵng).",
+          "Kết: hai ưu (tiết kiệm thời gian, tiện lợi) và hai nhược (tai nạn, mệt mỏi)."
+        ]
+      },
+      {
+        "id": "W2T3",
+        "prompt": "Machines are helping people in many aspects of life. Do you agree that someday machines will replace the human workforce in factories? Use specific details and examples in your answer.",
+        "vi": "Máy móc đang giúp con người trong nhiều mặt. Bạn có đồng ý rằng một ngày nào đó máy móc sẽ thay thế con người trong nhà máy?",
+        "sampleTitle": "Machines and the future of human workers",
+        "outline": [
+          "Nêu quan điểm rõ ràng: đồng ý (I strongly believe that ...).",
+          "Lĩnh vực 1: việc nhà — máy giặt, máy rửa chén, robot thay con người làm việc nhàm chán.",
+          "Lĩnh vực 2: sản xuất và y tế — nhà máy mua thêm máy vì máy không mệt; bệnh viện dùng máy phẫu thuật chính xác hơn.",
+          "Kết: máy móc sẽ thay con người ở nhiều lĩnh vực."
+        ]
+      },
+      {
+        "id": "W2T4",
+        "prompt": "Social development requires people to work a lot; therefore, they do not have much free time left. What kind of free time activities will you do in such a limited amount of time? Use specific details and examples in your answer.",
+        "vi": "Xã hội phát triển khiến người ta làm việc nhiều và ít thời gian rảnh. Bạn sẽ làm gì trong khoảng thời gian rảnh ít ỏi đó?",
+        "sampleTitle": "Making the most of limited free time",
+        "outline": [
+          "Nêu lựa chọn: hoạt động trong nhà (indoor activities) vì ít thời gian.",
+          "Hoạt động 1: tập yoga — chỉ cần một tấm thảm và nhạc nhẹ, giúp thư giãn đầu óc sau giờ làm.",
+          "Hoạt động 2: nấu ăn lành mạnh — chăm sóc bản thân và gia đình, quên đi căng thẳng.",
+          "Kết: chọn hai hoạt động trong nhà thay vì hoạt động ngoài trời."
+        ]
+      }
+    ]
+  }
+}

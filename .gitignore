@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.audio-tmp/
+tsconfig.tsbuildinfo
+*.local
+.DS_Store
+
+# ---------------------------------------------------------------------------
+# Tài liệu Cambridge "Prepare" — KHÔNG commit, KHÔNG public.
+# Đây là giáo trình có bản quyền. File nằm trên máy bạn để bạn tự ôn thì được,
+# nhưng đẩy lên GitHub công khai là phát tán lại tài liệu của nhà xuất bản.
+# Xem public/prepare/README.md để biết cách tự thả file vào.
+# ---------------------------------------------------------------------------
+public/prepare/audio/
+public/prepare/q/

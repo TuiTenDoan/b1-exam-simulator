@@ -1,0 +1,233 @@
+{
+  "sectionId": "speaking",
+  "title": "Speaking",
+  "totalMarks": 10,
+  "rubric": [
+    "Thí sinh bốc 02 thăm cho 02 vòng thi (10đ).",
+    "Vòng 1 (5đ) — Social interaction: trả lời câu hỏi thông tin cá nhân.",
+    "Vòng 2 (5đ) — Topic development: phát triển chủ đề với gợi ý có sẵn."
+  ],
+  "notes": [
+    "Thăm vòng 1 chỉ có tên chủ đề, không có câu hỏi. Bốc xong, ghi chú rồi trả lại thăm.",
+    "Thăm vòng 2 có nội dung đề đầy đủ. Bốc xong trả thăm, sau đó nhận tờ đề của hội đồng — không viết vào tờ đề này.",
+    "Giấy nháp được phát để ghi chú nhưng phải nộp lại cho giám khảo trước khi bắt đầu thi."
+  ],
+  "round1": {
+    "title": "Vòng 1 — Social interaction",
+    "durationSeconds": 60,
+    "topics": [
+      {
+        "id": "S1T1",
+        "name": "School",
+        "vi": "Trường học",
+        "questions": [
+          {
+            "id": "S1T1Q1",
+            "q": "Tell me something about your school.",
+            "a": "My school is Nam Can Tho University, located in Can Tho City.",
+            "vi": "Trường của tôi là Đại học Nam Cần Thơ, nằm ở Thành phố Cần Thơ."
+          },
+          {
+            "id": "S1T1Q2",
+            "q": "How do you go to school every day?",
+            "a": "I go to school by motorbike.",
+            "vi": "Tôi đi học bằng xe máy."
+          },
+          {
+            "id": "S1T1Q3",
+            "q": "Do you have a lot of homework after school?",
+            "a": "Yes, I usually have about two to three hours of homework.",
+            "vi": "Có, tôi thường có khoảng 2-3 tiếng làm bài tập."
+          },
+          {
+            "id": "S1T1Q4",
+            "q": "What is your favourite subject at school?",
+            "a": "My favourite subject is Mathematics.",
+            "vi": "Môn học yêu thích của tôi là Toán."
+          }
+        ]
+      },
+      {
+        "id": "S1T2",
+        "name": "Free time activities",
+        "vi": "Hoạt động lúc rảnh",
+        "questions": [
+          {
+            "id": "S1T2Q1",
+            "q": "What do you do in your free time?",
+            "a": "In my free time, I like reading books, watching movies, and playing badminton.",
+            "vi": "Tôi thích đọc sách, xem phim và chơi cầu lông."
+          },
+          {
+            "id": "S1T2Q2",
+            "q": "Who do you spend your free time with?",
+            "a": "I spend my free time with friends or family.",
+            "vi": "Tôi dành thời gian rảnh với bạn bè hoặc gia đình."
+          },
+          {
+            "id": "S1T2Q3",
+            "q": "Do you usually hang out with your friends?",
+            "a": "Yes, I hang out with friends about once or twice a week.",
+            "vi": "Có, tôi gặp bạn bè khoảng một đến hai lần mỗi tuần."
+          },
+          {
+            "id": "S1T2Q4",
+            "q": "Tell me something about what you did last weekend.",
+            "a": "Last weekend, I had a picnic with my friends at a park.",
+            "vi": "Cuối tuần trước, tôi đi picnic với bạn ở công viên."
+          }
+        ]
+      },
+      {
+        "id": "S1T3",
+        "name": "Shopping",
+        "vi": "Mua sắm",
+        "questions": [
+          {
+            "id": "S1T3Q1",
+            "q": "What shops do you go to the most?",
+            "a": "I often go to supermarkets or local markets.",
+            "vi": "Tôi hay đi siêu thị hoặc chợ địa phương."
+          },
+          {
+            "id": "S1T3Q2",
+            "q": "When do you usually go shopping?",
+            "a": "I usually go shopping on weekends.",
+            "vi": "Tôi thường mua sắm vào cuối tuần."
+          },
+          {
+            "id": "S1T3Q3",
+            "q": "Do you like shopping?",
+            "a": "Yes, I enjoy shopping because it's fun and I like finding good deals.",
+            "vi": "Có, tôi thích mua sắm vì nó vui và tôi thường tìm được giá tốt."
+          },
+          {
+            "id": "S1T3Q4",
+            "q": "Tell me some online shopping websites that you know.",
+            "a": "Shopee, Lazada, and Tiki are some websites I know.",
+            "vi": "Một số trang web tôi biết là Shopee, Lazada và Tiki."
+          }
+        ]
+      },
+      {
+        "id": "S1T4",
+        "name": "Food",
+        "vi": "Đồ ăn",
+        "questions": [
+          {
+            "id": "S1T4Q1",
+            "q": "What are your favourite types of food?",
+            "a": "My favourite types of food are Vietnamese dishes, especially pho and banh mi.",
+            "vi": "Tôi thích các món Việt Nam, đặc biệt là phở và bánh mì."
+          },
+          {
+            "id": "S1T4Q2",
+            "q": "What is the most delicious food you have ever eaten?",
+            "a": "The most delicious food I've ever eaten is homemade bun bo Hue.",
+            "vi": "Món ngon nhất tôi từng ăn là bún bò Huế nấu tại nhà."
+          },
+          {
+            "id": "S1T4Q3",
+            "q": "Is your diet healthy?",
+            "a": "Yes, I eat vegetables, fruits, and protein, and avoid junk food.",
+            "vi": "Có, tôi ăn rau củ, trái cây và protein, và tránh đồ ăn vặt."
+          },
+          {
+            "id": "S1T4Q4",
+            "q": "Tell me some famous foods or drinks in Vietnam.",
+            "a": "Famous foods include pho, banh xeo, and goi cuon. Popular drinks are ca phe sua da and nuoc mia.",
+            "vi": "Một số món nổi tiếng là phở, bánh xèo và gỏi cuốn. Đồ uống là cà phê sữa đá và nước mía."
+          }
+        ]
+      }
+    ]
+  },
+  "round2": {
+    "title": "Vòng 2 — Topic development",
+    "durationSeconds": 180,
+    "opening": "Hello teacher. My name is ______. I am ______ years old. I study at Nam Can Tho University, and my major is ______. Today, I am going to talk about my topic: \"______\". I hope my presentation is clear and easy to understand. Thank you for listening.",
+    "closing": "That's all. Thank you for listening.",
+    "topics": [
+      {
+        "id": "S2T1",
+        "name": "There are many benefits of taking a holiday.",
+        "vi": "Lợi ích của việc đi nghỉ",
+        "cues": ["reduce stress", "widen knowledge of new cultures", "improve relationships", "improve communication skills"],
+        "samples": [
+          {
+            "id": "S2T1A",
+            "label": "Bài mẫu ngắn",
+            "audio": "SP_S2T1A",
+            "body": "There are many benefits of taking a holiday. First, we can reduce stress by doing different activities, such as going sightseeing and eating new foods. Second, we can widen our knowledge of new cultures and customs. Third, we can improve our relationships with other family members or friends after the trip. Finally, we can improve our communication skills because we can meet and talk with people coming from different places. In short, taking a holiday gives us many benefits."
+          },
+          {
+            "id": "S2T1B",
+            "label": "Bài mẫu dài",
+            "audio": "SP_S2T1B",
+            "body": "Taking a holiday has many benefits. First, it helps reduce stress by allowing people to relax and escape from daily pressures. A break from work and routine makes people feel refreshed and happier. Second, holidays expand knowledge as travellers experience new places, cultures, and foods. Visiting different countries or cities helps people learn about traditions and ways of life, making them more open-minded. Lastly, holidays improve health. Outdoor activities like swimming, hiking, or walking keep the body active. Spending time with family and friends also strengthens relationships and boosts mental well-being. In conclusion, holidays are important because they help people relax, learn, and stay healthy."
+          }
+        ]
+      },
+      {
+        "id": "S2T2",
+        "name": "People do many ways to have a good health.",
+        "vi": "Các cách để có sức khoẻ tốt",
+        "cues": ["play sports", "balanced diet", "go to bed early", "drink enough water"],
+        "samples": [
+          {
+            "id": "S2T2A",
+            "label": "Bài mẫu ngắn",
+            "audio": "SP_S2T2A",
+            "body": "There are many ways for people to have good health. First, we can play sports. Playing sports helps us build strong muscles and bones and stay mentally active. Second, we should have a balanced diet. We should eat more fish, vegetables, and fruits. Third, we should go to bed early. After a tiring day, we should let our body rest and relax by getting enough sleep. Last but not least, we should drink enough water during the day to detox our body. In short, people have many ways to stay healthy."
+          },
+          {
+            "id": "S2T2B",
+            "label": "Bài mẫu dài",
+            "audio": "SP_S2T2B",
+            "body": "Staying healthy is important for a happy life. People do different things to take care of their health, like playing sports, sleeping early, and making good choices. First, playing sports helps keep the body strong. It builds muscles, improves fitness, and reduces stress. Second, sleeping early helps the body rest. Good sleep gives more energy, better focus, and a stronger immune system. Finally, people have their own ways to stay healthy. Some eat healthy food, exercise, or drink enough water. Others avoid bad habits like smoking. In short, being healthy means exercising, resting well, and making good choices."
+          }
+        ]
+      },
+      {
+        "id": "S2T3",
+        "name": "The roles of the Internet in modern life.",
+        "vi": "Vai trò của Internet trong đời sống hiện đại",
+        "cues": ["connect with people", "widen knowledge", "relax and entertain", "online shopping"],
+        "samples": [
+          {
+            "id": "S2T3A",
+            "label": "Bài mẫu ngắn",
+            "audio": "SP_S2T3A",
+            "body": "The internet brings people a lot of benefits. First, it helps us connect with other people through social networking sites, such as Facebook and Instagram. Second, we can widen our knowledge because the internet is a great source of information. Third, we can use the internet to relax by doing different activities, such as listening to music and watching films. Finally, we can do shopping easily thanks to online shopping services. In short, the internet has many benefits."
+          },
+          {
+            "id": "S2T3B",
+            "label": "Bài mẫu dài",
+            "audio": "SP_S2T3B",
+            "body": "The Internet has become a big part of daily life, changing how people communicate, learn, and entertain themselves. While it has some downsides, its benefits are far greater. First, the Internet has made communication much easier. In the past, people had to send letters or make expensive phone calls to stay in touch. Now, emails, messaging apps, and video calls help people connect instantly. Second, the Internet is a huge source of knowledge. With just a few clicks, anyone can find information, take online courses, and learn new skills, making education more accessible to everyone. Third, the Internet offers many ways to relax and have fun. People can watch movies, listen to music, or play online games anytime. Of course, the Internet also has challenges, such as privacy issues and false information. But by using it wisely, people can enjoy its benefits while staying safe online."
+          }
+        ]
+      },
+      {
+        "id": "S2T4",
+        "name": "There are various ways to have fun in life.",
+        "vi": "Những cách để tận hưởng cuộc sống",
+        "cues": ["play sports with friends", "travelling", "going out with friends", "volunteer work"],
+        "samples": [
+          {
+            "id": "S2T4A",
+            "label": "Bài mẫu ngắn",
+            "audio": "SP_S2T4A",
+            "body": "There are different ways to have fun in life. First, we can play sports with our friends. Playing sports helps us have a good time with our friends and makes our friendship become better. Second, going travelling is a good way to enjoy life. We can do different activities, such as going sightseeing and eating new foods. Third, going out with friends can bring us a lot of fun. Good friends can make us happy whenever we need them. Finally, we can do volunteer work. Helping other people is a meaningful thing, and it can bring us a lot of happiness. In short, there are many ways to have fun."
+          },
+          {
+            "id": "S2T4B",
+            "label": "Bài mẫu dài",
+            "audio": "SP_S2T4B",
+            "body": "Having fun is important for happiness and well-being. There are many ways to enjoy life, depending on personal interests. One great way to have fun is through sports and physical activities. Playing games like football or basketball, going for a run, or even dancing can be exciting and good for health. Outdoor activities like hiking or swimming also help people stay active while enjoying nature. Travelling is another way to experience joy. Visiting new places allows people to explore different cultures, meet new friends, and try interesting food. Spending time with others also makes life fun. Attending parties, concerts, or festivals allows people to celebrate and socialise. Creative hobbies like painting, writing, or playing music help with self-expression and relaxation. Overall, having fun is key to a fulfilling life."
+          }
+        ]
+      }
+    ]
+  }
+}

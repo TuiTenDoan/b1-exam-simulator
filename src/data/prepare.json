@@ -1,0 +1,332 @@
+{
+  "sectionId": "prepare",
+  "title": "Đề nghe Cambridge Prepare",
+  "note": "Audio và ảnh đề là file gốc của bạn. Đáp án được dò từ nội dung bản ghi.",
+  "tasks": [
+    {
+      "id": "track31",
+      "audio": "track31",
+      "image": "track31",
+      "part": "Listening Part 1",
+      "title": "Nghe hình — nhà, giờ tan học, màu sơn",
+      "vi": "Chọn hình đúng cho mỗi câu",
+      "groups": [
+        {
+          "type": "mcq3",
+          "from": 1,
+          "answers": ["B", "A", "C", "A", "C"]
+        }
+      ]
+    },
+    {
+      "id": "track34",
+      "audio": "track34",
+      "image": "track34",
+      "part": "Listening Part 1",
+      "title": "Nghe hình — ngày đá bóng, vé sở thú, số nhà",
+      "vi": "Chọn hình đúng cho mỗi câu",
+      "groups": [
+        {
+          "type": "mcq3",
+          "from": 1,
+          "answers": ["B", "B", "A", "B", "C"]
+        }
+      ]
+    },
+    {
+      "id": "track150",
+      "audio": "track150",
+      "image": "track150",
+      "part": "Listening Part 1 — luyện",
+      "title": "Ted muốn mua gì cho phòng",
+      "vi": "Bài luyện trước khi vào đề thật",
+      "groups": [
+        {
+          "type": "mcq3",
+          "from": 1,
+          "label": "Đọc kỹ đề: hỏi thứ Ted MUỐN CÓ, không phải thứ đã có sẵn.",
+          "answers": ["B"]
+        }
+      ]
+    },
+    {
+      "id": "track151",
+      "audio": "track151",
+      "image": "track151",
+      "part": "Listening Part 1",
+      "title": "Đồ còn trong xe · giá cái cặp",
+      "vi": "Chọn hình đúng cho mỗi câu",
+      "groups": [
+        {
+          "type": "mcq3",
+          "from": 2,
+          "label": "Ảnh đề của bạn chỉ chụp câu 2 và 3, nhưng audio còn câu 4 (cắm trại năm ngoái → bên hồ) và câu 5 (giờ tụi nó sắp làm gì → ra quán cà phê).",
+          "answers": ["C", "A"]
+        }
+      ]
+    },
+    {
+      "id": "file4",
+      "audio": "file4",
+      "image": "f4",
+      "part": "Listening Part 1",
+      "title": "Richard nấu súp · nhà để xe · ban công",
+      "vi": "Chọn hình đúng cho mỗi câu",
+      "groups": [
+        {
+          "type": "mcq3",
+          "from": 1,
+          "answers": ["B", "C", "B", "A", "C"]
+        }
+      ]
+    },
+    {
+      "id": "file7",
+      "audio": "file7",
+      "image": "f7",
+      "part": "Listening Part 2",
+      "title": "School Trip — đảo Dolphin",
+      "vi": "Điền một từ, một số hoặc một giờ vào mỗi chỗ trống",
+      "groups": [
+        {
+          "type": "gap",
+          "from": 1,
+          "answers": ["11.30", "beach", "900", "kayaking", "Murphy"],
+          "accepts": [
+            ["11:30", "1130", "half past eleven"],
+            ["the beach", "on the beach"],
+            ["900 years", "nine hundred"],
+            ["kayak", "canoeing"],
+            ["murphy"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "file8",
+      "audio": "file8",
+      "image": "f8",
+      "part": "Listening Part 4",
+      "title": "5 đoạn hội thoại ngắn",
+      "vi": "Chọn A, B hoặc C",
+      "groups": [
+        {
+          "type": "mcq3",
+          "from": 1,
+          "answers": ["B", "C", "C", "A", "B"]
+        }
+      ]
+    },
+    {
+      "id": "file12",
+      "audio": "file12",
+      "image": "f12",
+      "part": "Listening Part 3",
+      "title": "Marina và bộ phim dự thi",
+      "vi": "Chọn A, B hoặc C",
+      "groups": [
+        {
+          "type": "mcq3",
+          "from": 1,
+          "answers": ["C", "B", "A", "B", "C"]
+        }
+      ]
+    },
+    {
+      "id": "file13",
+      "audio": "file13",
+      "image": "f13",
+      "part": "Listening — phỏng vấn",
+      "title": "Agnes — vận động viên leo núi",
+      "vi": "Bài 1 tích chủ đề · Bài 2 Đúng/Sai",
+      "groups": [
+        {
+          "type": "tick",
+          "label": "Bài 1 — Tích những điều họ có nhắc tới",
+          "options": ["A", "B", "C", "D", "E"],
+          "answers": ["B", "C", "E"]
+        },
+        {
+          "type": "rw",
+          "from": 1,
+          "label": "Bài 2 — Câu nào đúng (✓), câu nào sai (✗)?",
+          "answers": ["W", "W", "R", "R", "W", "R", "R"]
+        }
+      ]
+    },
+    {
+      "id": "file15",
+      "audio": "file15",
+      "image": "f15",
+      "part": "Listening — hai bạn Thổ Nhĩ Kỳ",
+      "title": "Dilek (múa) và Burak (đàn oud)",
+      "vi": "Bài 1 chọn ý tóm tắt · Bài 2 Đúng/Sai",
+      "groups": [
+        {
+          "type": "mcq3",
+          "from": 1,
+          "label": "Bài 1 — Chọn ý tóm tắt đúng nhất",
+          "answers": ["C"]
+        },
+        {
+          "type": "rw",
+          "from": 1,
+          "label": "Bài 2 — Câu nào đúng (✓), câu nào sai (✗)?",
+          "answers": ["W", "W", "R", "W", "W", "W", "R", "R", "R", "W"]
+        }
+      ]
+    },
+    {
+      "id": "file23",
+      "audio": "file23",
+      "image": "f23",
+      "part": "Listening — khách sạn",
+      "title": "John hỏi lễ tân ở Moscow",
+      "vi": "Câu nào đúng (✓), câu nào sai (✗)?",
+      "groups": [
+        {
+          "type": "rw",
+          "from": 1,
+          "answers": ["W", "R", "W", "W", "R", "W", "R", "R"]
+        }
+      ]
+    },
+    {
+      "id": "file48",
+      "audio": "file48",
+      "image": "4811",
+      "part": "Listening — đoạn ngắn",
+      "title": "Chủ đề nấu ăn (7 câu)",
+      "vi": "Chọn hình đúng cho mỗi câu",
+      "groups": [
+        {
+          "type": "mcq3",
+          "from": 1,
+          "label": "Ảnh đề của bạn chỉ chụp 3 câu đầu, nhưng audio có đủ 7 câu — xem trang 19 trong PDF để thấy câu 4–7 (món chỉ có hôm nay / món Lizzie không thích / nguyên liệu cần mua / bữa tối họ chọn).",
+          "answers": ["C", "A", "A", "B", "C", "C", "A"]
+        }
+      ]
+    },
+    {
+      "id": "file08",
+      "audio": "file08",
+      "image": "811",
+      "part": "Listening — đoạn ngắn",
+      "title": "Chủ đề đồ ăn (7 câu)",
+      "vi": "Chọn hình đúng cho mỗi câu",
+      "groups": [
+        {
+          "type": "mcq3",
+          "from": 1,
+          "answers": ["C", "C", "A", "C", "B", "A", "B"]
+        }
+      ]
+    },
+    {
+      "id": "file56",
+      "audio": "file56",
+      "image": "f56",
+      "part": "Listening Part 2",
+      "title": "Adventure Holiday — Across the Water",
+      "vi": "Điền một từ, một số hoặc một ngày vào mỗi chỗ trống",
+      "groups": [
+        {
+          "type": "gap",
+          "from": 1,
+          "label": "Câu 5 (số điện thoại): máy nghe ra hai kết quả khác nhau, bạn nên tự nghe lại quanh phút 1:20 rồi sửa lại nếu cần.",
+          "answers": ["28 July", "16", "river", "345", "05371 255946"],
+          "accepts": [
+            ["28th July", "28/7", "July 28", "28 of July", "28th of July"],
+            ["sixteen"],
+            ["a river", "the river"],
+            ["£345", "345 pounds"],
+            ["05371 25946", "0537125946", "053712 55946"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "file94",
+      "audio": "file94",
+      "image": "f94",
+      "part": "Listening Part 3",
+      "title": "Finley rủ bạn đi xem phim",
+      "vi": "Chọn A, B hoặc C",
+      "groups": [
+        {
+          "type": "mcq3",
+          "from": 1,
+          "answers": ["B", "C", "C", "C", "A"]
+        }
+      ]
+    },
+    {
+      "id": "file116",
+      "audio": "file116",
+      "image": "f116",
+      "part": "Listening — thuyết trình",
+      "title": "Libby và nghề nuôi ong",
+      "vi": "Câu nào đúng (✓), câu nào sai (✗)?",
+      "groups": [
+        {
+          "type": "rw",
+          "from": 1,
+          "answers": ["W", "W", "R", "R", "R", "W", "W"]
+        }
+      ]
+    },
+    {
+      "id": "file153",
+      "audio": "file153",
+      "image": "f153",
+      "part": "Listening Part 2",
+      "title": "Bodyfit Gym — câu lạc bộ cho tuổi teen",
+      "vi": "Điền một từ, một số hoặc một giờ vào mỗi chỗ trống",
+      "groups": [
+        {
+          "type": "gap",
+          "from": 1,
+          "label": "Bẫy: 10 giờ là giờ nên có mặt, còn giờ BẮT ĐẦU là 10.20. Và họ nói không cần mang nước.",
+          "answers": ["12.50", "10.20", "Hughie", "trousers", "towel"],
+          "accepts": [
+            ["12:50", "£12.50", "12.50 pounds"],
+            ["10:20", "1020", "twenty past ten"],
+            ["hughie", "hugie"],
+            ["long trousers", "trouser"],
+            ["a towel"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "file155",
+      "audio": "file155",
+      "image": "f155",
+      "part": "Listening Part 3",
+      "title": "Callum và Stella — công viên trượt ván",
+      "vi": "Chọn A, B hoặc C",
+      "groups": [
+        {
+          "type": "mcq3",
+          "from": 1,
+          "answers": ["C", "B", "A", "C", "A"]
+        }
+      ]
+    },
+    {
+      "id": "file157",
+      "audio": "file157",
+      "image": "f157",
+      "part": "Listening Part 4",
+      "title": "5 đoạn ngắn — đồ ăn, TV, đi bộ, hẹn gặp",
+      "vi": "Chọn A, B hoặc C",
+      "groups": [
+        {
+          "type": "mcq3",
+          "from": 1,
+          "answers": ["C", "C", "A", "B", "B"]
+        }
+      ]
+    }
+  ]
+}

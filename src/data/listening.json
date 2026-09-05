@@ -1,0 +1,365 @@
+{
+  "sectionId": "listening",
+  "title": "Listening",
+  "totalQuestions": 25,
+  "durationSeconds": 2100,
+  "parts": [
+    {
+      "id": "L1",
+      "title": "Part 1 — Picture description",
+      "vi": "Nghe và chọn hình đúng",
+      "instructions": "You will hear ten short recordings. For each one, choose the picture that answers the question. You may play each recording twice.",
+      "items": [
+        {
+          "id": "L1Q1",
+          "prompt": "What time does the next train to Da Nang leave?",
+          "script": [
+            { "voice": "f1", "text": "Excuse me, what time does the next train to Da Nang leave?" },
+            { "voice": "m1", "text": "The seven fifteen was cancelled, I'm afraid. The next one goes at seven forty-five." },
+            { "voice": "f1", "text": "Seven forty-five. Thank you." }
+          ],
+          "art": "clock",
+          "options": [
+            { "key": "A", "art": "clock:7:15" },
+            { "key": "B", "art": "clock:7:30" },
+            { "key": "C", "art": "clock:7:45" }
+          ],
+          "correct": "C",
+          "explain": "Chuyến 7:15 bị huỷ (cancelled). Chuyến kế tiếp là 7:45."
+        },
+        {
+          "id": "L1Q2",
+          "prompt": "What will the weather be like tomorrow?",
+          "script": [
+            { "voice": "m1", "text": "Should I take an umbrella tomorrow?" },
+            { "voice": "f1", "text": "No need. The rain stops tonight, and tomorrow is going to be bright and sunny all day." }
+          ],
+          "art": "weather",
+          "options": [
+            { "key": "A", "art": "weather:rain" },
+            { "key": "B", "art": "weather:sun" },
+            { "key": "C", "art": "weather:cloud" }
+          ],
+          "correct": "B",
+          "explain": "Mưa tạnh tối nay; ngày mai \"bright and sunny\" — trời nắng."
+        },
+        {
+          "id": "L1Q3",
+          "prompt": "Where is the woman going now?",
+          "script": [
+            { "voice": "f1", "text": "I can't come for coffee yet. I have to return these books before five o'clock or I'll pay a fine." },
+            { "voice": "m1", "text": "Alright, I'll wait for you here." }
+          ],
+          "art": "place",
+          "options": [
+            { "key": "A", "art": "place:market" },
+            { "key": "B", "art": "place:library" },
+            { "key": "C", "art": "place:gym" }
+          ],
+          "correct": "B",
+          "explain": "\"Return these books\" và \"pay a fine\" — trả sách ở thư viện."
+        },
+        {
+          "id": "L1Q4",
+          "prompt": "What did the man buy?",
+          "script": [
+            { "voice": "m1", "text": "I went to town to look at cameras, but they were all far too expensive. So I bought a pair of running shoes instead." }
+          ],
+          "art": "object",
+          "options": [
+            { "key": "A", "art": "object:camera" },
+            { "key": "B", "art": "object:laptop" },
+            { "key": "C", "art": "object:shoes" }
+          ],
+          "correct": "C",
+          "explain": "Anh ấy chỉ đi xem máy ảnh, nhưng thứ đã mua (bought) là giày chạy bộ."
+        },
+        {
+          "id": "L1Q5",
+          "prompt": "How does the girl travel to school now?",
+          "script": [
+            { "voice": "f1", "text": "I used to take the bus every morning, but since we moved closer to school I cycle instead. It only takes ten minutes." }
+          ],
+          "art": "transport",
+          "options": [
+            { "key": "A", "art": "transport:bus" },
+            { "key": "B", "art": "transport:bike" },
+            { "key": "C", "art": "transport:walk" }
+          ],
+          "correct": "B",
+          "explain": "\"I used to take the bus\" là quá khứ. Hiện tại: \"I cycle\" — đi xe đạp."
+        },
+        {
+          "id": "L1Q6",
+          "prompt": "Which sport does the man do now?",
+          "script": [
+            { "voice": "m1", "text": "I had to give up football after I hurt my knee. These days I swim three times a week — it's much easier on the joints." }
+          ],
+          "art": "sport",
+          "options": [
+            { "key": "A", "art": "sport:football" },
+            { "key": "B", "art": "sport:tennis" },
+            { "key": "C", "art": "sport:swimming" }
+          ],
+          "correct": "C",
+          "explain": "Anh ấy đã bỏ bóng đá (give up football). Hiện tại bơi ba lần một tuần."
+        },
+        {
+          "id": "L1Q7",
+          "prompt": "What time does the meeting start?",
+          "script": [
+            { "voice": "f1", "text": "Don't forget the meeting is at nine thirty." },
+            { "voice": "m1", "text": "Actually, they moved it back. It starts at ten o'clock now." }
+          ],
+          "art": "clock",
+          "options": [
+            { "key": "A", "art": "clock:9:30" },
+            { "key": "B", "art": "clock:10:00" },
+            { "key": "C", "art": "clock:10:30" }
+          ],
+          "correct": "B",
+          "explain": "Cuộc họp đã bị dời (moved it back) sang 10 giờ."
+        },
+        {
+          "id": "L1Q8",
+          "prompt": "What is in the man's bag?",
+          "script": [
+            { "voice": "m1", "text": "Please be careful with that bag when you put it down. My laptop is inside and the screen cracks easily." }
+          ],
+          "art": "object",
+          "options": [
+            { "key": "A", "art": "object:laptop" },
+            { "key": "B", "art": "object:camera" },
+            { "key": "C", "art": "object:book" }
+          ],
+          "correct": "A",
+          "explain": "\"My laptop is inside\" — trong túi là máy tính xách tay."
+        },
+        {
+          "id": "L1Q9",
+          "prompt": "Which room does the woman want?",
+          "script": [
+            { "voice": "f1", "text": "We'd like a room for two people, please. My sister and I would prefer separate beds rather than one big one." }
+          ],
+          "art": "room",
+          "options": [
+            { "key": "A", "art": "room:single" },
+            { "key": "B", "art": "room:double" },
+            { "key": "C", "art": "room:twin" }
+          ],
+          "correct": "C",
+          "explain": "Hai người nhưng muốn giường riêng (separate beds) — phòng twin."
+        },
+        {
+          "id": "L1Q10",
+          "prompt": "What are they going to eat tonight?",
+          "script": [
+            { "voice": "m1", "text": "Shall we order pizza again?" },
+            { "voice": "f1", "text": "We had pizza twice this week. Let's get noodles instead — there's a good place on Tran Phu street." },
+            { "voice": "m1", "text": "Good idea." }
+          ],
+          "art": "food",
+          "options": [
+            { "key": "A", "art": "food:pizza" },
+            { "key": "B", "art": "food:noodles" },
+            { "key": "C", "art": "food:salad" }
+          ],
+          "correct": "B",
+          "explain": "Cô ấy từ chối pizza và đề nghị \"let's get noodles instead\"."
+        }
+      ]
+    },
+    {
+      "id": "L2",
+      "title": "Part 2 — Conversation: Right or Wrong",
+      "vi": "Nghe hội thoại và chọn Đúng / Sai",
+      "instructions": "Listen to Mai and Tuan talking about a weekend trip. Decide whether each statement is RIGHT or WRONG.",
+      "sharedAudio": "L2_conversation",
+      "script": [
+        { "voice": "f1", "text": "Tuan, are you still coming to Da Lat with us on Saturday?" },
+        { "voice": "m1", "text": "I want to, but I'm not sure yet. My brother is arriving from Ha Noi on Friday night and I might have to stay with him." },
+        { "voice": "f1", "text": "Bring him along! There's still one seat free in the car." },
+        { "voice": "m1", "text": "That's kind, but he gets carsick on mountain roads. How long is the drive?" },
+        { "voice": "f1", "text": "About six hours if we leave early. We're meeting at my house at five in the morning." },
+        { "voice": "m1", "text": "Five? That's painful. And where are we staying?" },
+        { "voice": "f1", "text": "I booked a small guesthouse near the lake. It's not expensive — two hundred thousand each per night." },
+        { "voice": "m1", "text": "That's reasonable. What about food?" },
+        { "voice": "f1", "text": "Breakfast is included, but we pay for our own lunch and dinner. Oh, and bring a warm jacket. It drops to twelve degrees at night up there." },
+        { "voice": "m1", "text": "Twelve? I'll definitely pack a jacket then. Let me call my brother tonight and I'll tell you tomorrow." }
+      ],
+      "items": [
+        {
+          "id": "L2Q1",
+          "prompt": "Tuan has already decided to go on the trip.",
+          "type": "rightwrong",
+          "correct": "B",
+          "explain": "SAI. Anh ấy nói \"I'm not sure yet\" và sẽ trả lời vào ngày mai."
+        },
+        {
+          "id": "L2Q2",
+          "prompt": "There is space in the car for one more person.",
+          "type": "rightwrong",
+          "correct": "A",
+          "explain": "ĐÚNG. Mai nói \"There's still one seat free in the car.\""
+        },
+        {
+          "id": "L2Q3",
+          "prompt": "They are going to leave at five in the morning.",
+          "type": "rightwrong",
+          "correct": "A",
+          "explain": "ĐÚNG. \"We're meeting at my house at five in the morning.\""
+        },
+        {
+          "id": "L2Q4",
+          "prompt": "All meals are included in the price of the guesthouse.",
+          "type": "rightwrong",
+          "correct": "B",
+          "explain": "SAI. Chỉ có bữa sáng (breakfast is included); trưa và tối phải tự trả."
+        },
+        {
+          "id": "L2Q5",
+          "prompt": "Mai warns Tuan that the nights are cold in Da Lat.",
+          "type": "rightwrong",
+          "correct": "A",
+          "explain": "ĐÚNG. \"Bring a warm jacket. It drops to twelve degrees at night.\""
+        }
+      ]
+    },
+    {
+      "id": "L3",
+      "title": "Part 3 — Short talks: Best answer",
+      "vi": "Nghe thông báo ngắn và chọn đáp án đúng nhất",
+      "instructions": "You will hear five short talks. For each one, choose the best answer, A, B or C.",
+      "items": [
+        {
+          "id": "L3Q1",
+          "prompt": "Why is the library closing early?",
+          "script": [
+            { "voice": "f2", "text": "Attention please. The library will close at four o'clock today instead of nine. Engineers need to repair the air conditioning on the second floor, and the noise would disturb readers. We will reopen at the usual time tomorrow morning. Please take any books you need to the front desk before ten to four." }
+          ],
+          "options": [
+            { "key": "A", "text": "Because of a public holiday" },
+            { "key": "B", "text": "Because repair work is being done" },
+            { "key": "C", "text": "Because there are too few readers" }
+          ],
+          "correct": "B",
+          "explain": "\"Engineers need to repair the air conditioning\" — đóng cửa sớm vì sửa chữa."
+        },
+        {
+          "id": "L3Q2",
+          "prompt": "What does the speaker advise visitors to do?",
+          "script": [
+            { "voice": "m2", "text": "Welcome to the museum. Photography is allowed in every room except the gallery on the top floor, where the light damages the old paintings. Bags larger than a small backpack must be left in the lockers by the entrance. The lockers are free, but you will need a ten thousand dong coin, which you get back afterwards." }
+          ],
+          "options": [
+            { "key": "A", "text": "Leave large bags in the lockers" },
+            { "key": "B", "text": "Pay ten thousand dong to enter" },
+            { "key": "C", "text": "Avoid taking photographs anywhere" }
+          ],
+          "correct": "A",
+          "explain": "Túi lớn phải để ở tủ khoá. Tiền xu chỉ là đặt cọc, được trả lại; chụp ảnh chỉ cấm ở tầng trên cùng."
+        },
+        {
+          "id": "L3Q3",
+          "prompt": "What is the main change to the course?",
+          "script": [
+            { "voice": "f1", "text": "A quick announcement about Thursday's English class. From next week the lesson moves from room B2 to room C14, because our group has grown and B2 is simply too small. The day and the time stay exactly the same. Please tell anyone who is absent today." }
+          ],
+          "options": [
+            { "key": "A", "text": "The time of the lesson" },
+            { "key": "B", "text": "The day of the lesson" },
+            { "key": "C", "text": "The room where it takes place" }
+          ],
+          "correct": "C",
+          "explain": "Chỉ đổi phòng (B2 sang C14). \"The day and the time stay exactly the same.\""
+        },
+        {
+          "id": "L3Q4",
+          "prompt": "What problem does the caller have?",
+          "script": [
+            { "voice": "m1", "text": "Hi, this is Nam. I ordered a blue jacket from your website last Tuesday and it arrived this morning. The size is right and the quality is fine, but you have sent me a green one. I don't want a refund — I would just like to exchange it for the colour I ordered. Could you call me back on this number?" }
+          ],
+          "options": [
+            { "key": "A", "text": "The jacket is the wrong size" },
+            { "key": "B", "text": "The jacket is the wrong colour" },
+            { "key": "C", "text": "The jacket has not arrived" }
+          ],
+          "correct": "B",
+          "explain": "\"The size is right... but you have sent me a green one\" — sai màu."
+        },
+        {
+          "id": "L3Q5",
+          "prompt": "What does the speaker say about the tickets?",
+          "script": [
+            { "voice": "f2", "text": "Tickets for Saturday's concert are still available, but only online. The box office at the theatre is closed for refurbishment until the end of the month, so please do not travel here to buy them in person. Students get a thirty percent discount if they upload a photo of their student card." }
+          ],
+          "options": [
+            { "key": "A", "text": "They can only be bought on the internet" },
+            { "key": "B", "text": "They have completely sold out" },
+            { "key": "C", "text": "They are cheaper at the box office" }
+          ],
+          "correct": "A",
+          "explain": "\"still available, but only online\" — phòng vé đóng cửa để sửa chữa."
+        }
+      ]
+    },
+    {
+      "id": "L4",
+      "title": "Part 4 — Gap fill",
+      "vi": "Nghe và điền từ còn thiếu",
+      "lockOrder": true,
+      "instructions": "Listen to the message and complete the notes. Write ONE word or a number in each gap.",
+      "sharedAudio": "L4_message",
+      "script": [
+        { "voice": "m2", "text": "Good afternoon, this is a message for Ms Linh Pham from Riverside Sports Centre. You asked about our swimming courses for beginners." },
+        { "voice": "m2", "text": "The beginners' course runs on Tuesday and Thursday evenings, starting at seven o'clock. Each lesson lasts ninety minutes." },
+        { "voice": "m2", "text": "The full course is ten weeks and the total price is one million eight hundred thousand dong. That includes the use of the changing rooms but not the parking." },
+        { "voice": "m2", "text": "Please bring a swimming cap — it is compulsory in our pool — and arrive fifteen minutes early for your first lesson." },
+        { "voice": "m2", "text": "If you would like to book, call us back on zero nine zero, four four two, seven one eight three. Thank you." }
+      ],
+      "noteTitle": "Riverside Sports Centre — Beginners' swimming",
+      "items": [
+        {
+          "id": "L4Q1",
+          "prompt": "Lessons are on Tuesday and ________ evenings.",
+          "type": "gap",
+          "correct": "Thursday",
+          "accepts": ["thursday", "thurs"],
+          "explain": "\"Tuesday and Thursday evenings\"."
+        },
+        {
+          "id": "L4Q2",
+          "prompt": "Each lesson lasts ________ minutes.",
+          "type": "gap",
+          "correct": "90",
+          "accepts": ["ninety", "90 minutes"],
+          "explain": "\"Each lesson lasts ninety minutes.\""
+        },
+        {
+          "id": "L4Q3",
+          "prompt": "The course lasts ________ weeks in total.",
+          "type": "gap",
+          "correct": "10",
+          "accepts": ["ten", "10 weeks"],
+          "explain": "\"The full course is ten weeks\"."
+        },
+        {
+          "id": "L4Q4",
+          "prompt": "The price does not include ________.",
+          "type": "gap",
+          "correct": "parking",
+          "accepts": ["the parking", "car parking"],
+          "explain": "\"That includes the use of the changing rooms but not the parking.\""
+        },
+        {
+          "id": "L4Q5",
+          "prompt": "Students must bring a swimming ________.",
+          "type": "gap",
+          "correct": "cap",
+          "accepts": ["hat", "swimming cap"],
+          "explain": "\"Please bring a swimming cap — it is compulsory\"."
+        }
+      ]
+    }
+  ]
+}
