@@ -1701,16 +1701,27 @@ select {
   margin-bottom: 6px;
 }
 
+/* Block, not flex: these messages mix prose with inline <code>, and flex would
+   turn every text node into its own column. */
 .alert {
-  display: flex;
-  gap: 10px;
+  display: block;
   padding: 12px 16px;
   border-radius: var(--radius);
   font-size: 13.5px;
+  line-height: 1.6;
   background: var(--amber-weak);
   color: var(--amber);
   border: 1px solid color-mix(in srgb, var(--amber) 34%, transparent);
   margin-bottom: 18px;
+}
+
+.alert code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--amber) 16%, transparent);
+  overflow-wrap: anywhere;
 }
 
 /* ============================================================
