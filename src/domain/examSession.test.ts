@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { createSession, answer, goTo, next, prev } from './examSession'
+import { createSession, answer, goTo, next, prev, toggleFlag } from './examSession'
 
 const ids = ['q1', 'q2', 'q3']
 
@@ -25,6 +25,20 @@ describe('exam session', () => {
 
     expect(s.answers).toEqual({ q1: 'C' })
     expect(s.answeredCount).toBe(1)
+  })
+
+  it('flags a question for review and clears it again', () => {
+    const flagged = toggleFlag(createSession(ids), 'q2')
+
+    expect(flagged.flags).toEqual(['q2'])
+    expect(toggleFlag(flagged, 'q2').flags).toEqual([])
+  })
+
+  it('keeps a flag independent of whether the question is answered', () => {
+    const s = answer(toggleFlag(createSession(ids), 'q1'), 'q1', 'B')
+
+    expect(s.flags).toEqual(['q1'])
+    expect(s.answers).toEqual({ q1: 'B' })
   })
 
   it('clamps navigation at both ends instead of running off the paper', () => {

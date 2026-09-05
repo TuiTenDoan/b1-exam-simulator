@@ -1,9 +1,9 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { AudioPlayer } from './AudioPlayer'
-import { OmrSheet } from './OmrSheet'
+import { QuestionNav } from './QuestionNav'
 import { Scene } from '../art/Scene'
 import { ExamResults } from './ExamResults'
-import { answer, createSession, goTo, next, prev } from '../domain/examSession'
+import { answer, createSession, goTo, next, prev, toggleFlag } from '../domain/examSession'
 import { gradeSection } from '../domain/scoring'
 import { formatClock, phaseFor, remainingAt } from '../domain/timer'
 import type { SectionResult } from '../domain/types'
@@ -17,6 +17,14 @@ type Props = {
   shuffle: boolean
   onExit: () => void
   onFinished: (sectionId: string, result: SectionResult) => void
+}
+
+/**
+ * One screenful of the paper: a part, split further by passage so a reading
+ * text is never shown next to questions about a different text.
+ */
+function screenKey(q: FlatQuestion): string {
+  return `${q.partId}/${q.passageId ?? ''}`
 }
 
 function ClockPill({ seconds }: { seconds: number }) {
@@ -35,10 +43,12 @@ function QuestionBody({
   q,
   given,
   onAnswer,
+  locked,
 }: {
   q: FlatQuestion
   given: string | undefined
   onAnswer: (value: string) => void
+  locked: boolean
 }) {
   if (q.kind === 'gap') {
     return (
@@ -49,6 +59,7 @@ function QuestionBody({
         placeholder="Nhập một từ hoặc một số…"
         autoComplete="off"
         spellCheck={false}
+        disabled={locked}
         aria-label={`Câu ${q.number}`}
       />
     )
@@ -62,6 +73,7 @@ function QuestionBody({
             key={o.key}
             className={`optArt${given === o.key ? ' optArt--on' : ''}`}
             onClick={() => onAnswer(o.key)}
+            disabled={locked}
             role="radio"
             aria-checked={given === o.key}
           >
@@ -80,6 +92,7 @@ function QuestionBody({
           key={o.key}
           className={`opt${given === o.key ? ' opt--on' : ''}`}
           onClick={() => onAnswer(o.key)}
+          disabled={locked}
           role="radio"
           aria-checked={given === o.key}
         >
@@ -91,7 +104,7 @@ function QuestionBody({
   )
 }
 
-/** One sitting. Remounted on retry, which resets the clock, the sheet and the shuffle. */
+/** One sitting. Remounted on retry, which resets the clock, the answers and the shuffle. */
 function Attempt({
   attempt,
   maxPlays,
@@ -112,9 +125,23 @@ function Attempt({
   const [startedAt] = useState(() => Date.now())
   const [now, setNow] = useState(() => Date.now())
   const [result, setResult] = useState<SectionResult | null>(null)
+  const cardRefs = useRef(new Map<string, HTMLElement>())
 
   const remaining = remainingAt(startedAt, attempt.durationSeconds, now)
   const submitted = result !== null
+
+  const current = attempt.questions[session.index]
+  const visible = useMemo(
+    () => attempt.questions.filter((q) => screenKey(q) === screenKey(current)),
+    [attempt, current],
+  )
+
+  // Parts like the gap-fill notes share one recording; play it once at the top
+  // rather than repeating a player above every question.
+  const sharedAudio =
+    visible.length > 1 && visible.every((q) => q.audio && q.audio === visible[0].audio)
+      ? visible[0].audio
+      : undefined
 
   const submit = useCallback(() => {
     setResult((existing) => {
@@ -135,6 +162,12 @@ function Attempt({
     if (!submitted && remaining <= 0) submit()
   }, [remaining, submitted, submit])
 
+  // Bring the selected question into view after a jump from the bottom strip.
+  useEffect(() => {
+    if (submitted) return
+    cardRefs.current.get(current.id)?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
+  }, [current.id, submitted])
+
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return
@@ -145,15 +178,13 @@ function Attempt({
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
-  const q = attempt.questions[session.index]
-  const given = session.answers[q.id]
   const unanswered = attempt.questions.length - session.answeredCount
 
-  return (
-    <div className="shell">
-      <div className="exam">
-        <main className="examMain">
-          {submitted && result ? (
+  if (submitted && result) {
+    return (
+      <div className="ielts">
+        <div className="ielts__scroll">
+          <div className="shell">
             <ExamResults
               paper={attempt}
               result={result}
@@ -162,84 +193,113 @@ function Attempt({
               onRetry={onRetry}
               onExit={onExit}
             />
-          ) : (
-            <>
-              <div className="examBar">
-                <div>
-                  <div className="examBar__part">{q.partTitle}</div>
-                  <div className="examBar__vi">{q.partVi}</div>
-                </div>
-                <div className="examBar__spacer" />
-                <ClockPill seconds={remaining} />
-                <button className="btn btn--sm" onClick={onExit}>
-                  Thoát
-                </button>
-              </div>
+          </div>
+        </div>
+        <QuestionNav
+          questions={attempt.questions}
+          answers={session.answers}
+          flags={session.flags}
+          current={session.index}
+          onJump={(i) => setSession((s) => goTo(s, i))}
+          graded={result.questions}
+        />
+      </div>
+    )
+  }
 
-              {q.instructions && <p className="instructions">{q.instructions}</p>}
+  const passage = current.passage
 
-              {q.audio && (
-                <AudioPlayer
-                  src={q.audio}
-                  maxPlays={maxPlays}
-                  label={q.noteTitle ?? `Bản ghi — ${q.partTitle}`}
-                />
-              )}
+  return (
+    <div className="ielts">
+      <header className="ielts__bar">
+        <div>
+          <div className="examBar__part">{current.partTitle}</div>
+          <div className="examBar__vi">{current.partVi}</div>
+        </div>
+        <div className="examBar__spacer" />
+        <ClockPill seconds={remaining} />
+        <button className="btn btn--sm btn--primary" onClick={submit}>
+          Nộp bài{unanswered > 0 ? ` · còn ${unanswered}` : ''}
+        </button>
+        <button className="btn btn--sm" onClick={onExit}>
+          Thoát
+        </button>
+      </header>
 
-              {q.passage && (
-                <article className="passage">
-                  <h3 className="passage__title">{q.passage.title}</h3>
-                  <p className="passage__body">{q.passage.body}</p>
-                </article>
-              )}
+      <div className={`ielts__body${passage ? ' ielts__body--split' : ''}`}>
+        {passage && (
+          <aside className="ielts__passage" aria-label="Bài đọc">
+            <h3 className="passage__title">{passage.title}</h3>
+            <p className="passage__body">{passage.body}</p>
+          </aside>
+        )}
 
-              {q.notice && <pre className="notice">{q.notice}</pre>}
+        <section className="ielts__questions">
+          {current.instructions && <p className="instructions">{current.instructions}</p>}
 
-              <div className="qCard" key={q.id}>
+          {sharedAudio && (
+            <AudioPlayer
+              src={sharedAudio}
+              maxPlays={maxPlays}
+              label={current.noteTitle ?? `Bản ghi — ${current.partTitle}`}
+            />
+          )}
+
+          {visible.map((q) => {
+            const given = session.answers[q.id]
+            const isFlagged = session.flags.includes(q.id)
+
+            return (
+              <article
+                key={q.id}
+                ref={(el) => {
+                  if (el) cardRefs.current.set(q.id, el)
+                  else cardRefs.current.delete(q.id)
+                }}
+                className={`qCard${q.id === current.id ? ' qCard--here' : ''}`}
+                onFocusCapture={() => {
+                  const i = attempt.questions.indexOf(q)
+                  if (i !== session.index) setSession((s) => goTo(s, i))
+                }}
+              >
                 <div className="qHead">
                   <span className="qHead__num">{String(q.number).padStart(2, '0')}</span>
                   <h2 className="qHead__prompt">{q.prompt}</h2>
+                  <button
+                    className={`flagBtn${isFlagged ? ' flagBtn--on' : ''}`}
+                    onClick={() => setSession((s) => toggleFlag(s, q.id))}
+                    aria-pressed={isFlagged}
+                    title="Đánh dấu để quay lại sau"
+                  >
+                    {isFlagged ? '★' : '☆'} Xem lại
+                  </button>
                 </div>
+
+                {!sharedAudio && q.audio && (
+                  <AudioPlayer src={q.audio} maxPlays={maxPlays} label={`Câu ${q.number}`} />
+                )}
+
+                {q.notice && <pre className="notice">{q.notice}</pre>}
 
                 <QuestionBody
                   q={q}
                   given={given}
                   onAnswer={(value) => setSession((s) => answer(s, q.id, value))}
+                  locked={false}
                 />
-              </div>
-
-              <div className="qNav">
-                <button
-                  className="btn"
-                  onClick={() => setSession((s) => prev(s))}
-                  disabled={session.index === 0}
-                >
-                  ← Câu trước
-                </button>
-                <button
-                  className="btn"
-                  onClick={() => setSession((s) => next(s))}
-                  disabled={session.index === attempt.questions.length - 1}
-                >
-                  Câu sau →
-                </button>
-                <div className="qNav__spacer" />
-                <button className="btn btn--primary" onClick={submit}>
-                  Nộp bài{unanswered > 0 ? ` (còn ${unanswered} câu trống)` : ''}
-                </button>
-              </div>
-            </>
-          )}
-        </main>
-
-        <OmrSheet
-          questions={attempt.questions}
-          answers={session.answers}
-          current={session.index}
-          onJump={(i) => setSession((s) => goTo(s, i))}
-          graded={result?.questions}
-        />
+              </article>
+            )
+          })}
+        </section>
       </div>
+
+      <QuestionNav
+        questions={attempt.questions}
+        answers={session.answers}
+        flags={session.flags}
+        current={session.index}
+        onJump={(i) => setSession((s) => goTo(s, i))}
+      />
     </div>
   )
 }

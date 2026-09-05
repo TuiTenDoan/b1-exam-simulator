@@ -7,6 +7,8 @@ export interface Session {
   readonly index: number
   readonly answers: Readonly<Record<QuestionId, string>>
   readonly answeredCount: number
+  /** Questions marked to come back to, in the order they were flagged. */
+  readonly flags: readonly QuestionId[]
 }
 
 function clamp(index: number, length: number): number {
@@ -19,7 +21,15 @@ function withIndex(session: Session, index: number): Session {
 }
 
 export function createSession(ids: readonly QuestionId[]): Session {
-  return { ids, index: 0, answers: {}, answeredCount: 0 }
+  return { ids, index: 0, answers: {}, answeredCount: 0, flags: [] }
+}
+
+/** Mark a question to revisit, or clear the mark. Independent of answering it. */
+export function toggleFlag(session: Session, id: QuestionId): Session {
+  const flags = session.flags.includes(id)
+    ? session.flags.filter((f) => f !== id)
+    : [...session.flags, id]
+  return { ...session, flags }
 }
 
 /** Record a response. Blank input clears the answer so the count stays honest. */

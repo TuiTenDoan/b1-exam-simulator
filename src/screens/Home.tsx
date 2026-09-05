@@ -47,6 +47,7 @@ const sections = [
     name: 'Speaking',
     desc: `2 vòng · bốc thăm · ${speaking.round1.topics.length} chủ đề giao tiếp + ${speaking.round2.topics.length} chủ đề thuyết trình`,
     marks: '10đ',
+    selfGraded: true,
   },
   {
     route: 'listening' as Route,
@@ -68,6 +69,7 @@ const sections = [
     name: 'Writing',
     desc: `8 câu hoàn thành (4đ) + 1 bài luận ${writing.part2.minWords}–${writing.part2.maxWords} từ (6đ)`,
     marks: '10đ',
+    selfGraded: true,
   },
   {
     route: 'prepare' as Route,
@@ -129,7 +131,12 @@ export function Home({ onGo, best, shuffle, onShuffleChange }: Props) {
                   <span className="section__desc">{s.desc}</span>
                 </span>
                 <span className="section__right">
-                  {best[s.route] !== undefined ? (
+                  {s.selfGraded ? (
+                    <span className="section__score" style={{ color: 'var(--ink-3)' }}>
+                      {s.marks}
+                      <span className="section__scoreLabel">bạn tự chấm</span>
+                    </span>
+                  ) : best[s.route] !== undefined ? (
                     <span className="section__score">
                       {best[s.route].toFixed(1)}
                       <span className="section__scoreLabel">điểm cao nhất</span>
