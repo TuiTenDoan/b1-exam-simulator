@@ -121,11 +121,37 @@ const MIN_WORDS = 120
 const MAX_WORDS = 180
 const TOTAL_MARKS = 6
 
+/**
+ * Cohesive devices, not just the Firstly/Secondly formula — a student who
+ * writes "In my opinion … At the same time …" is joining ideas at least as
+ * well, and the earlier short list marked that as having no linkers at all.
+ *
+ * Bare high-frequency conjunctions (and, but, so, also, then, I think) stay
+ * out on purpose: they appear in the weakest writing too, so counting them
+ * would make this check meaningless.
+ */
 const LINKERS = [
-  'first', 'firstly', 'second', 'secondly', 'third', 'thirdly',
-  'moreover', 'furthermore', 'in addition', 'however', 'therefore',
-  'finally', 'lastly', 'to conclude', 'in conclusion', 'for example',
-  'as a result', 'on the other hand',
+  // stance
+  'in my opinion', 'from my point of view', 'personally', 'i would argue',
+  // sequence
+  'first', 'firstly', 'first of all', 'second', 'secondly', 'third', 'thirdly',
+  'to begin with', 'at the same time', 'meanwhile', 'finally', 'lastly',
+  // addition
+  'moreover', 'furthermore', 'in addition', 'additionally', 'besides',
+  'what is more',
+  // contrast
+  'however', 'on the other hand', 'nevertheless', 'in contrast', 'whereas',
+  'even though', 'although', 'despite', 'while',
+  // result
+  'therefore', 'as a result', 'consequently', 'thus', 'for this reason',
+  'that is why',
+  // example
+  'for example', 'for instance', 'such as', 'namely',
+  // emphasis
+  'especially', 'in particular', 'above all', 'indeed',
+  // conclusion
+  'to conclude', 'in conclusion', 'in summary', 'to sum up', 'overall',
+  'all in all',
 ]
 
 export function analyseEssay(text: string, topic: { keywords: string[] }): EssayResult {
@@ -143,14 +169,23 @@ export function analyseEssay(text: string, topic: { keywords: string[] }): Essay
     {
       id: 'length',
       label: `Độ dài ${MIN_WORDS}–${MAX_WORDS} từ`,
-      detail: `Bài của bạn ${wordCount} từ.`,
+      detail:
+        wordCount < MIN_WORDS
+          ? `Bài của bạn ${wordCount} từ — thiếu ${MIN_WORDS - wordCount} từ nữa là đạt.`
+          : wordCount > MAX_WORDS
+            ? `Bài của bạn ${wordCount} từ — thừa ${wordCount - MAX_WORDS} từ, nên rút bớt.`
+            : `Bài của bạn ${wordCount} từ.`,
       pass: wordCount >= MIN_WORDS && wordCount <= MAX_WORDS,
       mark: 1,
     },
     {
       id: 'paragraphs',
       label: 'Đủ 4 đoạn: mở, hai thân, kết',
-      detail: `Đếm được ${paragraphCount} đoạn (cách nhau bằng một dòng trống).`,
+      detail:
+        paragraphCount >= 4
+          ? `Đếm được ${paragraphCount} đoạn.`
+          : `Đếm được ${paragraphCount} đoạn — cần thêm ${4 - paragraphCount} đoạn nữa. ` +
+            'Ngăn cách bằng một dòng trống.',
       pass: paragraphCount >= 4,
       mark: 1,
     },

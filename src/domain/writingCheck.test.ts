@@ -77,6 +77,33 @@ describe('analyseEssay', () => {
     expect(r.checks.find((c) => c.id === 'onTopic')?.pass).toBe(true)
   })
 
+  it('credits natural connectives, not only the Firstly/Secondly formula', () => {
+    // Real answer from a strong student: cohesive, but never says "Firstly".
+    const essay =
+      'The Internet has transformed our daily lives, but it also poses challenges. ' +
+      'In my opinion, the most alarming issues are cybercrime and digital addiction. ' +
+      'Moreover, excessive screen time harms mental health, especially among young people. ' +
+      'At the same time, individuals must cultivate digital discipline.'
+
+    expect(analyseEssay(essay, topic).checks.find((c) => c.id === 'linkers')?.pass).toBe(true)
+  })
+
+  it('says how far short the length is, not just the count', () => {
+    const short = analyseEssay('word '.repeat(115), topic).checks.find((c) => c.id === 'length')
+    const long = analyseEssay('word '.repeat(200), topic).checks.find((c) => c.id === 'length')
+
+    expect(short?.pass).toBe(false)
+    expect(short?.detail).toMatch(/thiếu 5 từ/)
+    expect(long?.detail).toMatch(/thừa 20 từ/)
+  })
+
+  it('says how many paragraphs are still missing', () => {
+    const paras = analyseEssay('a\n\nb', topic).checks.find((c) => c.id === 'paragraphs')
+
+    expect(paras?.pass).toBe(false)
+    expect(paras?.detail).toMatch(/thêm 2 đoạn/)
+  })
+
   it('never awards the marks it cannot judge', () => {
     const r = analyseEssay('word '.repeat(150) + '\n\na\n\nb\n\nc', topic)
 
