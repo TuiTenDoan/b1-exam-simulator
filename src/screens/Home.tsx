@@ -86,11 +86,10 @@ export function Home({ onGo, best, shuffle, onShuffleChange }: Props) {
       <section className="cover">
         <div className="cover__grid">
           <div>
-            <p className="cover__eyebrow">Anh văn chuẩn đầu ra · Trình độ B1</p>
             <h1>
-              Thi thử đủ bốn kỹ năng,
+              Thi thử Anh văn
               <br />
-              chấm điểm ngay khi nộp.
+              chuẩn đầu ra, trình độ B1
             </h1>
             <p className="cover__lede">
               Đề mô phỏng đúng cấu trúc kỳ thi: bốn phần độc lập, mỗi phần 10 điểm, mức đạt 5.0.
@@ -102,24 +101,31 @@ export function Home({ onGo, best, shuffle, onShuffleChange }: Props) {
               Bắt đầu phần Nghe <Arrow />
             </button>
 
-            <div className="cover__meta">
-              <div className="cover__metaItem">
-                <span className="cover__metaValue">4</span>
-                <span className="cover__metaLabel">phần thi</span>
+            <dl className="spec">
+              <div className="spec__row">
+                <dt>Cấu trúc</dt>
+                <dd>Bốn phần thi độc lập, mỗi phần 10 điểm</dd>
               </div>
-              <div className="cover__metaItem">
-                <span className="cover__metaValue">{examQuestions + prepareQuestions}</span>
-                <span className="cover__metaLabel">câu trắc nghiệm</span>
+              <div className="spec__row">
+                <dt>Trắc nghiệm</dt>
+                <dd>
+                  <span className="mono">{examQuestions + prepareQuestions}</span> câu, chấm ngay
+                  khi nộp
+                </dd>
               </div>
-              <div className="cover__metaItem">
-                <span className="cover__metaValue">{recordings}</span>
-                <span className="cover__metaLabel">bản ghi âm</span>
+              <div className="spec__row">
+                <dt>Bản ghi âm</dt>
+                <dd>
+                  <span className="mono">{recordings}</span> file, mỗi bản phát tối đa 2 lượt
+                </dd>
               </div>
-              <div className="cover__metaItem">
-                <span className="cover__metaValue">5.0</span>
-                <span className="cover__metaLabel">mức đạt</span>
+              <div className="spec__row">
+                <dt>Mức đạt</dt>
+                <dd>
+                  <span className="mono">5,0</span> trên 10
+                </dd>
               </div>
-            </div>
+            </dl>
           </div>
 
           <div className="sections">

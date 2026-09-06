@@ -194,7 +194,7 @@ export function Speaking({ onExit }: Props) {
           ) : (
             <>
               <div className="drawCard">
-                <p className="cover__eyebrow" style={{ marginBottom: 10 }}>
+                <p className="drawCard__label">
                   {round === 1 ? 'Chủ đề vòng 1' : 'Chủ đề vòng 2'}
                 </p>
                 <p className="drawCard__topic">

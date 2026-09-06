@@ -25,9 +25,26 @@ type Task = {
 }
 
 const MCQ3 = ['A', 'B', 'C']
-const RW: { key: string; label: string }[] = [
-  { key: 'R', label: '✓ Right' },
-  { key: 'W', label: '✗ Wrong' },
+
+function TickIcon() {
+  return (
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M4 12.5 9.5 18 20 6.5" />
+    </svg>
+  )
+}
+
+function CrossIcon() {
+  return (
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" aria-hidden="true">
+      <path d="M6 6l12 12M18 6L6 18" />
+    </svg>
+  )
+}
+
+const RW: { key: string; label: React.ReactNode }[] = [
+  { key: 'R', label: <><TickIcon /> Right</> },
+  { key: 'W', label: <><CrossIcon /> Wrong</> },
 ]
 
 function normalise(v: string) {
@@ -83,7 +100,11 @@ function GroupBlock({
                 aria-pressed={on}
               >
                 {opt}
-                {revealed && shouldBeOn && <span className="pqTick__star">✓</span>}
+                {revealed && shouldBeOn && (
+                  <span className="pqTick__star">
+                    <TickIcon />
+                  </span>
+                )}
               </button>
             )
           })}

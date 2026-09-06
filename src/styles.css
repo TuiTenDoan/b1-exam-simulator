@@ -32,8 +32,11 @@
   --shadow-md: 0 10px 24px -12px rgba(22, 32, 30, 0.18);
   --shadow-lg: 0 24px 48px -20px rgba(22, 32, 30, 0.24);
 
+  /* All three carry the Vietnamese block (U+1EA0–1EF9). Outfit did not, so
+     tone-marked letters fell back mid-word and headings rendered in two faces
+     at once. Never pick a display face here without checking that subset. */
   --font-ui: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-display: 'Outfit', 'Be Vietnam Pro', system-ui, sans-serif;
+  --font-display: 'Archivo', 'Be Vietnam Pro', system-ui, sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', monospace;
 
   --shell: 1320px;
@@ -320,58 +323,58 @@ select {
   align-items: start;
 }
 
-.cover__eyebrow {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 18px;
-}
-
 .cover h1 {
-  font-size: clamp(34px, 4.4vw, 52px);
+  font-size: clamp(32px, 4.2vw, 50px);
   font-weight: 700;
-  margin-bottom: 18px;
+  /* Archivo is a grotesque; it wants a touch more negative tracking than the
+     geometric face it replaced, but stays well above the -0.04em floor. */
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  margin-bottom: 20px;
+  text-wrap: balance;
 }
 
 .cover__lede {
   color: var(--ink-2);
   font-size: 16px;
-  max-width: 52ch;
+  line-height: 1.65;
+  max-width: 54ch;
   margin-bottom: 28px;
 }
 
-.cover__meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0;
-  border-top: 1px solid var(--rule);
-  margin-top: 32px;
+/* Exam front matter: label/value rows, the way a paper states its own terms.
+   Deliberately not stat tiles — the numbers are terms of the exam, not a score. */
+.spec {
+  margin: 34px 0 0;
+  border-top: 1px solid var(--rule-strong);
 }
 
-.cover__metaItem {
-  padding: 14px 28px 14px 0;
-  margin-right: 28px;
-  border-right: 1px solid var(--rule);
+.spec__row {
+  display: grid;
+  grid-template-columns: 132px minmax(0, 1fr);
+  gap: 20px;
+  align-items: baseline;
+  padding: 13px 2px;
+  border-bottom: 1px solid var(--rule);
 }
 
-.cover__metaItem:last-child {
-  border-right: 0;
-}
-
-.cover__metaValue {
-  font-family: var(--font-mono);
-  font-size: 21px;
-  font-weight: 600;
-  display: block;
-  line-height: 1.2;
-}
-
-.cover__metaLabel {
+.spec dt {
   font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--ink-3);
-  letter-spacing: 0.03em;
+}
+
+.spec dd {
+  margin: 0;
+  font-size: 14.5px;
+  color: var(--ink);
+}
+
+.spec dd .mono {
+  font-weight: 600;
+  font-size: 15.5px;
 }
 
 /* Section list — rules, not cards */
@@ -1361,6 +1364,16 @@ select {
   background: var(--card-sunk);
 }
 
+/* Labels the lot that was drawn, inside the card — not a page-heading eyebrow. */
+.drawCard__label {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 10px;
+}
+
 .drawCard__topic {
   font-family: var(--font-display);
   font-size: 22px;
@@ -1882,9 +1895,9 @@ select {
     justify-content: space-between;
   }
 
-  .cover__metaItem {
-    padding-right: 18px;
-    margin-right: 18px;
+  .spec__row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3px;
   }
 
   .stat {
