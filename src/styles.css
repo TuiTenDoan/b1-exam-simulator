@@ -1506,6 +1506,99 @@ select {
   background: var(--card);
 }
 
+/* Per-sentence verdict from the structural check. */
+.stemMark {
+  font-size: 13px;
+  margin-top: 8px;
+  padding: 8px 11px;
+  border-radius: 8px;
+  line-height: 1.5;
+}
+
+.stemMark .mono {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.stemMark--ok {
+  background: var(--accent-weak);
+  color: var(--accent);
+}
+
+.stemMark--warn {
+  background: var(--amber-weak);
+  color: var(--amber);
+}
+
+.stemMark--no {
+  background: var(--wrong-weak);
+  color: var(--wrong);
+}
+
+/* Essay report: scores only what it can defend, and says so. */
+.essayReport {
+  margin-top: 18px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  background: var(--card-sunk);
+  padding: 18px 20px;
+}
+
+.essayReport__head {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.essayReport__score {
+  flex: none;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.essayReport__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.essayReport__list li {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 12px;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+.essayReport__mark {
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.essayReport__list .is-ok .essayReport__mark {
+  background: var(--accent);
+  color: #fff;
+}
+
+.essayReport__list .is-no .essayReport__mark {
+  background: var(--rule);
+  color: var(--ink-3);
+}
+
 .stemLine__sample {
   font-size: 13.5px;
   color: var(--ink-2);

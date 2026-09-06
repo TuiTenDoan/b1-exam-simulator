@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import writing from '../data/writing.json'
+import { analyseEssay, checkSentence, type SentenceRule } from '../domain/writingCheck'
 
 type Props = { onExit: () => void }
 type Tab = 1 | 2
@@ -31,12 +32,30 @@ export function Writing({ onExit }: Props) {
   const drawn = useMemo(() => pickEight(writing.part1.items, seed), [seed])
   const [answers, setAnswers] = useState<Record<string, string>>({})
   const [showSamples, setShowSamples] = useState(false)
+  const [marked, setMarked] = useState(false)
+
+  const sentenceMarks = useMemo(
+    () =>
+      drawn.map((item) =>
+        checkSentence(answers[item.id] ?? '', {
+          stem: item.stem,
+          rule: (item.rule ?? 'any') as SentenceRule,
+        }),
+      ),
+    [drawn, answers],
+  )
+  const part1Score = sentenceMarks.reduce((n, r) => n + r.mark, 0)
 
   // Part 2
   const [topicIdx, setTopicIdx] = useState(0)
   const [essay, setEssay] = useState('')
   const [showOutline, setShowOutline] = useState(false)
+  const [essayChecked, setEssayChecked] = useState(false)
   const topic = writing.part2.topics[topicIdx]
+  const essayReport = useMemo(
+    () => analyseEssay(essay, { keywords: topic.keywords ?? [] }),
+    [essay, topic],
+  )
   const words = countWords(essay)
   const inRange = words >= writing.part2.minWords && words <= writing.part2.maxWords
   const over = words > writing.part2.maxWords
@@ -84,6 +103,21 @@ export function Writing({ onExit }: Props) {
                     autoComplete="off"
                     aria-label={item.stem}
                   />
+                  {marked && (
+                    <p
+                      className={`stemMark stemMark--${
+                        sentenceMarks[n].verdict === 'ok'
+                          ? 'ok'
+                          : sentenceMarks[n].mark > 0
+                            ? 'warn'
+                            : 'no'
+                      }`}
+                    >
+                      <span className="mono">{sentenceMarks[n].mark.toFixed(2)}đ</span>{' '}
+                      {sentenceMarks[n].message}
+                    </p>
+                  )}
+
                   {showSamples && (
                     <p className="stemLine__sample">
                       <strong>Gợi ý:</strong> {item.sample}
@@ -96,7 +130,15 @@ export function Writing({ onExit }: Props) {
             ))}
 
             <div className="qNav">
-              <button className="btn btn--primary" onClick={() => setShowSamples((v) => !v)}>
+              <button className="btn btn--primary" onClick={() => setMarked((v) => !v)}>
+                {marked ? 'Ẩn kết quả chấm' : 'Chấm 8 câu'}
+              </button>
+              {marked && (
+                <span className="mono" style={{ fontSize: 15, fontWeight: 600 }}>
+                  {part1Score.toFixed(1)} / 4,0
+                </span>
+              )}
+              <button className="btn" onClick={() => setShowSamples((v) => !v)}>
                 {showSamples ? 'Ẩn gợi ý' : 'Xem câu mẫu'}
               </button>
               <button
@@ -105,6 +147,7 @@ export function Writing({ onExit }: Props) {
                   setSeed(Date.now() % 100000)
                   setAnswers({})
                   setShowSamples(false)
+                  setMarked(false)
                 }}
               >
                 Bốc đề khác
@@ -171,13 +214,58 @@ export function Writing({ onExit }: Props) {
             </div>
 
             <div className="qNav">
-              <button className="btn btn--primary" onClick={() => setShowOutline((v) => !v)}>
+              <button
+                className="btn btn--primary"
+                onClick={() => setEssayChecked((v) => !v)}
+                disabled={essay.trim() === ''}
+              >
+                {essayChecked ? 'Ẩn kết quả' : 'Kiểm tra bài luận'}
+              </button>
+              <button className="btn" onClick={() => setShowOutline((v) => !v)}>
                 {showOutline ? 'Ẩn dàn ý' : 'Xem dàn ý gợi ý'}
               </button>
-              <button className="btn" onClick={() => setEssay('')} disabled={essay === ''}>
+              <button
+                className="btn"
+                onClick={() => {
+                  setEssay('')
+                  setEssayChecked(false)
+                }}
+                disabled={essay === ''}
+              >
                 Xoá bài
               </button>
             </div>
+
+            {essayChecked && (
+              <div className="essayReport">
+                <div className="essayReport__head">
+                  <span className="mono essayReport__score">
+                    {essayReport.autoScore.toFixed(1)} / {essayReport.maxAutoScore.toFixed(1)}
+                  </span>
+                  <span>
+                    điểm máy chấm được. Còn{' '}
+                    <strong className="mono">{essayReport.humanMarks.toFixed(1)} điểm</strong> về ý
+                    tưởng và độ chính xác ngữ pháp — phần này máy không đánh giá được, cần bạn hoặc
+                    giáo viên đọc.
+                  </span>
+                </div>
+
+                <ul className="essayReport__list">
+                  {essayReport.checks.map((c) => (
+                    <li key={c.id} className={c.pass ? 'is-ok' : 'is-no'}>
+                      <span className="essayReport__mark mono">
+                        {c.pass ? c.mark.toFixed(0) : '0'}
+                      </span>
+                      <span>
+                        <strong>{c.label}</strong>
+                        <br />
+                        <span style={{ color: 'var(--ink-2)' }}>{c.detail}</span>
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
 
           <div className="panel">
