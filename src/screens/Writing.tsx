@@ -1,6 +1,8 @@
 import { useMemo, useState } from 'react'
 import writing from '../data/writing.json'
 import { analyseEssay, checkSentence, type SentenceRule } from '../domain/writingCheck'
+import { gradeEssay, loadKey, saveKey, GeminiError } from '../lib/gemini'
+import type { AiMark } from '../domain/aiMark'
 
 type Props = { onExit: () => void }
 type Tab = 1 | 2
@@ -51,6 +53,29 @@ export function Writing({ onExit }: Props) {
   const [essay, setEssay] = useState('')
   const [showOutline, setShowOutline] = useState(false)
   const [essayChecked, setEssayChecked] = useState(false)
+
+  // AI marking. The key stays in this browser; nothing is stored in the repo.
+  const [apiKey, setApiKey] = useState(loadKey)
+  const [showKeyBox, setShowKeyBox] = useState(false)
+  const [aiBusy, setAiBusy] = useState(false)
+  const [aiMark, setAiMark] = useState<AiMark | null>(null)
+  const [aiError, setAiError] = useState<string | null>(null)
+
+  async function runAiMark() {
+    setAiBusy(true)
+    setAiError(null)
+    setAiMark(null)
+    try {
+      const mark = await gradeEssay({ key: apiKey, topic: topic.prompt, essay })
+      setAiMark(mark)
+    } catch (e) {
+      setAiError(
+        e instanceof GeminiError ? e.message : 'Không chấm được. Thử lại sau một lát.',
+      )
+    } finally {
+      setAiBusy(false)
+    }
+  }
   const topic = writing.part2.topics[topicIdx]
   const essayReport = useMemo(
     () => analyseEssay(essay, { keywords: topic.keywords ?? [] }),
@@ -221,6 +246,13 @@ export function Writing({ onExit }: Props) {
               >
                 {essayChecked ? 'Ẩn kết quả' : 'Kiểm tra bài luận'}
               </button>
+              <button
+                className="btn"
+                onClick={() => (apiKey ? void runAiMark() : setShowKeyBox(true))}
+                disabled={essay.trim() === '' || aiBusy}
+              >
+                {aiBusy ? 'Đang chấm…' : apiKey ? 'Chấm bằng AI' : 'Bật chấm AI'}
+              </button>
               <button className="btn" onClick={() => setShowOutline((v) => !v)}>
                 {showOutline ? 'Ẩn dàn ý' : 'Xem dàn ý gợi ý'}
               </button>
@@ -235,6 +267,95 @@ export function Writing({ onExit }: Props) {
                 Xoá bài
               </button>
             </div>
+
+            {showKeyBox && (
+              <div className="keyBox">
+                <p className="keyBox__title">Chấm bằng AI (Google Gemini)</p>
+                <p className="keyBox__note">
+                  Key lưu trong trình duyệt này, không gửi lên web và không nằm trong mã nguồn.
+                  Lấy key miễn phí tại{' '}
+                  <a href="https://aistudio.google.com/apikey" target="_blank" rel="noreferrer">
+                    aistudio.google.com/apikey
+                  </a>
+                  .
+                </p>
+                <div className="keyBox__row">
+                  <input
+                    type="password"
+                    className="stemLine__input"
+                    value={apiKey}
+                    onChange={(e) => setApiKey(e.target.value)}
+                    placeholder="Dán API key vào đây"
+                    autoComplete="off"
+                    spellCheck={false}
+                    aria-label="Gemini API key"
+                  />
+                  <button
+                    className="btn btn--primary btn--sm"
+                    onClick={() => {
+                      saveKey(apiKey)
+                      setShowKeyBox(false)
+                      if (apiKey.trim()) void runAiMark()
+                    }}
+                    disabled={apiKey.trim() === ''}
+                  >
+                    Lưu &amp; chấm
+                  </button>
+                  <button
+                    className="btn btn--sm btn--ghost"
+                    onClick={() => {
+                      setApiKey('')
+                      saveKey('')
+                      setShowKeyBox(false)
+                      setAiMark(null)
+                    }}
+                  >
+                    Xoá key
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {aiError && <p className="alert">{aiError}</p>}
+
+            {aiMark && (
+              <div className="essayReport">
+                <div className="essayReport__head">
+                  <span className="mono essayReport__score">{aiMark.total.toFixed(1)} / 6.0</span>
+                  <span>
+                    Ý tưởng <strong className="mono">{aiMark.ideas.toFixed(1)}/3</strong> · Ngôn ngữ{' '}
+                    <strong className="mono">{aiMark.language.toFixed(1)}/3</strong>. Đây là{' '}
+                    <strong>điểm AI gợi ý</strong>, không phải điểm chính thức — dùng để biết mình
+                    yếu chỗ nào, đừng coi là điểm thi.
+                  </span>
+                </div>
+
+                {aiMark.comment && <p className="aiComment">{aiMark.comment}</p>}
+
+                {aiMark.errors.length > 0 && (
+                  <ul className="aiErrors">
+                    {aiMark.errors.map((e, i) => (
+                      <li key={i}>
+                        <p className="aiErrors__fix">
+                          <s>{e.wrong}</s> <span aria-hidden="true">→</span>{' '}
+                          <strong>{e.fix}</strong>
+                        </p>
+                        <p className="aiErrors__why">{e.why}</p>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                <div className="qNav" style={{ marginTop: 16 }}>
+                  <button className="btn btn--sm" onClick={() => setShowKeyBox(true)}>
+                    Đổi key
+                  </button>
+                  <button className="btn btn--sm" onClick={runAiMark} disabled={aiBusy}>
+                    Chấm lại
+                  </button>
+                </div>
+              </div>
+            )}
 
             {essayChecked && (
               <div className="essayReport">

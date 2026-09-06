@@ -1535,6 +1535,93 @@ select {
   color: var(--wrong);
 }
 
+/* Bring-your-own-key panel. Nothing here is ever committed. */
+.keyBox {
+  margin-top: 18px;
+  padding: 18px 20px;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-lg);
+  background: var(--card-sunk);
+}
+
+.keyBox__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.keyBox__note {
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.keyBox__note a {
+  color: var(--accent);
+}
+
+.keyBox__row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.keyBox__row .stemLine__input {
+  flex: 1;
+  min-width: 220px;
+  max-width: none;
+}
+
+.aiComment {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--ink);
+  padding: 12px 14px;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  margin-bottom: 14px;
+}
+
+.aiErrors {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.aiErrors li {
+  padding: 11px 14px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--card);
+}
+
+.aiErrors__fix {
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+.aiErrors__fix s {
+  color: var(--wrong);
+  text-decoration-thickness: 1px;
+}
+
+.aiErrors__fix strong {
+  color: var(--accent);
+}
+
+.aiErrors__why {
+  font-size: 13px;
+  color: var(--ink-2);
+  margin-top: 4px;
+  line-height: 1.55;
+}
+
 /* Essay report: scores only what it can defend, and says so. */
 .essayReport {
   margin-top: 18px;
