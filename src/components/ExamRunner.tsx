@@ -27,6 +27,24 @@ function screenKey(q: FlatQuestion): string {
   return `${q.partId}/${q.passageId ?? ''}`
 }
 
+function FlagIcon({ filled }: { filled: boolean }) {
+  return (
+    <svg
+      width="13"
+      height="13"
+      viewBox="0 0 24 24"
+      fill={filled ? 'currentColor' : 'none'}
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M5 21V4a1 1 0 0 1 1-1h10.5l-1.5 4 1.5 4H6" />
+    </svg>
+  )
+}
+
 function ClockPill({ seconds }: { seconds: number }) {
   const phase = phaseFor(seconds)
   const cls =
@@ -271,7 +289,8 @@ function Attempt({
                     aria-pressed={isFlagged}
                     title="Đánh dấu để quay lại sau"
                   >
-                    {isFlagged ? '★' : '☆'} Xem lại
+                    <FlagIcon filled={isFlagged} />
+                    Xem lại
                   </button>
                 </div>
 

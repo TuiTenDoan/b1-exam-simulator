@@ -9,7 +9,8 @@
 
   --ink: #16201e;
   --ink-2: #55625e;
-  --ink-3: #8a9793;
+  /* Tertiary text still has to clear 4.5:1 — it labels things, it isn't decoration. */
+  --ink-3: #66746f;
 
   --rule: #dce3e0;
   --rule-strong: #c3cec9;
@@ -47,7 +48,7 @@
 
     --ink: #e8efec;
     --ink-2: #a3b0ac;
-    --ink-3: #74817d;
+    --ink-3: #7f8d89;
 
     --rule: #263230;
     --rule-strong: #35443f;
@@ -75,7 +76,7 @@
   --card-sunk: #131a19;
   --ink: #e8efec;
   --ink-2: #a3b0ac;
-  --ink-3: #74817d;
+  --ink-3: #7f8d89;
   --rule: #263230;
   --rule-strong: #35443f;
   --accent: #4fbfa9;
@@ -1051,6 +1052,9 @@ select {
 .flagBtn {
   flex: none;
   margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: 4px 10px;
   border-radius: 999px;
   border: 1px solid var(--rule-strong);
@@ -1886,6 +1890,64 @@ select {
   .stat {
     padding-right: 18px;
     margin-right: 18px;
+  }
+}
+
+/* ============================================================
+   Touch devices — every control reaches the 44px minimum.
+   Scoped to coarse pointers so a mouse-driven desktop keeps its
+   tighter, denser layout.
+   ============================================================ */
+@media (pointer: coarse) {
+  .qnum {
+    width: 44px;
+    height: 44px;
+    font-size: 13px;
+  }
+
+  /* The strip already scrolls horizontally, so wider buttons cost nothing. */
+  .qnavPart__nums {
+    gap: 4px;
+  }
+
+  .flagBtn {
+    min-height: 44px;
+    padding: 8px 14px;
+  }
+
+  .btn--icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .btn--sm {
+    min-height: 44px;
+    padding: 10px 14px;
+  }
+
+  .switch {
+    width: 56px;
+    height: 34px;
+  }
+
+  .switch__dot {
+    width: 26px;
+    height: 26px;
+  }
+
+  .switch--on .switch__dot {
+    transform: translateX(22px);
+  }
+
+  .pqChoice,
+  .pqTick {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .player__btn {
+    width: 52px;
+    height: 52px;
   }
 }
 
