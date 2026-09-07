@@ -9,7 +9,7 @@
  *   node scripts/generate-audio.mjs --force    rebuild everything
  */
 import { execFile } from 'node:child_process'
-import { mkdir, readFile, rm, writeFile } from 'node:fs/promises'
+import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises'
 import { existsSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -119,11 +119,35 @@ async function readJson(name) {
   return JSON.parse(await readFile(join(root, 'src', 'data', name), 'utf8'))
 }
 
+/**
+ * Every listening paper, not just the first: listening.json, listening2.json…
+ * Recording ids have to be unique across papers, since they all land in the
+ * same public/audio folder.
+ */
+async function listeningPaperFiles() {
+  const names = await readdir(join(root, 'src', 'data'))
+  return names.filter((n) => /^listening\d*\.json$/.test(n)).sort()
+}
+
 async function main() {
-  const jobs = [
-    ...collectListeningJobs(await readJson('listening.json')),
-    ...collectSpeakingJobs(await readJson('speaking.json')),
-  ]
+  const files = await listeningPaperFiles()
+  const jobs = []
+
+  for (const file of files) {
+    jobs.push(...collectListeningJobs(await readJson(file)))
+  }
+  jobs.push(...collectSpeakingJobs(await readJson('speaking.json')))
+
+  const ids = jobs.map((j) => j.id)
+  const clash = ids.find((id, i) => ids.indexOf(id) !== i)
+  if (clash) {
+    throw new Error(
+      `Hai bản ghi cùng id "${clash}" — chúng sẽ ghi đè nhau trong public/audio. ` +
+        'Đặt id khác nhau giữa các đề.',
+    )
+  }
+
+  console.log(`Đề nghe: ${files.join(', ')} — ${jobs.length} bản ghi`)
 
   await mkdir(outDir, { recursive: true })
   await mkdir(tmpDir, { recursive: true })

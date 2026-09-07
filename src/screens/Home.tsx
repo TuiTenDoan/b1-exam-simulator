@@ -1,5 +1,5 @@
-import type { Route } from '../App'
-import { listeningPaper, readingPaper } from '../lib/paper'
+import type { PaperChoice, Route } from '../App'
+import { listeningPaper, listeningPapers, readingPaper, readingPapers } from '../lib/paper'
 import speaking from '../data/speaking.json'
 import writing from '../data/writing.json'
 import prepare from '../data/prepare.json'
@@ -23,11 +23,18 @@ const recordings =
   speaking.round2.topics.reduce((n, t) => n + t.samples.length, 0) +
   prepare.tasks.length
 
+const paperCount = Math.max(listeningPapers.length, readingPapers.length)
+
+/** "2 đề" reads better than "2 papers available" and is checked from the data. */
+const paperCountLabel = (n: number) => (n > 1 ? `${n} đề` : '1 đề')
+
 type Props = {
   onGo: (route: Route) => void
   best: Record<string, number>
   shuffle: boolean
   onShuffleChange: (value: boolean) => void
+  paperChoice: PaperChoice
+  onPaperChange: (value: PaperChoice) => void
 }
 
 function Arrow() {
@@ -51,14 +58,18 @@ const sections = [
     route: 'listening' as Route,
     num: 'II',
     name: 'Listening',
-    desc: `${listeningPaper.questions.length} câu · nghe hình, hội thoại, điền từ · có audio`,
+    desc: `${listeningPaper.questions.length} câu · ${paperCountLabel(
+      listeningPapers.length,
+    )} · nghe hình, hội thoại, điền từ`,
     marks: '10đ',
   },
   {
     route: 'reading' as Route,
     num: 'III',
     name: 'Reading, Grammar & Vocabulary',
-    desc: `${readingPaper.questions.length} câu · ngữ pháp, từ vựng, đọc hiểu, điền từ`,
+    desc: `${readingPaper.questions.length} câu · ${paperCountLabel(
+      readingPapers.length,
+    )} · ngữ pháp, từ vựng, đọc hiểu, điền từ`,
     marks: '10đ',
   },
   {
@@ -89,7 +100,7 @@ const sections = [
   },
 ]
 
-export function Home({ onGo, best, shuffle, onShuffleChange }: Props) {
+export function Home({ onGo, best, shuffle, onShuffleChange, paperChoice, onPaperChange }: Props) {
   return (
     <div className="shell">
       <section className="cover">
@@ -168,6 +179,40 @@ export function Home({ onGo, best, shuffle, onShuffleChange }: Props) {
                 </span>
               </button>
             ))}
+
+            {paperCount > 1 && (
+              <div className="setting">
+                <div className="setting__label">
+                  <span className="setting__name">Bộ đề</span>
+                  <span className="setting__hint">
+                    {paperChoice === 'random'
+                      ? `Mỗi lần vào thi bốc ngẫu nhiên một trong ${paperCount} đề.`
+                      : `Đang cố định Đề ${paperChoice + 1} — làm mãi một đề là thuộc lòng.`}
+                    {listeningPapers.length !== readingPapers.length &&
+                      ` Nghe có ${listeningPapers.length} đề, Đọc có ${readingPapers.length} đề.`}
+                  </span>
+                </div>
+                <div className="chips" role="group" aria-label="Chọn bộ đề">
+                  {Array.from({ length: paperCount }, (_, i) => (
+                    <button
+                      key={i}
+                      className={`chip${paperChoice === i ? ' chip--on' : ''}`}
+                      aria-pressed={paperChoice === i}
+                      onClick={() => onPaperChange(i)}
+                    >
+                      {i + 1}
+                    </button>
+                  ))}
+                  <button
+                    className={`chip${paperChoice === 'random' ? ' chip--on' : ''}`}
+                    aria-pressed={paperChoice === 'random'}
+                    onClick={() => onPaperChange('random')}
+                  >
+                    Ngẫu nhiên
+                  </button>
+                </div>
+              </div>
+            )}
 
             <div className="setting">
               <label className="setting__label" htmlFor="shuffle">

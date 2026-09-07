@@ -1,5 +1,6 @@
 import listeningRaw from '../data/listening.json'
 import readingRaw from '../data/reading.json'
+import reading2Raw from '../data/reading2.json'
 import type { AnswerKeyEntry } from '../domain/types'
 import { makeRng, shuffleOptions, shuffleWithinGroups } from '../domain/shuffle'
 
@@ -38,6 +39,8 @@ export interface FlatQuestion {
 export interface Paper {
   sectionId: string
   title: string
+  /** Shown in the paper picker: "Đề 1", "Đề 2"… */
+  label: string
   durationSeconds: number
   questions: FlatQuestion[]
   answerKey: AnswerKeyEntry[]
@@ -77,6 +80,7 @@ type RawPart = {
 type RawPaper = {
   sectionId: string
   title: string
+  label?: string
   durationSeconds: number
   parts: RawPart[]
 }
@@ -128,6 +132,7 @@ function buildPaper(raw: RawPaper): Paper {
   return {
     sectionId: raw.sectionId,
     title: raw.title,
+    label: raw.label ?? 'Đề 1',
     durationSeconds: raw.durationSeconds,
     questions,
     answerKey: questions.map((q) => ({
@@ -138,11 +143,29 @@ function buildPaper(raw: RawPaper): Paper {
   }
 }
 
-export const listeningPaper = buildPaper(listeningRaw as RawPaper)
-export const readingPaper = buildPaper(readingRaw as RawPaper)
+/**
+ * Every paper of a section, in the order they are offered. More than one paper
+ * is the whole point: a single fixed paper gets memorised, and a memorised
+ * paper stops measuring English.
+ */
+export const listeningPapers: Paper[] = [listeningRaw].map((raw) =>
+  buildPaper(raw as RawPaper),
+)
+export const readingPapers: Paper[] = [readingRaw, reading2Raw].map((raw) =>
+  buildPaper(raw as RawPaper),
+)
 
-export function paperFor(sectionId: string): Paper {
-  return sectionId === 'listening' ? listeningPaper : readingPaper
+export const listeningPaper = listeningPapers[0]
+export const readingPaper = readingPapers[0]
+
+export function papersFor(sectionId: string): Paper[] {
+  return sectionId === 'listening' ? listeningPapers : readingPapers
+}
+
+/** An index the data no longer has — a removed paper, a stale setting — falls back to the first. */
+export function paperFor(sectionId: string, index = 0): Paper {
+  const papers = papersFor(sectionId)
+  return papers[index] ?? papers[0]
 }
 
 /**

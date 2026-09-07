@@ -485,6 +485,45 @@ select {
   max-width: 42ch;
 }
 
+/* The setting label is a <label> for the switch, but a plain div for the chip
+   group — a label pointing at one of several buttons would be a lie. */
+.setting__label:not(label) {
+  cursor: default;
+}
+
+.chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.chip {
+  min-width: 34px;
+  min-height: 30px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--rule-strong);
+  background: var(--card);
+  color: var(--ink-2);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.14s, border-color 0.14s, color 0.14s;
+}
+
+.chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.chip--on {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
 .switch {
   width: 44px;
   height: 25px;
@@ -2132,6 +2171,12 @@ select {
   .flagBtn {
     min-height: 44px;
     padding: 8px 14px;
+  }
+
+  .chip {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 10px 14px;
   }
 
   .btn--icon {

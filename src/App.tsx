@@ -1,10 +1,10 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Home } from './screens/Home'
 import { Speaking } from './screens/Speaking'
 import { Writing } from './screens/Writing'
 import { Prepare } from './screens/Prepare'
 import { ExamRunner } from './components/ExamRunner'
-import { listeningPaper, readingPaper } from './lib/paper'
+import { paperFor, papersFor } from './lib/paper'
 import prepareListening from './data/prepare.json'
 import prepareReading from './data/prepareReading.json'
 import type { PrepareBoard } from './domain/prepareMark'
@@ -50,6 +50,26 @@ function loadBest(): Record<string, number> {
   }
 }
 
+const PAPER_KEY = 'b1-exam:paper'
+
+export type PaperChoice = number | 'random'
+
+/**
+ * Which paper to sit. 'random' draws a different one each time the section is
+ * opened, which is the point of having more than one: a learner who knows the
+ * answers by position has stopped reading the questions.
+ */
+function loadPaperChoice(): PaperChoice {
+  try {
+    const raw = localStorage.getItem(PAPER_KEY)
+    if (raw === null || raw === 'random') return 'random'
+    const n = Number(raw)
+    return Number.isInteger(n) && n >= 0 ? n : 'random'
+  } catch {
+    return 'random'
+  }
+}
+
 const SHUFFLE_KEY = 'b1-exam:shuffle'
 
 function loadShuffle(): boolean {
@@ -84,6 +104,19 @@ export default function App() {
     () => (localStorage.getItem('b1-exam:theme') as 'light' | 'dark' | null) ?? null,
   )
   const [shuffle, setShuffle] = useState<boolean>(loadShuffle)
+  const [paperChoice, setPaperChoice] = useState<PaperChoice>(loadPaperChoice)
+  // Bumped on every entry into an exam, so 'random' draws again rather than
+  // sticking on whichever paper came up first.
+  const [sitting, setSitting] = useState(0)
+
+  const paperIndex = useMemo(() => {
+    const resolve = (section: string) => {
+      const count = papersFor(section).length
+      if (paperChoice === 'random') return Math.floor(Math.random() * count)
+      return Math.min(paperChoice, count - 1)
+    }
+    return { listening: resolve('listening'), reading: resolve('reading') }
+  }, [paperChoice, sitting])
 
   useEffect(() => {
     try {
@@ -92,6 +125,14 @@ export default function App() {
       /* private mode — the setting just won't persist */
     }
   }, [shuffle])
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(PAPER_KEY, String(paperChoice))
+    } catch {
+      /* private mode — the setting just won't persist */
+    }
+  }, [paperChoice])
 
   useEffect(() => {
     const onHash = () => setRoute(routeFromHash())
@@ -109,6 +150,7 @@ export default function App() {
   }, [theme])
 
   const go = useCallback((next: Route) => {
+    if (next === 'listening' || next === 'reading') setSitting((n) => n + 1)
     window.location.hash = next === 'home' ? '#/' : `#/${next}`
     setRoute(next)
     window.scrollTo({ top: 0 })
@@ -153,12 +195,19 @@ export default function App() {
 
       <main style={{ flex: 1 }}>
         {route === 'home' && (
-          <Home onGo={go} best={best} shuffle={shuffle} onShuffleChange={setShuffle} />
+          <Home
+            onGo={go}
+            best={best}
+            shuffle={shuffle}
+            onShuffleChange={setShuffle}
+            paperChoice={paperChoice}
+            onPaperChange={setPaperChoice}
+          />
         )}
         {route === 'listening' && (
           <ExamRunner
-            key="listening"
-            paper={listeningPaper}
+            key={`listening-${paperIndex.listening}-${sitting}`}
+            paper={paperFor('listening', paperIndex.listening)}
             maxPlays={2}
             shuffle={shuffle}
             onExit={home}
@@ -167,8 +216,8 @@ export default function App() {
         )}
         {route === 'reading' && (
           <ExamRunner
-            key="reading"
-            paper={readingPaper}
+            key={`reading-${paperIndex.reading}-${sitting}`}
+            paper={paperFor('reading', paperIndex.reading)}
             maxPlays={0}
             shuffle={shuffle}
             onExit={home}
