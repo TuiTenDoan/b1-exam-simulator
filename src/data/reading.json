@@ -14,10 +14,22 @@
           "id": "R1Q1",
           "prompt": "Look! The bus ________ . Let's run.",
           "options": [
-            { "key": "A", "text": "comes" },
-            { "key": "B", "text": "is coming" },
-            { "key": "C", "text": "came" },
-            { "key": "D", "text": "come" }
+            {
+              "key": "A",
+              "text": "comes"
+            },
+            {
+              "key": "B",
+              "text": "is coming"
+            },
+            {
+              "key": "C",
+              "text": "came"
+            },
+            {
+              "key": "D",
+              "text": "come"
+            }
           ],
           "correct": "B",
           "explain": "\"Look!\" báo hiệu hành động đang xảy ra ngay lúc nói → hiện tại tiếp diễn."
@@ -26,10 +38,22 @@
           "id": "R1Q2",
           "prompt": "My father ________ two cups of coffee every morning.",
           "options": [
-            { "key": "A", "text": "is drinking" },
-            { "key": "B", "text": "drink" },
-            { "key": "C", "text": "drinks" },
-            { "key": "D", "text": "drank" }
+            {
+              "key": "A",
+              "text": "is drinking"
+            },
+            {
+              "key": "B",
+              "text": "drink"
+            },
+            {
+              "key": "C",
+              "text": "drinks"
+            },
+            {
+              "key": "D",
+              "text": "drank"
+            }
           ],
           "correct": "C",
           "explain": "\"every morning\" là thói quen → hiện tại đơn, chủ ngữ số ít thêm -s."
@@ -38,10 +62,22 @@
           "id": "R1Q3",
           "prompt": "We ________ to Da Lat last summer and stayed there for a week.",
           "options": [
-            { "key": "A", "text": "go" },
-            { "key": "B", "text": "are going" },
-            { "key": "C", "text": "have gone" },
-            { "key": "D", "text": "went" }
+            {
+              "key": "A",
+              "text": "go"
+            },
+            {
+              "key": "B",
+              "text": "are going"
+            },
+            {
+              "key": "C",
+              "text": "have gone"
+            },
+            {
+              "key": "D",
+              "text": "went"
+            }
           ],
           "correct": "D",
           "explain": "\"last summer\" là mốc quá khứ xác định → quá khứ đơn."
@@ -50,10 +86,22 @@
           "id": "R1Q4",
           "prompt": "She ________ come to class yesterday because she was ill.",
           "options": [
-            { "key": "A", "text": "didn't" },
-            { "key": "B", "text": "doesn't" },
-            { "key": "C", "text": "wasn't" },
-            { "key": "D", "text": "hasn't" }
+            {
+              "key": "A",
+              "text": "didn't"
+            },
+            {
+              "key": "B",
+              "text": "doesn't"
+            },
+            {
+              "key": "C",
+              "text": "wasn't"
+            },
+            {
+              "key": "D",
+              "text": "hasn't"
+            }
           ],
           "correct": "A",
           "explain": "Phủ định quá khứ đơn với động từ thường: didn't + V0."
@@ -62,10 +110,22 @@
           "id": "R1Q5",
           "prompt": "Be quiet! The baby ________ in the next room.",
           "options": [
-            { "key": "A", "text": "sleeps" },
-            { "key": "B", "text": "slept" },
-            { "key": "C", "text": "is sleeping" },
-            { "key": "D", "text": "sleep" }
+            {
+              "key": "A",
+              "text": "sleeps"
+            },
+            {
+              "key": "B",
+              "text": "slept"
+            },
+            {
+              "key": "C",
+              "text": "is sleeping"
+            },
+            {
+              "key": "D",
+              "text": "sleep"
+            }
           ],
           "correct": "C",
           "explain": "Hành động đang diễn ra tại thời điểm nói → is + V-ing."
@@ -74,10 +134,22 @@
           "id": "R1Q6",
           "prompt": "The weather in Ha Noi is ________ than in Can Tho in December.",
           "options": [
-            { "key": "A", "text": "cold" },
-            { "key": "B", "text": "colder" },
-            { "key": "C", "text": "coldest" },
-            { "key": "D", "text": "more cold" }
+            {
+              "key": "A",
+              "text": "cold"
+            },
+            {
+              "key": "B",
+              "text": "colder"
+            },
+            {
+              "key": "C",
+              "text": "coldest"
+            },
+            {
+              "key": "D",
+              "text": "as cold"
+            }
           ],
           "correct": "B",
           "explain": "Tính từ ngắn so sánh hơn: Adj + -er + than."
@@ -86,10 +158,22 @@
           "id": "R1Q7",
           "prompt": "That was ________ film I have ever seen.",
           "options": [
-            { "key": "A", "text": "the interestingest" },
-            { "key": "B", "text": "more interesting" },
-            { "key": "C", "text": "the most interesting" },
-            { "key": "D", "text": "as interesting" }
+            {
+              "key": "A",
+              "text": "the most interested"
+            },
+            {
+              "key": "B",
+              "text": "more interesting"
+            },
+            {
+              "key": "C",
+              "text": "the most interesting"
+            },
+            {
+              "key": "D",
+              "text": "as interesting"
+            }
           ],
           "correct": "C",
           "explain": "Tính từ dài so sánh nhất: the most + Adj."
@@ -98,10 +182,22 @@
           "id": "R1Q8",
           "prompt": "My phone is not ________ expensive as yours.",
           "options": [
-            { "key": "A", "text": "so much" },
-            { "key": "B", "text": "as" },
-            { "key": "C", "text": "more" },
-            { "key": "D", "text": "than" }
+            {
+              "key": "A",
+              "text": "so much"
+            },
+            {
+              "key": "B",
+              "text": "as"
+            },
+            {
+              "key": "C",
+              "text": "more"
+            },
+            {
+              "key": "D",
+              "text": "than"
+            }
           ],
           "correct": "B",
           "explain": "Cấu trúc so sánh bằng phủ định: not as + Adj + as."
@@ -110,10 +206,22 @@
           "id": "R1Q9",
           "prompt": "Her English is much ________ than mine, so she helps me a lot.",
           "options": [
-            { "key": "A", "text": "gooder" },
-            { "key": "B", "text": "more good" },
-            { "key": "C", "text": "best" },
-            { "key": "D", "text": "better" }
+            {
+              "key": "A",
+              "text": "good"
+            },
+            {
+              "key": "B",
+              "text": "well"
+            },
+            {
+              "key": "C",
+              "text": "best"
+            },
+            {
+              "key": "D",
+              "text": "better"
+            }
           ],
           "correct": "D",
           "explain": "good là tính từ bất quy tắc: good → better → the best."
@@ -122,10 +230,22 @@
           "id": "R1Q10",
           "prompt": "I'm sorry, I ________ understand this question. Could you explain it again?",
           "options": [
-            { "key": "A", "text": "don't" },
-            { "key": "B", "text": "am not" },
-            { "key": "C", "text": "didn't" },
-            { "key": "D", "text": "not" }
+            {
+              "key": "A",
+              "text": "don't"
+            },
+            {
+              "key": "B",
+              "text": "am not"
+            },
+            {
+              "key": "C",
+              "text": "didn't"
+            },
+            {
+              "key": "D",
+              "text": "not"
+            }
           ],
           "correct": "A",
           "explain": "understand là động từ trạng thái, dùng hiện tại đơn phủ định: don't + V0."
@@ -142,10 +262,22 @@
           "id": "R2Q1",
           "prompt": "The market is very ________ on Sunday mornings — you can hardly walk.",
           "options": [
-            { "key": "A", "text": "crowded" },
-            { "key": "B", "text": "empty" },
-            { "key": "C", "text": "quiet" },
-            { "key": "D", "text": "wide" }
+            {
+              "key": "A",
+              "text": "crowded"
+            },
+            {
+              "key": "B",
+              "text": "empty"
+            },
+            {
+              "key": "C",
+              "text": "quiet"
+            },
+            {
+              "key": "D",
+              "text": "wide"
+            }
           ],
           "correct": "A",
           "explain": "crowded = đông đúc, khớp với \"you can hardly walk\"."
@@ -154,10 +286,22 @@
           "id": "R2Q2",
           "prompt": "Students can get a 20% ________ if they show their student card.",
           "options": [
-            { "key": "A", "text": "price" },
-            { "key": "B", "text": "discount" },
-            { "key": "C", "text": "salary" },
-            { "key": "D", "text": "bill" }
+            {
+              "key": "A",
+              "text": "price"
+            },
+            {
+              "key": "B",
+              "text": "discount"
+            },
+            {
+              "key": "C",
+              "text": "salary"
+            },
+            {
+              "key": "D",
+              "text": "bill"
+            }
           ],
           "correct": "B",
           "explain": "discount = giảm giá."
@@ -166,10 +310,22 @@
           "id": "R2Q3",
           "prompt": "Could I ________ your dictionary for ten minutes? I'll give it straight back.",
           "options": [
-            { "key": "A", "text": "lend" },
-            { "key": "B", "text": "rent" },
-            { "key": "C", "text": "borrow" },
-            { "key": "D", "text": "hire" }
+            {
+              "key": "A",
+              "text": "lend"
+            },
+            {
+              "key": "B",
+              "text": "rent"
+            },
+            {
+              "key": "C",
+              "text": "borrow"
+            },
+            {
+              "key": "D",
+              "text": "hire"
+            }
           ],
           "correct": "C",
           "explain": "borrow = mượn (người nói lấy về). lend = cho mượn (đưa đi)."
@@ -178,10 +334,22 @@
           "id": "R2Q4",
           "prompt": "We should ________ a table before we go — the restaurant is always full.",
           "options": [
-            { "key": "A", "text": "order" },
-            { "key": "B", "text": "book" },
-            { "key": "C", "text": "buy" },
-            { "key": "D", "text": "take" }
+            {
+              "key": "A",
+              "text": "order"
+            },
+            {
+              "key": "B",
+              "text": "book"
+            },
+            {
+              "key": "C",
+              "text": "buy"
+            },
+            {
+              "key": "D",
+              "text": "take"
+            }
           ],
           "correct": "B",
           "explain": "book a table = đặt bàn trước."
@@ -190,10 +358,22 @@
           "id": "R2Q5",
           "prompt": "I got stuck in a terrible traffic ________ on the way to work.",
           "options": [
-            { "key": "A", "text": "block" },
-            { "key": "B", "text": "crowd" },
-            { "key": "C", "text": "jam" },
-            { "key": "D", "text": "line" }
+            {
+              "key": "A",
+              "text": "block"
+            },
+            {
+              "key": "B",
+              "text": "crowd"
+            },
+            {
+              "key": "C",
+              "text": "jam"
+            },
+            {
+              "key": "D",
+              "text": "line"
+            }
           ],
           "correct": "C",
           "explain": "traffic jam = kẹt xe."
@@ -202,10 +382,22 @@
           "id": "R2Q6",
           "prompt": "He decided to ________ smoking after his doctor warned him.",
           "options": [
-            { "key": "A", "text": "give up" },
-            { "key": "B", "text": "take up" },
-            { "key": "C", "text": "put on" },
-            { "key": "D", "text": "look after" }
+            {
+              "key": "A",
+              "text": "give up"
+            },
+            {
+              "key": "B",
+              "text": "take up"
+            },
+            {
+              "key": "C",
+              "text": "put on"
+            },
+            {
+              "key": "D",
+              "text": "look after"
+            }
           ],
           "correct": "A",
           "explain": "give up = từ bỏ. take up = bắt đầu một thói quen mới."
@@ -214,10 +406,22 @@
           "id": "R2Q7",
           "prompt": "My brother is very ________ — if he promises something, he always does it.",
           "options": [
-            { "key": "A", "text": "lazy" },
-            { "key": "B", "text": "reliable" },
-            { "key": "C", "text": "nervous" },
-            { "key": "D", "text": "generous" }
+            {
+              "key": "A",
+              "text": "lazy"
+            },
+            {
+              "key": "B",
+              "text": "reliable"
+            },
+            {
+              "key": "C",
+              "text": "nervous"
+            },
+            {
+              "key": "D",
+              "text": "generous"
+            }
           ],
           "correct": "B",
           "explain": "reliable = đáng tin cậy."
@@ -226,10 +430,22 @@
           "id": "R2Q8",
           "prompt": "A ________ diet includes plenty of vegetables, fruit and water.",
           "options": [
-            { "key": "A", "text": "wealthy" },
-            { "key": "B", "text": "heavy" },
-            { "key": "C", "text": "healthy" },
-            { "key": "D", "text": "strong" }
+            {
+              "key": "A",
+              "text": "wealthy"
+            },
+            {
+              "key": "B",
+              "text": "heavy"
+            },
+            {
+              "key": "C",
+              "text": "healthy"
+            },
+            {
+              "key": "D",
+              "text": "strong"
+            }
           ],
           "correct": "C",
           "explain": "healthy diet = chế độ ăn lành mạnh. Chú ý phân biệt healthy / wealthy."
@@ -238,10 +454,22 @@
           "id": "R2Q9",
           "prompt": "I'm trying to ________ money for a new laptop, so I don't eat out much.",
           "options": [
-            { "key": "A", "text": "spend" },
-            { "key": "B", "text": "waste" },
-            { "key": "C", "text": "pay" },
-            { "key": "D", "text": "save" }
+            {
+              "key": "A",
+              "text": "spend"
+            },
+            {
+              "key": "B",
+              "text": "waste"
+            },
+            {
+              "key": "C",
+              "text": "pay"
+            },
+            {
+              "key": "D",
+              "text": "save"
+            }
           ],
           "correct": "D",
           "explain": "save money = tiết kiệm tiền."
@@ -250,10 +478,22 @@
           "id": "R2Q10",
           "prompt": "The soup was absolutely ________ . I asked for the recipe.",
           "options": [
-            { "key": "A", "text": "delicious" },
-            { "key": "B", "text": "boring" },
-            { "key": "C", "text": "expensive" },
-            { "key": "D", "text": "salty" }
+            {
+              "key": "A",
+              "text": "delicious"
+            },
+            {
+              "key": "B",
+              "text": "boring"
+            },
+            {
+              "key": "C",
+              "text": "expensive"
+            },
+            {
+              "key": "D",
+              "text": "salty"
+            }
           ],
           "correct": "A",
           "explain": "delicious = rất ngon, hợp với việc xin công thức."
@@ -269,13 +509,25 @@
         {
           "id": "P1",
           "title": "My first job",
-          "forItems": ["R3Q1", "R3Q2", "R3Q3", "R3Q4", "R3Q5"],
+          "forItems": [
+            "R3Q1",
+            "R3Q2",
+            "R3Q3",
+            "R3Q4",
+            "R3Q5"
+          ],
           "body": "When I started university, my parents offered to send me money every month. I said no. I wanted to pay for my own books and phone bill, so in my second week I found a job at a small coffee shop two streets from my hostel.\n\nThe hours were difficult at first. I worked from five in the afternoon until ten at night, four days a week, and I still had morning classes. For the first month I was exhausted and my marks dropped a little. My mother phoned and told me to quit, but I asked her to give me until the end of the term.\n\nWhat saved me was a timetable. I wrote down every hour of the week and found that I was wasting most of my mornings. Once I moved my studying to before class instead of after work, everything became easier. By December my marks were higher than they had been in September.\n\nI stopped working there last year, but I don't regret a single shift. I learned to talk to strangers, to stay calm when someone complained, and to manage my own money. Those things were not on my course, and no lecture could have taught them to me."
         },
         {
           "id": "P2",
           "title": "The floating markets of the Mekong",
-          "forItems": ["R3Q6", "R3Q7", "R3Q8", "R3Q9", "R3Q10"],
+          "forItems": [
+            "R3Q6",
+            "R3Q7",
+            "R3Q8",
+            "R3Q9",
+            "R3Q10"
+          ],
           "body": "For more than a century, farmers in the Mekong Delta have sold their fruit and vegetables from boats rather than from shops. The largest of these floating markets opens long before sunrise and is usually finished by nine in the morning, when the heat becomes uncomfortable and the buyers have gone home.\n\nVisitors are often confused about how to tell what each boat is selling. The answer hangs above it. Sellers tie a sample of their goods — a pineapple, a bunch of onions — to a tall wooden pole, so that a buyer can read the whole market from a distance without shouting a single question.\n\nThe markets are smaller than they used to be. New bridges and better roads mean that a farmer can now drive to a town market in forty minutes, and many younger people prefer this. Some traders worry that within a generation the boats will exist only for tourists.\n\nOthers are more hopeful. Local authorities have begun supporting families who keep trading in the traditional way, and a number of young sellers have returned, arguing that the market is worth keeping for its own sake and not only as a photograph."
         }
       ],
@@ -325,10 +577,22 @@
           "passage": "P2",
           "prompt": "The floating markets usually finish",
           "options": [
-            { "key": "A", "text": "before sunrise." },
-            { "key": "B", "text": "by about nine in the morning." },
-            { "key": "C", "text": "in the early afternoon." },
-            { "key": "D", "text": "at sunset." }
+            {
+              "key": "A",
+              "text": "before sunrise."
+            },
+            {
+              "key": "B",
+              "text": "by about nine in the morning."
+            },
+            {
+              "key": "C",
+              "text": "in the early afternoon."
+            },
+            {
+              "key": "D",
+              "text": "at sunset."
+            }
           ],
           "correct": "B",
           "explain": "\"usually finished by nine in the morning\"."
@@ -338,10 +602,22 @@
           "passage": "P2",
           "prompt": "Sellers tie goods to a tall pole in order to",
           "options": [
-            { "key": "A", "text": "keep the fruit out of the water." },
-            { "key": "B", "text": "show the price of their goods." },
-            { "key": "C", "text": "let buyers see what they sell from far away." },
-            { "key": "D", "text": "attract tourists with photographs." }
+            {
+              "key": "A",
+              "text": "keep the fruit out of the water."
+            },
+            {
+              "key": "B",
+              "text": "show the price of their goods."
+            },
+            {
+              "key": "C",
+              "text": "let buyers see what they sell from far away."
+            },
+            {
+              "key": "D",
+              "text": "attract tourists with photographs."
+            }
           ],
           "correct": "C",
           "explain": "Cây sào giúp người mua \"read the whole market from a distance\" mà không cần hỏi."
@@ -351,10 +627,22 @@
           "passage": "P2",
           "prompt": "One reason the markets are getting smaller is that",
           "options": [
-            { "key": "A", "text": "roads and bridges make town markets easier to reach." },
-            { "key": "B", "text": "the river has become too dangerous." },
-            { "key": "C", "text": "farmers grow less fruit than before." },
-            { "key": "D", "text": "the government has closed several markets." }
+            {
+              "key": "A",
+              "text": "roads and bridges make town markets easier to reach."
+            },
+            {
+              "key": "B",
+              "text": "the river has become too dangerous."
+            },
+            {
+              "key": "C",
+              "text": "farmers grow less fruit than before."
+            },
+            {
+              "key": "D",
+              "text": "the government has closed several markets."
+            }
           ],
           "correct": "A",
           "explain": "\"New bridges and better roads mean that a farmer can now drive to a town market in forty minutes.\""
@@ -364,10 +652,22 @@
           "passage": "P2",
           "prompt": "What do some traders fear?",
           "options": [
-            { "key": "A", "text": "That prices will fall sharply." },
-            { "key": "B", "text": "That the markets will survive only for tourists." },
-            { "key": "C", "text": "That tourists will stop visiting." },
-            { "key": "D", "text": "That the river will be polluted." }
+            {
+              "key": "A",
+              "text": "That prices will fall sharply."
+            },
+            {
+              "key": "B",
+              "text": "That the markets will survive only for tourists."
+            },
+            {
+              "key": "C",
+              "text": "That tourists will stop visiting."
+            },
+            {
+              "key": "D",
+              "text": "That the river will be polluted."
+            }
           ],
           "correct": "B",
           "explain": "\"within a generation the boats will exist only for tourists\"."
@@ -377,10 +677,22 @@
           "passage": "P2",
           "prompt": "The writer's attitude at the end of the text is",
           "options": [
-            { "key": "A", "text": "completely certain the markets will disappear." },
-            { "key": "B", "text": "angry about government policy." },
-            { "key": "C", "text": "uninterested in the markets' future." },
-            { "key": "D", "text": "aware that some people remain hopeful." }
+            {
+              "key": "A",
+              "text": "completely certain the markets will disappear."
+            },
+            {
+              "key": "B",
+              "text": "angry about government policy."
+            },
+            {
+              "key": "C",
+              "text": "uninterested in the markets' future."
+            },
+            {
+              "key": "D",
+              "text": "aware that some people remain hopeful."
+            }
           ],
           "correct": "D",
           "explain": "Đoạn cuối: \"Others are more hopeful\" — chính quyền hỗ trợ và người trẻ quay lại."
@@ -397,103 +709,275 @@
         {
           "id": "P3",
           "title": "Learning a language online",
-          "forItems": ["R4Q1", "R4Q2", "R4Q3", "R4Q4", "R4Q5"],
+          "forItems": [
+            "R4Q1",
+            "R4Q2",
+            "R4Q3",
+            "R4Q4",
+            "R4Q5"
+          ],
           "body": "Ten years ago, anyone who wanted to learn English had to attend a class. Today millions of people study (1)________ from home using a phone. The choice is enormous, (2)________ this creates its own difficulty: many learners spend more time choosing an app than actually using one.\n\nTeachers generally agree that the method matters (3)________ than consistency. Twenty minutes every day is far more useful than four hours on a Sunday. It also helps to practise skills you find uncomfortable. Most learners repeat the activities they are already good (4)________ , and quietly avoid speaking.\n\nFinally, do not study alone forever. Language exists between people, so at some point you have to (5)________ a real conversation, make mistakes in front of someone, and survive it."
         },
         {
           "id": "P4",
           "title": "Less plastic, please",
-          "forItems": ["R4Q6", "R4Q7", "R4Q8", "R4Q9", "R4Q10"],
+          "forItems": [
+            "R4Q6",
+            "R4Q7",
+            "R4Q8",
+            "R4Q9",
+            "R4Q10"
+          ],
           "body": "Our city produces around four hundred tonnes of rubbish every day, and a large (6)________ of it is plastic packaging. Much of this is used for only a few minutes before being thrown (7)________ .\n\nThe good news is that small changes add (8)________ quickly. If every household refused one plastic bag a day, the city would use forty million fewer bags a year. Several markets now offer a discount to customers who (9)________ their own container.\n\nNone of this solves the problem completely, and factories must change too. (10)________ , waiting for someone else to act has never made a single street cleaner."
         }
       ],
       "items": [
         {
-          "id": "R4Q1", "passage": "P3", "gapNumber": 1,
+          "id": "R4Q1",
+          "passage": "P3",
+          "gapNumber": 1,
           "options": [
-            { "key": "A", "text": "lonely" }, { "key": "B", "text": "alone" },
-            { "key": "C", "text": "only" }, { "key": "D", "text": "single" }
+            {
+              "key": "A",
+              "text": "lonely"
+            },
+            {
+              "key": "B",
+              "text": "alone"
+            },
+            {
+              "key": "C",
+              "text": "only"
+            },
+            {
+              "key": "D",
+              "text": "single"
+            }
           ],
           "correct": "B",
           "explain": "study alone = học một mình. lonely = cảm thấy cô đơn (tính từ cảm xúc)."
         },
         {
-          "id": "R4Q2", "passage": "P3", "gapNumber": 2,
+          "id": "R4Q2",
+          "passage": "P3",
+          "gapNumber": 2,
           "options": [
-            { "key": "A", "text": "but" }, { "key": "B", "text": "so" },
-            { "key": "C", "text": "because" }, { "key": "D", "text": "although" }
+            {
+              "key": "A",
+              "text": "but"
+            },
+            {
+              "key": "B",
+              "text": "so"
+            },
+            {
+              "key": "C",
+              "text": "because"
+            },
+            {
+              "key": "D",
+              "text": "although"
+            }
           ],
           "correct": "A",
           "explain": "Hai vế trái ngược: lựa chọn nhiều NHƯNG lại sinh ra khó khăn."
         },
         {
-          "id": "R4Q3", "passage": "P3", "gapNumber": 3,
+          "id": "R4Q3",
+          "passage": "P3",
+          "gapNumber": 3,
           "options": [
-            { "key": "A", "text": "little" }, { "key": "B", "text": "fewer" },
-            { "key": "C", "text": "less" }, { "key": "D", "text": "least" }
+            {
+              "key": "A",
+              "text": "little"
+            },
+            {
+              "key": "B",
+              "text": "fewer"
+            },
+            {
+              "key": "C",
+              "text": "less"
+            },
+            {
+              "key": "D",
+              "text": "least"
+            }
           ],
           "correct": "C",
           "explain": "So sánh hơn với \"than\": matters less than consistency."
         },
         {
-          "id": "R4Q4", "passage": "P3", "gapNumber": 4,
+          "id": "R4Q4",
+          "passage": "P3",
+          "gapNumber": 4,
           "options": [
-            { "key": "A", "text": "in" }, { "key": "B", "text": "for" },
-            { "key": "C", "text": "on" }, { "key": "D", "text": "at" }
+            {
+              "key": "A",
+              "text": "in"
+            },
+            {
+              "key": "B",
+              "text": "for"
+            },
+            {
+              "key": "C",
+              "text": "on"
+            },
+            {
+              "key": "D",
+              "text": "at"
+            }
           ],
           "correct": "D",
           "explain": "Cụm cố định: be good at something."
         },
         {
-          "id": "R4Q5", "passage": "P3", "gapNumber": 5,
+          "id": "R4Q5",
+          "passage": "P3",
+          "gapNumber": 5,
           "options": [
-            { "key": "A", "text": "do" }, { "key": "B", "text": "have" },
-            { "key": "C", "text": "make" }, { "key": "D", "text": "take" }
+            {
+              "key": "A",
+              "text": "do"
+            },
+            {
+              "key": "B",
+              "text": "have"
+            },
+            {
+              "key": "C",
+              "text": "make"
+            },
+            {
+              "key": "D",
+              "text": "take"
+            }
           ],
           "correct": "B",
           "explain": "have a conversation = có một cuộc trò chuyện."
         },
         {
-          "id": "R4Q6", "passage": "P4", "gapNumber": 6,
+          "id": "R4Q6",
+          "passage": "P4",
+          "gapNumber": 6,
           "options": [
-            { "key": "A", "text": "number" }, { "key": "B", "text": "amount" },
-            { "key": "C", "text": "many" }, { "key": "D", "text": "count" }
+            {
+              "key": "A",
+              "text": "number"
+            },
+            {
+              "key": "B",
+              "text": "amount"
+            },
+            {
+              "key": "C",
+              "text": "many"
+            },
+            {
+              "key": "D",
+              "text": "count"
+            }
           ],
           "correct": "B",
           "explain": "plastic là danh từ không đếm được → a large amount of."
         },
         {
-          "id": "R4Q7", "passage": "P4", "gapNumber": 7,
+          "id": "R4Q7",
+          "passage": "P4",
+          "gapNumber": 7,
           "options": [
-            { "key": "A", "text": "away" }, { "key": "B", "text": "off" },
-            { "key": "C", "text": "over" }, { "key": "D", "text": "down" }
+            {
+              "key": "A",
+              "text": "away"
+            },
+            {
+              "key": "B",
+              "text": "off"
+            },
+            {
+              "key": "C",
+              "text": "over"
+            },
+            {
+              "key": "D",
+              "text": "down"
+            }
           ],
           "correct": "A",
           "explain": "throw away = vứt đi."
         },
         {
-          "id": "R4Q8", "passage": "P4", "gapNumber": 8,
+          "id": "R4Q8",
+          "passage": "P4",
+          "gapNumber": 8,
           "options": [
-            { "key": "A", "text": "in" }, { "key": "B", "text": "on" },
-            { "key": "C", "text": "up" }, { "key": "D", "text": "out" }
+            {
+              "key": "A",
+              "text": "in"
+            },
+            {
+              "key": "B",
+              "text": "on"
+            },
+            {
+              "key": "C",
+              "text": "up"
+            },
+            {
+              "key": "D",
+              "text": "out"
+            }
           ],
           "correct": "C",
           "explain": "add up = cộng dồn lại, tích tiểu thành đại."
         },
         {
-          "id": "R4Q9", "passage": "P4", "gapNumber": 9,
+          "id": "R4Q9",
+          "passage": "P4",
+          "gapNumber": 9,
           "options": [
-            { "key": "A", "text": "bring" }, { "key": "B", "text": "brings" },
-            { "key": "C", "text": "brought" }, { "key": "D", "text": "bringing" }
+            {
+              "key": "A",
+              "text": "bring"
+            },
+            {
+              "key": "B",
+              "text": "brings"
+            },
+            {
+              "key": "C",
+              "text": "brought"
+            },
+            {
+              "key": "D",
+              "text": "bringing"
+            }
           ],
           "correct": "A",
           "explain": "Mệnh đề quan hệ với \"customers\" (số nhiều) ở hiện tại đơn → bring."
         },
         {
-          "id": "R4Q10", "passage": "P4", "gapNumber": 10,
+          "id": "R4Q10",
+          "passage": "P4",
+          "gapNumber": 10,
           "options": [
-            { "key": "A", "text": "For example" }, { "key": "B", "text": "However" },
-            { "key": "C", "text": "Therefore" }, { "key": "D", "text": "In addition" }
+            {
+              "key": "A",
+              "text": "For example"
+            },
+            {
+              "key": "B",
+              "text": "However"
+            },
+            {
+              "key": "C",
+              "text": "Therefore"
+            },
+            {
+              "key": "D",
+              "text": "In addition"
+            }
           ],
           "correct": "B",
           "explain": "Câu trước thừa nhận hạn chế, câu sau phản biện → However (tuy nhiên)."
@@ -511,9 +995,18 @@
           "notice": "LIFT OUT OF ORDER\nPlease use the stairs at the end of the corridor.\nEngineers expected Thursday.",
           "prompt": "What does this notice tell you?",
           "options": [
-            { "key": "A", "text": "The lift cannot be used at the moment." },
-            { "key": "B", "text": "The stairs are closed until Thursday." },
-            { "key": "C", "text": "The lift is free on Thursdays." }
+            {
+              "key": "A",
+              "text": "The lift cannot be used at the moment."
+            },
+            {
+              "key": "B",
+              "text": "The stairs are closed until Thursday."
+            },
+            {
+              "key": "C",
+              "text": "The lift is free on Thursdays."
+            }
           ],
           "correct": "A",
           "explain": "out of order = hỏng, không dùng được."
@@ -523,9 +1016,18 @@
           "notice": "Hi Trang — I can't make 3pm after all, my class was moved. Any chance we could do 5pm same place? If that's no good, tomorrow works too. — Khoa",
           "prompt": "Why has Khoa written this message?",
           "options": [
-            { "key": "A", "text": "To cancel their meeting completely." },
-            { "key": "B", "text": "To suggest a later time." },
-            { "key": "C", "text": "To change where they meet." }
+            {
+              "key": "A",
+              "text": "To cancel their meeting completely."
+            },
+            {
+              "key": "B",
+              "text": "To suggest a later time."
+            },
+            {
+              "key": "C",
+              "text": "To change where they meet."
+            }
           ],
           "correct": "B",
           "explain": "Anh ấy không huỷ mà đề nghị 5pm cùng địa điểm (\"same place\")."
@@ -535,9 +1037,18 @@
           "notice": "STUDENT CANTEEN\nHot meals served 11:00–13:30 only.\nSandwiches and drinks available all day.",
           "prompt": "After 13:30 you can",
           "options": [
-            { "key": "A", "text": "buy a hot meal but not a drink." },
-            { "key": "B", "text": "buy sandwiches and drinks." },
-            { "key": "C", "text": "not buy anything." }
+            {
+              "key": "A",
+              "text": "buy a hot meal but not a drink."
+            },
+            {
+              "key": "B",
+              "text": "buy sandwiches and drinks."
+            },
+            {
+              "key": "C",
+              "text": "not buy anything."
+            }
           ],
           "correct": "B",
           "explain": "Chỉ món nóng bị giới hạn giờ; sandwich và đồ uống bán cả ngày."
@@ -547,9 +1058,18 @@
           "notice": "Please return this form to the office by Friday. Forms handed in after this date cannot be accepted for the June exam.",
           "prompt": "What happens if you are late?",
           "options": [
-            { "key": "A", "text": "You pay an extra fee." },
-            { "key": "B", "text": "You cannot take the June exam." },
-            { "key": "C", "text": "You must fill in a different form." }
+            {
+              "key": "A",
+              "text": "You pay an extra fee."
+            },
+            {
+              "key": "B",
+              "text": "You cannot take the June exam."
+            },
+            {
+              "key": "C",
+              "text": "You must fill in a different form."
+            }
           ],
           "correct": "B",
           "explain": "\"cannot be accepted for the June exam\" — nộp muộn thì không được dự thi tháng 6."
@@ -559,9 +1079,18 @@
           "notice": "SPECIAL OFFER\nBuy any two books and get a third free.\nCheapest book free. Offer ends 30 April.",
           "prompt": "To get a free book you must",
           "options": [
-            { "key": "A", "text": "buy two books first." },
-            { "key": "B", "text": "spend over 300,000 dong." },
-            { "key": "C", "text": "come before 30 March." }
+            {
+              "key": "A",
+              "text": "buy two books first."
+            },
+            {
+              "key": "B",
+              "text": "spend over 300,000 dong."
+            },
+            {
+              "key": "C",
+              "text": "come before 30 March."
+            }
           ],
           "correct": "A",
           "explain": "Mua hai cuốn thì được tặng cuốn thứ ba (rẻ nhất)."
@@ -571,9 +1100,18 @@
           "notice": "NO PARKING IN FRONT OF THE GATE AT ANY TIME. Vehicles will be removed at the owner's expense.",
           "prompt": "If you park here,",
           "options": [
-            { "key": "A", "text": "you must pay to have your vehicle taken away." },
-            { "key": "B", "text": "you may park for a short time only." },
-            { "key": "C", "text": "you should ask the owner first." }
+            {
+              "key": "A",
+              "text": "you must pay to have your vehicle taken away."
+            },
+            {
+              "key": "B",
+              "text": "you may park for a short time only."
+            },
+            {
+              "key": "C",
+              "text": "you should ask the owner first."
+            }
           ],
           "correct": "A",
           "explain": "\"removed at the owner's expense\" — chủ xe phải chịu chi phí kéo xe."
@@ -583,9 +1121,18 @@
           "notice": "Reminder: the library will be open but UNSTAFFED this Saturday. You can study and return books, but you cannot borrow.",
           "prompt": "On Saturday students can",
           "options": [
-            { "key": "A", "text": "borrow books as usual." },
-            { "key": "B", "text": "study but not borrow books." },
-            { "key": "C", "text": "not enter the library." }
+            {
+              "key": "A",
+              "text": "borrow books as usual."
+            },
+            {
+              "key": "B",
+              "text": "study but not borrow books."
+            },
+            {
+              "key": "C",
+              "text": "not enter the library."
+            }
           ],
           "correct": "B",
           "explain": "Mở cửa nhưng không có nhân viên: học và trả sách được, mượn thì không."
@@ -595,9 +1142,18 @@
           "notice": "Nga — your jacket is at reception, someone found it in room 204. They close at 6. Don't leave it till Monday, they clear the box every week. — Ly",
           "prompt": "What does Ly want Nga to do?",
           "options": [
-            { "key": "A", "text": "Look for her jacket in room 204." },
-            { "key": "B", "text": "Collect her jacket before Monday." },
-            { "key": "C", "text": "Phone reception after six." }
+            {
+              "key": "A",
+              "text": "Look for her jacket in room 204."
+            },
+            {
+              "key": "B",
+              "text": "Collect her jacket before Monday."
+            },
+            {
+              "key": "C",
+              "text": "Phone reception after six."
+            }
           ],
           "correct": "B",
           "explain": "\"Don't leave it till Monday\" — hãy lấy áo trước thứ Hai vì hộp đồ thất lạc bị dọn hằng tuần."
@@ -607,9 +1163,18 @@
           "notice": "TRAIN INFORMATION\nThe 14:20 to Nha Trang is delayed by approximately 40 minutes. Passengers holding tickets may travel on the 15:35 service instead.",
           "prompt": "Passengers are told that they",
           "options": [
-            { "key": "A", "text": "must wait for the 14:20 train." },
-            { "key": "B", "text": "can use their ticket on a later train." },
-            { "key": "C", "text": "will get their money back." }
+            {
+              "key": "A",
+              "text": "must wait for the 14:20 train."
+            },
+            {
+              "key": "B",
+              "text": "can use their ticket on a later train."
+            },
+            {
+              "key": "C",
+              "text": "will get their money back."
+            }
           ],
           "correct": "B",
           "explain": "Có thể dùng vé để đi chuyến 15:35 thay thế."
@@ -619,9 +1184,18 @@
           "notice": "Swimming pool rules: shower before entering the water. Swimming caps compulsory. Children under 12 must be with an adult.",
           "prompt": "Which statement is true?",
           "options": [
-            { "key": "A", "text": "Everyone must wear a swimming cap." },
-            { "key": "B", "text": "Children under 12 cannot swim here." },
-            { "key": "C", "text": "You should shower after swimming." }
+            {
+              "key": "A",
+              "text": "Everyone must wear a swimming cap."
+            },
+            {
+              "key": "B",
+              "text": "Children under 12 cannot swim here."
+            },
+            {
+              "key": "C",
+              "text": "You should shower after swimming."
+            }
           ],
           "correct": "A",
           "explain": "compulsory = bắt buộc. Trẻ dưới 12 vẫn bơi được nhưng phải có người lớn đi cùng."
