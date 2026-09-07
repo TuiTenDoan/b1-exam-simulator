@@ -3,19 +3,17 @@ import { listeningPaper, readingPaper } from '../lib/paper'
 import speaking from '../data/speaking.json'
 import writing from '../data/writing.json'
 import prepare from '../data/prepare.json'
+import prepareReading from '../data/prepareReading.json'
+import { taskQuestionCount, type PrepareBoard } from '../domain/prepareMark'
 
-type PrepareGroup = { type: string; answers: string[] }
+const listeningBoard = prepare as unknown as PrepareBoard
+const readingBoard = prepareReading as unknown as PrepareBoard
 
 /** Counted from the data so these never drift when content is added. */
-const prepareQuestions = prepare.tasks.reduce(
-  (n, t) =>
-    n +
-    (t.groups as PrepareGroup[]).reduce(
-      (m, g) => m + (g.type === 'tick' ? 1 : g.answers.length),
-      0,
-    ),
-  0,
-)
+const countBoard = (board: PrepareBoard) =>
+  board.tasks.reduce((n, t) => n + taskQuestionCount(t), 0)
+
+const prepareQuestions = countBoard(listeningBoard) + countBoard(readingBoard)
 
 const examQuestions = listeningPaper.questions.length + readingPaper.questions.length
 
@@ -75,7 +73,18 @@ const sections = [
     route: 'prepare' as Route,
     num: '+',
     name: 'Đề nghe Cambridge Prepare',
-    desc: '19 bài nghe từ giáo trình của bạn · audio và đề gốc · có đáp án',
+    desc: `${listeningBoard.tasks.length} bài nghe từ giáo trình của bạn · ${countBoard(
+      listeningBoard,
+    )} câu · audio và đề gốc`,
+    marks: 'ôn thêm',
+  },
+  {
+    route: 'prepare-reading' as Route,
+    num: '+',
+    name: 'Đề đọc Cambridge Prepare',
+    desc: `${readingBoard.tasks.length} bài từ vựng và đọc hiểu · ${countBoard(
+      readingBoard,
+    )} câu · ảnh đề gốc`,
     marks: 'ôn thêm',
   },
 ]

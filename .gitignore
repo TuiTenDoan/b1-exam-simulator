@@ -13,6 +13,7 @@ tsconfig.tsbuildinfo
 # ---------------------------------------------------------------------------
 public/prepare/audio/
 public/prepare/q/
+public/prepare/rq/
 
 # Cấu hình máy cá nhân, không đẩy lên
 .claude/

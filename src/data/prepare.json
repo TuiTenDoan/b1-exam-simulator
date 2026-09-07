@@ -1,12 +1,14 @@
 {
   "sectionId": "prepare",
   "title": "Đề nghe Cambridge Prepare",
+  "imageDir": "prepare/q",
+  "audioDir": "prepare/audio",
   "note": "Audio và ảnh đề là file gốc của bạn. Đáp án được dò từ nội dung bản ghi.",
   "tasks": [
     {
       "id": "track31",
       "audio": "track31",
-      "image": "track31",
+      "images": ["track31"],
       "part": "Listening Part 1",
       "title": "Nghe hình — nhà, giờ tan học, màu sơn",
       "vi": "Chọn hình đúng cho mỗi câu",
@@ -21,7 +23,7 @@
     {
       "id": "track34",
       "audio": "track34",
-      "image": "track34",
+      "images": ["track34"],
       "part": "Listening Part 1",
       "title": "Nghe hình — ngày đá bóng, vé sở thú, số nhà",
       "vi": "Chọn hình đúng cho mỗi câu",
@@ -36,7 +38,7 @@
     {
       "id": "track150",
       "audio": "track150",
-      "image": "track150",
+      "images": ["track150"],
       "part": "Listening Part 1 — luyện",
       "title": "Ted muốn mua gì cho phòng",
       "vi": "Bài luyện trước khi vào đề thật",
@@ -52,7 +54,7 @@
     {
       "id": "track151",
       "audio": "track151",
-      "image": "track151",
+      "images": ["track151"],
       "part": "Listening Part 1",
       "title": "Đồ còn trong xe · giá cái cặp",
       "vi": "Chọn hình đúng cho mỗi câu",
@@ -68,7 +70,7 @@
     {
       "id": "file4",
       "audio": "file4",
-      "image": "f4",
+      "images": ["f4"],
       "part": "Listening Part 1",
       "title": "Richard nấu súp · nhà để xe · ban công",
       "vi": "Chọn hình đúng cho mỗi câu",
@@ -83,7 +85,7 @@
     {
       "id": "file7",
       "audio": "file7",
-      "image": "f7",
+      "images": ["f7"],
       "part": "Listening Part 2",
       "title": "School Trip — đảo Dolphin",
       "vi": "Điền một từ, một số hoặc một giờ vào mỗi chỗ trống",
@@ -105,7 +107,7 @@
     {
       "id": "file8",
       "audio": "file8",
-      "image": "f8",
+      "images": ["f8"],
       "part": "Listening Part 4",
       "title": "5 đoạn hội thoại ngắn",
       "vi": "Chọn A, B hoặc C",
@@ -120,7 +122,7 @@
     {
       "id": "file12",
       "audio": "file12",
-      "image": "f12",
+      "images": ["f12"],
       "part": "Listening Part 3",
       "title": "Marina và bộ phim dự thi",
       "vi": "Chọn A, B hoặc C",
@@ -135,7 +137,7 @@
     {
       "id": "file13",
       "audio": "file13",
-      "image": "f13",
+      "images": ["f13"],
       "part": "Listening — phỏng vấn",
       "title": "Agnes — vận động viên leo núi",
       "vi": "Bài 1 tích chủ đề · Bài 2 Đúng/Sai",
@@ -157,7 +159,7 @@
     {
       "id": "file15",
       "audio": "file15",
-      "image": "f15",
+      "images": ["f15"],
       "part": "Listening — hai bạn Thổ Nhĩ Kỳ",
       "title": "Dilek (múa) và Burak (đàn oud)",
       "vi": "Bài 1 chọn ý tóm tắt · Bài 2 Đúng/Sai",
@@ -179,7 +181,7 @@
     {
       "id": "file23",
       "audio": "file23",
-      "image": "f23",
+      "images": ["f23"],
       "part": "Listening — khách sạn",
       "title": "John hỏi lễ tân ở Moscow",
       "vi": "Câu nào đúng (✓), câu nào sai (✗)?",
@@ -194,7 +196,7 @@
     {
       "id": "file48",
       "audio": "file48",
-      "image": "4811",
+      "images": ["4811"],
       "part": "Listening — đoạn ngắn",
       "title": "Chủ đề nấu ăn (7 câu)",
       "vi": "Chọn hình đúng cho mỗi câu",
@@ -210,7 +212,7 @@
     {
       "id": "file08",
       "audio": "file08",
-      "image": "811",
+      "images": ["811"],
       "part": "Listening — đoạn ngắn",
       "title": "Chủ đề đồ ăn (7 câu)",
       "vi": "Chọn hình đúng cho mỗi câu",
@@ -225,7 +227,7 @@
     {
       "id": "file56",
       "audio": "file56",
-      "image": "f56",
+      "images": ["f56"],
       "part": "Listening Part 2",
       "title": "Adventure Holiday — Across the Water",
       "vi": "Điền một từ, một số hoặc một ngày vào mỗi chỗ trống",
@@ -248,7 +250,7 @@
     {
       "id": "file94",
       "audio": "file94",
-      "image": "f94",
+      "images": ["f94"],
       "part": "Listening Part 3",
       "title": "Finley rủ bạn đi xem phim",
       "vi": "Chọn A, B hoặc C",
@@ -263,7 +265,7 @@
     {
       "id": "file116",
       "audio": "file116",
-      "image": "f116",
+      "images": ["f116"],
       "part": "Listening — thuyết trình",
       "title": "Libby và nghề nuôi ong",
       "vi": "Câu nào đúng (✓), câu nào sai (✗)?",
@@ -278,7 +280,7 @@
     {
       "id": "file153",
       "audio": "file153",
-      "image": "f153",
+      "images": ["f153"],
       "part": "Listening Part 2",
       "title": "Bodyfit Gym — câu lạc bộ cho tuổi teen",
       "vi": "Điền một từ, một số hoặc một giờ vào mỗi chỗ trống",
@@ -301,7 +303,7 @@
     {
       "id": "file155",
       "audio": "file155",
-      "image": "f155",
+      "images": ["f155"],
       "part": "Listening Part 3",
       "title": "Callum và Stella — công viên trượt ván",
       "vi": "Chọn A, B hoặc C",
@@ -316,7 +318,7 @@
     {
       "id": "file157",
       "audio": "file157",
-      "image": "f157",
+      "images": ["f157"],
       "part": "Listening Part 4",
       "title": "5 đoạn ngắn — đồ ăn, TV, đi bộ, hẹn gặp",
       "vi": "Chọn A, B hoặc C",

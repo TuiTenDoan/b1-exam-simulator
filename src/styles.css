@@ -1873,6 +1873,14 @@ select {
   color: #fff;
 }
 
+/* Word answers — True/False, a name, an adjective — read as text rather than
+   as an option code, so they drop the monospace treatment the A/B/C keys use. */
+.pqChoice--word {
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
 .pqTicks {
   display: flex;
   gap: 8px;
@@ -1952,6 +1960,24 @@ select {
   font-weight: 600;
   color: var(--ink);
   margin-bottom: 6px;
+}
+
+/* A quiet aside: context worth reading once, not a warning to act on. */
+.note {
+  display: block;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--rule-strong);
+  background: var(--card-sunk);
+  color: var(--ink-2);
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.note--warn {
+  border-left-color: var(--amber);
 }
 
 /* Block, not flex: these messages mix prose with inline <code>, and flex would

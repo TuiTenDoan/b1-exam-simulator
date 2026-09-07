@@ -1,0 +1,224 @@
+{
+  "sectionId": "prepare-reading",
+  "title": "Đề đọc Cambridge Prepare",
+  "imageDir": "prepare/rq",
+  "note": "Ảnh đề lấy nguyên từ tài liệu ôn thi của bạn. Bài nào tài liệu in sẵn đáp án thì ghi rõ là theo tài liệu; bài nào tài liệu chỉ in đề, đáp án là do dò lại từ chính trang đó.",
+  "tasks": [
+    {
+      "id": "p31",
+      "images": ["p31_0"],
+      "part": "Phần 2 · Từ vựng",
+      "title": "Tính cách con người",
+      "vi": "Điền tính từ đúng vào mỗi chỗ trống",
+      "source": "Vocabulary · Ex 3 — SB Level 3, tr.10",
+      "origin": "doc",
+      "groups": [
+        {
+          "type": "gap",
+          "from": 1,
+          "answers": ["lazy", "active", "kind", "popular", "funny", "polite", "friendly", "quiet", "helpful", "creative"]
+        }
+      ]
+    },
+    {
+      "id": "p32",
+      "images": ["p32_0"],
+      "part": "Phần 2 · Từ vựng",
+      "title": "Du lịch và khách sạn",
+      "vi": "Điền danh từ đúng vào mỗi chỗ trống",
+      "source": "Vocabulary · Ex 2 — SB Level 3, tr.23",
+      "origin": "doc",
+      "groups": [
+        {
+          "type": "gap",
+          "from": 1,
+          "answers": ["map", "tourists", "guidebook", "suitcase", "guests", "luggage", "receptionist", "visitors"],
+          "accepts": [
+            [],
+            [],
+            ["guide book"],
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p33",
+      "images": ["p33_0"],
+      "part": "Phần 2 · Từ vựng",
+      "title": "Đồ đạc trong nhà",
+      "vi": "Nối 12 định nghĩa với từ trong khung",
+      "source": "Vocabulary · Ex 1 — SB Level 3, tr.46",
+      "origin": "doc",
+      "groups": [
+        {
+          "type": "gap",
+          "from": 1,
+          "answers": ["fridge", "washing machine", "air conditioning", "bookcase", "roof", "barbecue", "stairs", "drawer", "lights", "seat", "heating", "bin"]
+        }
+      ]
+    },
+    {
+      "id": "p34",
+      "images": ["p34_0"],
+      "part": "Phần 2 · Từ vựng",
+      "title": "Chọn tính từ đúng",
+      "vi": "Mỗi câu chọn một trong hai tính từ",
+      "source": "Vocabulary · Ex 4 — SB Level 4, tr.10",
+      "origin": "derived",
+      "groups": [
+        {
+          "type": "pick",
+          "from": 1,
+          "rows": [
+            ["polite", "careless"],
+            ["funny", "polite"],
+            ["miserable", "friendly"],
+            ["confident", "careless"],
+            ["miserable", "polite"],
+            ["careless", "confident"]
+          ],
+          "answers": ["polite", "funny", "friendly", "careless", "miserable", "confident"]
+        }
+      ]
+    },
+    {
+      "id": "p35",
+      "images": ["p35_0"],
+      "part": "Phần 2 · Từ vựng",
+      "title": "Cụm từ về thời gian rảnh",
+      "vi": "Chọn từ đúng để hoàn thành câu",
+      "source": "Vocabulary · Ex 1 — WB Level 3, tr.61",
+      "origin": "derived",
+      "groups": [
+        {
+          "type": "mcq3",
+          "from": 1,
+          "answers": ["B", "C", "C", "A", "C"]
+        }
+      ]
+    },
+    {
+      "id": "p36",
+      "images": ["p36_0"],
+      "part": "Phần 2 · Từ vựng",
+      "title": "Động từ make, do, have",
+      "vi": "Chọn động từ đúng trong mỗi câu",
+      "source": "Vocabulary · Ex 1 — WB Level 4, tr.28",
+      "origin": "derived",
+      "groups": [
+        {
+          "type": "pick",
+          "from": 1,
+          "options": ["a", "b", "c"],
+          "answers": ["a", "c", "b", "a", "b", "a", "a", "b", "c", "b"]
+        }
+      ]
+    },
+    {
+      "id": "p37",
+      "images": ["p37_0", "p37_1"],
+      "part": "Phần 3 · Đọc hiểu",
+      "title": "Olivia, Carla và Monique",
+      "vi": "Mỗi câu ứng với một người trong bài",
+      "source": "Reading part 2 · Ex 2 — SB Level 3, tr.22",
+      "origin": "doc",
+      "groups": [
+        {
+          "type": "pick",
+          "from": 1,
+          "options": ["O", "C", "M"],
+          "labels": ["O · Olivia", "C · Carla", "M · Monique"],
+          "answers": ["O", "C", "M", "C", "O", "M", "C"]
+        }
+      ]
+    },
+    {
+      "id": "p38",
+      "images": ["p38_0", "p38_1"],
+      "part": "Phần 3 · Đọc hiểu",
+      "title": "Tuổi teen bây giờ so với ngày xưa",
+      "vi": "Đọc bài của Simon và Emily rồi chọn A, B hoặc C",
+      "source": "Reading · Ex 2 — SB Level 4, tr.21",
+      "origin": "derived",
+      "groups": [
+        {
+          "type": "mcq3",
+          "from": 1,
+          "answers": ["B", "B", "C", "A", "A", "B"]
+        }
+      ]
+    },
+    {
+      "id": "p39",
+      "images": ["p39_0", "p39_1"],
+      "part": "Phần 3 · Đọc hiểu",
+      "title": "Alex, Dylan và Kaitlin",
+      "vi": "Mỗi câu ứng với một bạn trong bài",
+      "source": "Reading · Ex 2 — SB Level 4, tr.43",
+      "origin": "doc",
+      "groups": [
+        {
+          "type": "pick",
+          "from": 1,
+          "options": ["ALEX", "DYLAN", "KAITLIN"],
+          "answers": ["ALEX", "DYLAN", "KAITLIN", "KAITLIN", "ALEX", "DYLAN"]
+        }
+      ]
+    },
+    {
+      "id": "p40",
+      "images": ["p40_0", "p40_1"],
+      "part": "Phần 3 · Đọc hiểu",
+      "title": "Cậu bé 14 tuổi tự đóng giày",
+      "vi": "Đọc blog rồi chọn A, B hoặc C",
+      "source": "Reading part 3 · Ex 2 — WB Level 3, tr.62",
+      "origin": "derived",
+      "groups": [
+        {
+          "type": "mcq3",
+          "from": 1,
+          "answers": ["C", "B", "C", "A", "B"]
+        }
+      ]
+    },
+    {
+      "id": "p41",
+      "images": ["p41_0", "p41_1"],
+      "part": "Phần 3 · Đọc hiểu",
+      "title": "Đúng hay sai",
+      "vi": "Đọc bài rồi chọn True hoặc False",
+      "source": "Reading · Ex 2 — WB Level 4, tr.9",
+      "origin": "doc",
+      "groups": [
+        {
+          "type": "pick",
+          "from": 1,
+          "options": ["T", "F"],
+          "labels": ["True", "False"],
+          "answers": ["T", "T", "T", "T", "F", "T"]
+        }
+      ]
+    },
+    {
+      "id": "p42",
+      "images": ["p42_1"],
+      "part": "Phần 4 · Điền từ",
+      "title": "Thành phố gửi email cho cây",
+      "vi": "Chọn từ đúng cho mỗi chỗ trống",
+      "source": "Reading part 4 · Ex 2 — SB Level 3, tr.124",
+      "origin": "derived",
+      "groups": [
+        {
+          "type": "mcq3",
+          "from": 1,
+          "answers": ["B", "C", "A", "B", "B", "C"]
+        }
+      ]
+    }
+  ]
+}

@@ -5,11 +5,34 @@ import { Writing } from './screens/Writing'
 import { Prepare } from './screens/Prepare'
 import { ExamRunner } from './components/ExamRunner'
 import { listeningPaper, readingPaper } from './lib/paper'
+import prepareListening from './data/prepare.json'
+import prepareReading from './data/prepareReading.json'
+import type { PrepareBoard } from './domain/prepareMark'
 import type { SectionResult } from './domain/types'
 
-export type Route = 'home' | 'listening' | 'reading' | 'writing' | 'speaking' | 'prepare'
+export type Route =
+  | 'home'
+  | 'listening'
+  | 'reading'
+  | 'writing'
+  | 'speaking'
+  | 'prepare'
+  | 'prepare-reading'
 
-const ROUTES: Route[] = ['home', 'listening', 'reading', 'writing', 'speaking', 'prepare']
+const ROUTES: Route[] = [
+  'home',
+  'listening',
+  'reading',
+  'writing',
+  'speaking',
+  'prepare',
+  'prepare-reading',
+]
+
+/* JSON keeps every string wide (`string`, not `'gap' | 'mcq3'`), so the shape
+   is asserted once here rather than at every use inside the board. */
+const LISTENING_BOARD = prepareListening as unknown as PrepareBoard
+const READING_BOARD = prepareReading as unknown as PrepareBoard
 const BEST_KEY = 'b1-exam:best'
 
 function routeFromHash(): Route {
@@ -154,7 +177,10 @@ export default function App() {
         )}
         {route === 'writing' && <Writing onExit={home} />}
         {route === 'speaking' && <Speaking onExit={home} />}
-        {route === 'prepare' && <Prepare onExit={home} />}
+        {route === 'prepare' && <Prepare key="pl" data={LISTENING_BOARD} onExit={home} />}
+        {route === 'prepare-reading' && (
+          <Prepare key="pr" data={READING_BOARD} onExit={home} />
+        )}
       </main>
     </div>
   )
