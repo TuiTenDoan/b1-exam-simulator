@@ -57,6 +57,42 @@ export interface PartSpec {
 
 const MIN_EXPLAIN = 20
 
+/** Rough syllable count: good enough to tell a short adjective from a long one. */
+function syllables(word: string): number {
+  const groups = word.toLowerCase().replace(/e$/, '').match(/[aeiouy]+/g)
+  return groups?.length ?? 1
+}
+
+/**
+ * Comparative forms the model invented.
+ *
+ * A long adjective takes "more"/"most", never "-er"/"-est": there is no such
+ * word as "popularer". A learner spots the fake word and crosses it out
+ * without knowing any grammar, so the question stops testing anything.
+ *
+ * Only flagged when the same item also offers "more X" or "most X" — that is
+ * what proves X is the adjective being inflected, and it keeps real words like
+ * "photographer" from being mistaken for an invention.
+ */
+export function inventedInflections(options: GeneratedOption[]): string[] {
+  const longStems = new Set<string>()
+  for (const o of options) {
+    const m = (o?.text ?? '').trim().toLowerCase().match(/^(?:more|most)\s+([a-z]+)$/)
+    if (m && syllables(m[1]) >= 3) longStems.add(m[1])
+  }
+  if (longStems.size === 0) return []
+
+  const bad: string[] = []
+  for (const o of options) {
+    const word = (o?.text ?? '').trim().toLowerCase()
+    const m = word.match(/^([a-z]+?)(er|est)$/)
+    if (!m) continue
+    const stem = m[1].replace(/i$/, 'y')
+    if (longStems.has(stem) || longStems.has(m[1])) bad.push(o.text)
+  }
+  return bad
+}
+
 /** Null-safe: a model that loses the thread can put anything in the array. */
 function isRightWrong(item: GeneratedItem | null | undefined): boolean {
   return item?.type === 'rightwrong'
@@ -115,8 +151,11 @@ export function validatePart(part: GeneratedPart, spec: PartSpec): string[] {
     }
 
     const options = item.options ?? []
-    const keys = options.map((o) => o?.key)
-    if (keys.join(',') !== spec.optionKeys.join(',')) {
+    // The SET of letters is what matters; order is fixed by canonicalise()
+    // below, because a model that emits B before A has still written a valid
+    // question and throwing the part away over that wastes a whole retry.
+    const keys = [...options.map((o) => o?.key)].sort()
+    if (keys.join(',') !== [...spec.optionKeys].sort().join(',')) {
       say(`${at}: phương án là [${keys.join(', ')}], phải là [${spec.optionKeys.join(', ')}]`)
       continue
     }
@@ -128,6 +167,9 @@ export function validatePart(part: GeneratedPart, spec: PartSpec): string[] {
     if (!spec.optionKeys.includes(item.correct)) {
       say(`${at}: đáp án "${item.correct}" không nằm trong các phương án`)
     }
+    for (const fake of inventedInflections(options)) {
+      say(`${at}: "${fake}" không phải từ tiếng Anh — tính từ dài phải dùng more/most`)
+    }
   }
 
   if (gapNumbers.length && new Set(gapNumbers).size !== gapNumbers.length) {
@@ -135,6 +177,24 @@ export function validatePart(part: GeneratedPart, spec: PartSpec): string[] {
   }
 
   return problems
+}
+
+/**
+ * Put every item's options back in A, B, C, D order.
+ *
+ * Only the array order changes: each option keeps its own letter and text, so
+ * which answer is correct is untouched. Generated papers arrive shuffled often
+ * enough that this is worth doing before anything else looks at them.
+ */
+export function canonicaliseOptions(part: GeneratedPart): GeneratedPart {
+  return {
+    ...part,
+    items: part.items.map((item) =>
+      item?.options?.length
+        ? { ...item, options: [...item.options].sort((a, b) => a.key.localeCompare(b.key)) }
+        : item,
+    ),
+  }
 }
 
 /**

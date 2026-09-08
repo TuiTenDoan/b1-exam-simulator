@@ -2,11 +2,13 @@ import { describe, it, expect } from 'vitest'
 import {
   validatePart,
   balanceAnswerKeys,
+  canonicaliseOptions,
   type GeneratedPart,
   type PartSpec,
 } from './aiPaperCheck'
 
 const SPEC: PartSpec = { id: 'R1', items: 2, optionKeys: ['A', 'B', 'C', 'D'] }
+const SPEC2: PartSpec = { id: 'R1', items: 1, optionKeys: ['A', 'B', 'C', 'D'] }
 
 const opts = (correct: string) => ({
   options: [
@@ -159,5 +161,75 @@ describe('balanceAnswerKeys', () => {
       items: [{ id: 'Q1', type: 'rightwrong', correct: 'A', explain: 'x'.repeat(30) }],
     }
     expect(balanceAnswerKeys(p)).toEqual(p)
+  })
+})
+
+describe('canonicaliseOptions', () => {
+  it('puts shuffled options back in letter order', () => {
+    const part: GeneratedPart = {
+      id: 'R1',
+      items: [
+        {
+          id: 'Q1',
+          correct: 'C',
+          explain: 'Giải thích đủ dài để vượt ngưỡng kiểm tra tối thiểu.',
+          options: [
+            { key: 'B', text: 'two' },
+            { key: 'A', text: 'one' },
+            { key: 'D', text: 'four' },
+            { key: 'C', text: 'three' },
+          ],
+        },
+      ],
+    }
+    const out = canonicaliseOptions(part)
+    expect(out.items[0].options!.map((o) => o.key)).toEqual(['A', 'B', 'C', 'D'])
+    expect(out.items[0].options!.map((o) => o.text)).toEqual(['one', 'two', 'three', 'four'])
+    expect(out.items[0].correct).toBe('C')
+  })
+
+  it('accepts a part whose only fault was option order', () => {
+    const part: GeneratedPart = {
+      id: 'R1',
+      items: [
+        { id: 'Q1', prompt: 'a', ...opts('A') },
+        { id: 'Q2', prompt: 'b', ...opts('B') },
+      ],
+    }
+    part.items[0].options = [part.items[0].options![1], part.items[0].options![0], ...part.items[0].options!.slice(2)]
+    expect(validatePart(canonicaliseOptions(part), SPEC)).toEqual([])
+  })
+})
+
+describe('inventedInflections', () => {
+  const withOptions = (texts: string[]): GeneratedPart => ({
+    id: 'R1',
+    items: [
+      {
+        id: 'Q1',
+        prompt: 'p',
+        correct: 'A',
+        explain: 'Giải thích đủ dài để vượt ngưỡng kiểm tra tối thiểu.',
+        options: texts.map((t, i) => ({ key: 'ABCD'[i], text: t })),
+      },
+    ],
+  })
+
+  it('catches a comparative the model made up', () => {
+    const p = withOptions(['popular', 'popularer', 'more popular', 'most popular'])
+    expect(validatePart(p, SPEC2).join()).toMatch(/"popularer" không phải từ tiếng Anh/)
+  })
+
+  it('leaves real short-adjective comparatives alone', () => {
+    // "more big" is a fair distractor and "bigger" is the real word.
+    const p = withOptions(['big', 'bigger', 'more big', 'the biggest'])
+    expect(validatePart(p, SPEC2).join()).not.toMatch(/không phải từ tiếng Anh/)
+  })
+
+  it('does not mistake an ordinary noun for an invented form', () => {
+    // "photographer" ends in -er and its stem has three syllables, but no
+    // option offers "more photograph", so nothing here is being inflected.
+    const p = withOptions(['receptionist', 'photographer', 'tour guide', 'travel agent'])
+    expect(validatePart(p, SPEC2).join()).not.toMatch(/không phải từ tiếng Anh/)
   })
 })

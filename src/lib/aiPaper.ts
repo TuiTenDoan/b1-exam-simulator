@@ -1,6 +1,7 @@
 import { askGemini, GeminiError } from './gemini'
 import {
   balanceAnswerKeys,
+  canonicaliseOptions,
   validatePart,
   type GeneratedPart,
   type PartSpec,
@@ -29,7 +30,7 @@ NGỮ PHÁP chỉ gồm 4 điểm, không được ra ngoài:
   CẤM: present perfect, future, passive, conditional, relative clause,
   reported speech, modal perfect.
 
-TỪ VỰNG chỉ lấy trong 6 bộ từ sau (đáp án phần từ vựng BẮT BUỘC nằm trong đây):
+TỪ VỰNG - 6 bộ từ tài liệu chỉ định:
   A. lazy, active, kind, popular, funny, polite, friendly, quiet, helpful, creative
   B. map, tourists, guidebook, suitcase, guests, luggage, receptionist, visitors
   C. fridge, washing machine, air conditioning, bookcase, roof, barbecue, stairs,
@@ -40,6 +41,16 @@ TỪ VỰNG chỉ lấy trong 6 bộ từ sau (đáp án phần từ vựng BẮ
      do something, have fun, do somebody a favour, make friends, be annoyed,
      have a lot in common
 
+RÀNG BUỘC 6 BỘ TỪ CHỈ ÁP DỤNG CHO ĐÁP ÁN ĐÚNG CỦA PHẦN R2.
+Các phần khác (đoạn đọc, thông báo, đoạn điền từ) hãy viết tiếng Anh TỰ NHIÊN.
+TUYỆT ĐỐI KHÔNG nhồi từ trong danh sách vào cho đủ: một đoạn văn nhét liền
+receptionist, guidebook, bookcase, fridge, barbecue, luggage đọc như bảng từ
+chứ không như bài đọc, và đó là lỗi nặng.
+
+NỘI DUNG PHẢI HỢP LÝ NGOÀI ĐỜI. Không viết thông báo kiểu "thư viện yêu cầu
+bỏ sách vào thùng rác sau khi đọc" chỉ để dùng cho được từ "bin". Nếu một từ
+không vào được cách tự nhiên thì bỏ từ đó, đừng bẻ cong tình huống.
+
 Trình độ B1 (CEFR). Người học: sinh viên Việt Nam thi chuẩn đầu ra.
 Bối cảnh nên gần gũi Việt Nam (tên người Việt, thành phố Việt Nam).
 `
@@ -48,10 +59,18 @@ const ANTI_TELL = `
 CHỐNG ĐOÁN MẸO:
 - Với câu mà phương án là cả một câu (từ 20 ký tự trở lên): phương án dài nhất
   không được dài quá 1,4 lần phương án ngắn nhất. Tự đếm ký tự.
+- NHƯNG NGỮ PHÁP ĐÚNG QUAN TRỌNG HƠN CÂN ĐỘ DÀI. Cân bằng cách chọn từ khác
+  hoặc diễn đạt khác, TUYỆT ĐỐI KHÔNG được lược bỏ mạo từ a/an/the cho ngắn
+  bớt. "Because weather is hotter today" và "after busy week" là tiếng Anh SAI;
+  phải viết "Because the weather is hotter today", "after a busy week".
+  Thà lệch độ dài một chút còn hơn viết câu sai ngữ pháp.
 - Đáp án đúng không được là phương án dài nhất ở quá 1/4 số câu.
 - Mỗi phương án nhiễu phải là một lỗi THẬT người Việt hay mắc (sai thì, thiếu s
   ngôi ba, dùng more với tính từ ngắn, nhầm từ gần nghĩa, dịch word-by-word).
-  Không được bịa chữ không tồn tại như "gooder", "badder".
+  Không được bịa chữ không tồn tại. Tính từ DÀI (từ 3 âm tiết trở lên) không bao
+  giờ thêm -er/-est: không có từ "popularer", "expensiver", "beautifulest",
+  "interestinger". Với tính từ dài chỉ dùng more/most. Cũng không có "gooder",
+  "badder", "worser".
 - CHỈ MỘT đáp án đúng. Nếu hai phương án đều chấp nhận được thì câu hỏi hỏng.
 - Trường "explain" viết bằng TIẾNG VIỆT, ít nhất 25 ký tự, nói rõ vì sao đáp án
   đúng và vì sao nhiễu chính sai. TUYỆT ĐỐI KHÔNG gọi tên phương án bằng chữ cái
@@ -204,9 +223,10 @@ async function generateOnePart(
       signal,
     })) as GeneratedPart
 
-    const problems = validatePart(reply, plan)
+    const tidy = canonicaliseOptions(reply)
+    const problems = validatePart(tidy, plan)
     if (problems.length === 0) {
-      const balanced = balanceAnswerKeys(reply)
+      const balanced = balanceAnswerKeys(tidy)
       return {
         ...balanced,
         title: plan.title,
