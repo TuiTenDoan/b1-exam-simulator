@@ -1,8 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { generateReadingPaper } from './aiPaper'
-import { buildPaper, type RawPaper } from './paper'
+import { buildPaper, readingPapers, type RawPaper } from './paper'
 import { reportPart } from './paperQuality'
-import { readingPapers } from './paper'
 import { writeFileSync } from 'node:fs'
 
 /**

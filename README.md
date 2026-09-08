@@ -45,6 +45,18 @@ Mở http://localhost:5180
 Mức đạt: **5.0/10** mỗi phần. Phần Nghe và Đọc chấm tự động ngay khi nộp, kèm giải thích
 tiếng Việt cho từng câu.
 
+## Bộ đề
+
+Phần Đọc có **bốn đề**, mỗi đề 50 câu, nội dung khác hẳn nhau. Chọn đề cố định
+hoặc để **Ngẫu nhiên** (mặc định) để mỗi lần vào thi bốc một đề khác. Bấm *Làm
+lại* sau khi nộp cũng bốc đề khác chứ không lặp lại đề vừa làm.
+
+Mọi đề đều phải qua các chốt kiểm trong `src/lib/paperQuality.ts`, chạy cùng bộ
+test: đáp án đúng không được là phương án dài nhất quá mức ngẫu nhiên (và cũng
+không được *không bao giờ* là phương án dài nhất — loại câu dài đi cũng là một
+mẹo), các phương án của một câu không lệch nhau quá 1,4 lần, và không chữ cái
+nào bị bỏ trống.
+
 ## Đảo đề
 
 Bật/tắt ở trang chủ (mặc định **bật**, nhớ trong `localStorage`). Khi bật, mỗi lần vào thi
@@ -59,6 +71,47 @@ Bốn quy tắc được giữ nguyên khi đảo, có test bảo vệ:
 4. Câu đọc hiểu không bao giờ rời khỏi bài đọc của nó; các câu cùng một bài luôn đi liền nhau.
 
 Phần Viết cũng tự rút 8 câu khác nhau từ ngân hàng 20 câu, và phần Nói bốc thăm ngẫu nhiên.
+
+## Chế độ thi học
+
+Bật ở trang chủ. Khi bật, trong lúc làm bài:
+
+- **gạch chân dấu hiệu nhận biết** ngay trong câu hỏi, kèm chú thích
+  `twice a week → hiện tại đơn`;
+- **hiện giải thích ngay khi chọn đáp án**, không phải đợi nộp bài.
+
+Danh sách dấu hiệu là danh sách đã dạy ở mục **Học**, và có test buộc hai bên
+không lệch nhau — app không gạch chân thứ gì mà bài học chưa nhắc tới.
+
+Quen rồi thì tắt đi để thi như thật.
+
+## Đề đọc do AI soạn
+
+Ở ô **Bộ đề** trên trang chủ có chip **AI**. Chọn nó thì phần Đọc được Google
+Gemini soạn mới 50 câu mỗi lần; nộp xong bấm *Làm lại* là ra đề khác hẳn, nên
+không còn đề nào để học thuộc.
+
+Cần **key Gemini của riêng bạn**. Key lưu trong trình duyệt (`localStorage`),
+không gửi đi đâu ngoài Google và không nằm trong mã nguồn. Lấy key miễn phí tại
+[aistudio.google.com/apikey](https://aistudio.google.com/apikey).
+
+Đề sinh ra không được đưa thẳng cho người học. Mỗi phần phải qua `validatePart`
+trước: đủ số câu, đáp án phải nằm trong chính các phương án, không hai phương án
+trùng nghĩa, giải thích không được cụt, không được bịa từ kiểu `popularer`. Sai
+thì bắt soạn lại một lần; hỏng hai lần thì bỏ phần đó chứ không vá. Đáp án cũng
+được cân đều cho A/B/C/D vì model hay dồn vào A và B.
+
+**Hạn mức gói miễn phí: 20 lượt gọi mỗi ngày**, mỗi đề tốn 5 lượt (mỗi phần một
+lượt) → khoảng **4 đề AI mỗi ngày**. Hết hạn mức thì bốn đề có sẵn vẫn dùng bình
+thường, vẫn đảo câu và đảo đáp án.
+
+Muốn tự kiểm đề AI có đúng cấu trúc trong giáo trình không:
+
+```bash
+GEMINI_KEY=your-key npx vitest run src/lib/aiPaper.integration.test.ts
+```
+
+Thêm `DUMP_TO=paper.json` nếu muốn xuất đề ra đọc tay.
 
 ## Âm thanh
 
