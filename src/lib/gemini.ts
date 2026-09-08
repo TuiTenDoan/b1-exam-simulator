@@ -38,6 +38,27 @@ function buildPrompt(topic: string, essay: string): string {
   ].join('\n')
 }
 
+/**
+ * Turns a 429 body into a message that says what to actually do.
+ *
+ * Google returns two very different limits under the same status. The
+ * per-minute one clears while you wait; the per-day one does not, and telling
+ * someone to "wait a moment" for a quota that resets at midnight sends them
+ * back every few minutes for nothing.
+ */
+export function quotaMessage(body: string): string {
+  const perDay = /PerDay/i.test(body)
+  const limit = body.match(/"quotaValue":\s*"?(\d+)/)?.[1]
+
+  if (perDay) {
+    const budget = limit
+      ? ` Gói miễn phí cho ${limit} lượt gọi mỗi ngày, mà mỗi đề tốn 5 lượt (mỗi phần một lượt).`
+      : ''
+    return `Đã hết hạn mức MỖI NGÀY của gói miễn phí.${budget} Hạn mức đặt lại vào nửa đêm giờ Thái Bình Dương; hôm nay chờ thêm cũng không dùng được. Bốn đề có sẵn vẫn làm bình thường.`
+  }
+  return 'Gọi quá nhanh, đã chạm hạn mức mỗi phút. Chờ khoảng một phút rồi bấm lại.'
+}
+
 export class GeminiError extends Error {
   constructor(
     message: string,
@@ -101,7 +122,7 @@ export async function askGemini(opts: {
       throw new GeminiError('Key không hợp lệ hoặc không có quyền dùng model này.', 'key')
     }
     if (res.status === 429) {
-      throw new GeminiError('Đã chạm giới hạn của gói miễn phí. Chờ một lát rồi thử lại.', 'quota')
+      throw new GeminiError(quotaMessage(await res.text().catch(() => '')), 'quota')
     }
     if (res.status === 503 || res.status >= 500) {
       lastBusy = `Google đang quá tải (HTTP ${res.status}).`

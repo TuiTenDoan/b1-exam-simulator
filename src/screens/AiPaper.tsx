@@ -111,6 +111,10 @@ export function AiPaper({ shuffle, studyMode, onExit, onFinished }: Props) {
               </a>
               . Không có key thì bốn đề có sẵn vẫn dùng bình thường.
             </p>
+            <p className="keyBox__note">
+              Gói miễn phí cho 20 lượt gọi mỗi ngày, mỗi đề tốn 5 lượt — tức khoảng bốn đề AI
+              một ngày. Hết hạn mức thì quay lại bốn đề có sẵn, vẫn đảo câu và đảo đáp án.
+            </p>
             <div className="keyBox__row">
               <input
                 type="password"

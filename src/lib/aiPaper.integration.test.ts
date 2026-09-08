@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { generateReadingPaper } from './aiPaper'
 import { buildPaper, type RawPaper } from './paper'
 import { reportPart } from './paperQuality'
+import { readingPapers } from './paper'
 import { writeFileSync } from 'node:fs'
 
 /**
@@ -75,6 +76,18 @@ describe.skipIf(!KEY)('đề AI so với cấu trúc trong tài liệu', () => {
       const part = parts.find((p) => p.id === spec.id)!
       expect(part.items.length, `${spec.id}: số câu`).toBe(spec.items)
       expect(part.passages?.length ?? 0, `${spec.id}: số đoạn văn`).toBe(spec.passages)
+    }
+  })
+
+  it('dùng đúng tiêu đề và câu lệnh của đề trong tài liệu', () => {
+    // Đề AI phải trông y hệt đề có sẵn: cùng tên phần, cùng câu lệnh tiếng Anh.
+    const builtIn = readingPapers[0]
+    for (const spec of DOCUMENT_SHAPE) {
+      const mine = builtIn.questions.find((q) => q.partId === spec.id)!
+      const theirs = paper.questions.find((q) => q.partId === spec.id)!
+      expect(theirs.partTitle, `${spec.id}: tiêu đề`).toBe(mine.partTitle)
+      expect(theirs.partVi, `${spec.id}: mô tả tiếng Việt`).toBe(mine.partVi)
+      expect(theirs.instructions, `${spec.id}: câu lệnh`).toBe(mine.instructions)
     }
   })
 
