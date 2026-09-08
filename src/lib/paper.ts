@@ -1,6 +1,8 @@
 import listeningRaw from '../data/listening.json'
 import readingRaw from '../data/reading.json'
 import reading2Raw from '../data/reading2.json'
+import reading3Raw from '../data/reading3.json'
+import reading4Raw from '../data/reading4.json'
 import type { AnswerKeyEntry } from '../domain/types'
 import { makeRng, shuffleOptions, shuffleWithinGroups } from '../domain/shuffle'
 
@@ -77,7 +79,7 @@ type RawPart = {
   passages?: RawPassage[]
   items: RawItem[]
 }
-type RawPaper = {
+export type RawPaper = {
   sectionId: string
   title: string
   label?: string
@@ -85,7 +87,7 @@ type RawPaper = {
   parts: RawPart[]
 }
 
-function buildPaper(raw: RawPaper): Paper {
+export function buildPaper(raw: RawPaper): Paper {
   const questions: FlatQuestion[] = []
 
   for (const part of raw.parts) {
@@ -151,9 +153,12 @@ function buildPaper(raw: RawPaper): Paper {
 export const listeningPapers: Paper[] = [listeningRaw].map((raw) =>
   buildPaper(raw as RawPaper),
 )
-export const readingPapers: Paper[] = [readingRaw, reading2Raw].map((raw) =>
-  buildPaper(raw as RawPaper),
-)
+export const readingPapers: Paper[] = [
+  readingRaw,
+  reading2Raw,
+  reading3Raw,
+  reading4Raw,
+].map((raw) => buildPaper(raw as RawPaper))
 
 export const listeningPaper = listeningPapers[0]
 export const readingPaper = readingPapers[0]

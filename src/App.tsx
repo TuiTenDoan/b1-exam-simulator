@@ -4,6 +4,7 @@ import { Speaking } from './screens/Speaking'
 import { Writing } from './screens/Writing'
 import { Prepare } from './screens/Prepare'
 import { Study } from './screens/Study'
+import { AiPaper } from './screens/AiPaper'
 import { ExamRunner } from './components/ExamRunner'
 import { paperFor, papersFor } from './lib/paper'
 import prepareListening from './data/prepare.json'
@@ -55,7 +56,7 @@ function loadBest(): Record<string, number> {
 
 const PAPER_KEY = 'b1-exam:paper'
 
-export type PaperChoice = number | 'random'
+export type PaperChoice = number | 'random' | 'ai'
 
 /**
  * Which paper to sit. 'random' draws a different one each time the section is
@@ -65,11 +66,22 @@ export type PaperChoice = number | 'random'
 function loadPaperChoice(): PaperChoice {
   try {
     const raw = localStorage.getItem(PAPER_KEY)
+    if (raw === 'ai') return 'ai'
     if (raw === null || raw === 'random') return 'random'
     const n = Number(raw)
     return Number.isInteger(n) && n >= 0 ? n : 'random'
   } catch {
     return 'random'
+  }
+}
+
+const STUDY_KEY = 'b1-exam:study-mode'
+
+function loadStudyMode(): boolean {
+  try {
+    return localStorage.getItem(STUDY_KEY) === 'on'
+  } catch {
+    return false
   }
 }
 
@@ -108,6 +120,7 @@ export default function App() {
   )
   const [shuffle, setShuffle] = useState<boolean>(loadShuffle)
   const [paperChoice, setPaperChoice] = useState<PaperChoice>(loadPaperChoice)
+  const [studyMode, setStudyMode] = useState<boolean>(loadStudyMode)
   // Bumped on every entry into an exam, so 'random' draws again rather than
   // sticking on whichever paper came up first.
   const [sitting, setSitting] = useState(0)
@@ -115,7 +128,10 @@ export default function App() {
   const paperIndex = useMemo(() => {
     const resolve = (section: string) => {
       const count = papersFor(section).length
-      if (paperChoice === 'random') return Math.floor(Math.random() * count)
+      // 'ai' only applies to Reading; Listening falls back to a random paper.
+      if (paperChoice === 'random' || paperChoice === 'ai') {
+        return Math.floor(Math.random() * count)
+      }
       return Math.min(paperChoice, count - 1)
     }
     return { listening: resolve('listening'), reading: resolve('reading') }
@@ -128,6 +144,14 @@ export default function App() {
       /* private mode — the setting just won't persist */
     }
   }, [shuffle])
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(STUDY_KEY, studyMode ? 'on' : 'off')
+    } catch {
+      /* private mode — the setting just won't persist */
+    }
+  }, [studyMode])
 
   useEffect(() => {
     try {
@@ -217,6 +241,8 @@ export default function App() {
             onShuffleChange={setShuffle}
             paperChoice={paperChoice}
             onPaperChange={setPaperChoice}
+            studyMode={studyMode}
+            onStudyModeChange={setStudyMode}
           />
         )}
         {route === 'listening' && (
@@ -227,10 +253,20 @@ export default function App() {
             shuffle={shuffle}
             onExit={home}
             onFinished={record}
+            studyMode={studyMode}
             onRedraw={redraw('listening')}
           />
         )}
-        {route === 'reading' && (
+        {route === 'reading' && paperChoice === 'ai' && (
+          <AiPaper
+            key={`ai-${sitting}`}
+            shuffle={shuffle}
+            studyMode={studyMode}
+            onExit={home}
+            onFinished={record}
+          />
+        )}
+        {route === 'reading' && paperChoice !== 'ai' && (
           <ExamRunner
             key={`reading-${paperIndex.reading}-${sitting}`}
             paper={paperFor('reading', paperIndex.reading)}
@@ -238,6 +274,7 @@ export default function App() {
             shuffle={shuffle}
             onExit={home}
             onFinished={record}
+            studyMode={studyMode}
             onRedraw={redraw('reading')}
           />
         )}

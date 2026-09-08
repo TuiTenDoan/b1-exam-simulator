@@ -509,13 +509,25 @@
         {
           "id": "P1",
           "title": "My first job",
-          "forItems": ["R3Q1", "R3Q2", "R3Q3", "R3Q4", "R3Q5"],
+          "forItems": [
+            "R3Q1",
+            "R3Q2",
+            "R3Q3",
+            "R3Q4",
+            "R3Q5"
+          ],
           "body": "When I started university, my parents offered to send me money every month. I said no. I wanted to pay for my own books and phone bill, so in my second week I found a job at a small coffee shop two streets from my hostel.\n\nThe hours were difficult at first. I worked from five in the afternoon until ten at night, four days a week, and I still had morning classes. For the first month I was exhausted and my marks dropped a little. My mother phoned and told me to quit, but I asked her to give me until the end of the term.\n\nWhat saved me was a timetable. I wrote down every hour of the week and found that I was wasting most of my mornings. Once I moved my studying to before class instead of after work, everything became easier. By December my marks were higher than they had been in September.\n\nI stopped working there last year, but I don't regret a single shift. I learned to talk to strangers, to stay calm when someone complained, and to manage my own money. Those things were not on my course, and no lecture could have taught them to me."
         },
         {
           "id": "P2",
           "title": "The floating markets of the Mekong",
-          "forItems": ["R3Q6", "R3Q7", "R3Q8", "R3Q9", "R3Q10"],
+          "forItems": [
+            "R3Q6",
+            "R3Q7",
+            "R3Q8",
+            "R3Q9",
+            "R3Q10"
+          ],
           "body": "For more than a century, farmers in the Mekong Delta have sold their fruit and vegetables from boats rather than from shops. The largest of these floating markets opens long before sunrise and is usually finished by nine in the morning, when the heat becomes uncomfortable and the buyers have gone home.\n\nVisitors are often confused about how to tell what each boat is selling. The answer hangs above it. Sellers tie a sample of their goods — a pineapple, a bunch of onions — to a tall wooden pole, so that a buyer can read the whole market from a distance without shouting a single question.\n\nThe markets are smaller than they used to be. New bridges and better roads mean that a farmer can now drive to a town market in forty minutes, and many younger people prefer this. Some traders worry that within a generation the boats will exist only for tourists.\n\nOthers are more hopeful. Local authorities have begun supporting families who keep trading in the traditional way, and a number of young sellers have returned, arguing that the market is worth keeping for its own sake and not only as a photograph."
         }
       ],
@@ -583,7 +595,7 @@
             }
           ],
           "correct": "B",
-          "explain": "ĐÁP ÁN B. Bài đọc viết: \"is usually finished by nine in the morning\" — chợ tan vào khoảng 9 giờ sáng, khi trời bắt đầu nóng và người mua đã về. A là bẫy chính: chi tiết \"opens long before sunrise\" nói về giờ MỞ chợ, không phải giờ TAN chợ; người đọc lướt dễ chộp nhầm cụm \"before sunrise\". C sai vì đến giữa buổi chiều thì chợ đã tan từ lâu (trời nóng, người mua đã về). D sai vì bài không hề nhắc tới hoàng hôn hay chợ họp buổi tối."
+          "explain": "Bài đọc viết: \"is usually finished by nine in the morning\" — chợ tan vào khoảng 9 giờ sáng, khi trời bắt đầu nóng và người mua đã về. “well before the sun comes up.” là bẫy chính: chi tiết \"opens long before sunrise\" nói về giờ MỞ chợ, không phải giờ TAN chợ; người đọc lướt dễ chộp nhầm cụm \"before sunrise\". “in the middle of the afternoon.” sai vì đến giữa buổi chiều thì chợ đã tan từ lâu (trời nóng, người mua đã về). “at about sunset each evening.” sai vì bài không hề nhắc tới hoàng hôn hay chợ họp buổi tối."
         },
         {
           "id": "R3Q7",
@@ -608,7 +620,7 @@
             }
           ],
           "correct": "C",
-          "explain": "ĐÁP ÁN C. Bài đọc nói rõ mục đích của cây sào: người bán treo một mẫu hàng lên \"so that a buyer can read the whole market from a distance without shouting a single question\" — tức để người mua nhìn thấy hàng từ xa. A là bẫy suy diễn theo kiểu dịch nghĩa đen (treo lên cho khỏi rơi xuống nước): bài không nói gì về việc bảo quản hay giữ trái cây khỏi nước. B sai vì thứ treo trên sào là MẪU HÀNG (\"a sample of their goods — a pineapple, a bunch of onions\"), không phải giá tiền. D sai vì du khách và chuyện chụp ảnh chỉ xuất hiện ở hai đoạn cuối, và không phải là lý do người bán dựng sào."
+          "explain": "Bài đọc nói rõ mục đích của cây sào: người bán treo một mẫu hàng lên \"so that a buyer can read the whole market from a distance without shouting a single question\" — tức để người mua nhìn thấy hàng từ xa. “stop the fruit from falling in the water.” là bẫy suy diễn theo kiểu dịch nghĩa đen (treo lên cho khỏi rơi xuống nước): bài không nói gì về việc bảo quản hay giữ trái cây khỏi nước. “show buyers the price of everything sold.” sai vì thứ treo trên sào là MẪU HÀNG (\"a sample of their goods — a pineapple, a bunch of onions\"), không phải giá tiền. “attract tourists who want to take photos.” sai vì du khách và chuyện chụp ảnh chỉ xuất hiện ở hai đoạn cuối, và không phải là lý do người bán dựng sào."
         },
         {
           "id": "R3Q8",
@@ -633,7 +645,7 @@
             }
           ],
           "correct": "A",
-          "explain": "ĐÁP ÁN A. Bài đọc: \"New bridges and better roads mean that a farmer can now drive to a town market in forty minutes, and many younger people prefer this\" — đường sá và cầu tốt hơn khiến nông dân bỏ chợ nổi để lên chợ trên bờ. D là bẫy nặng nhất vì nó nhắc tới chính quyền: nhưng bài viết nói ngược lại, \"Local authorities have begun supporting families who keep trading in the traditional way\" — chính quyền HỖ TRỢ chứ không đóng cửa chợ nào. B sai vì bài không hề nói con sông trở nên nguy hiểm. C sai vì bài không nói nông dân trồng ít trái cây hơn; nguyên nhân là cách đi bán thay đổi, không phải sản lượng giảm."
+          "explain": "Bài đọc: \"New bridges and better roads mean that a farmer can now drive to a town market in forty minutes, and many younger people prefer this\" — đường sá và cầu tốt hơn khiến nông dân bỏ chợ nổi để lên chợ trên bờ. “the government has closed several markets.” là bẫy nặng nhất vì nó nhắc tới chính quyền: nhưng bài viết nói ngược lại, \"Local authorities have begun supporting families who keep trading in the traditional way\" — chính quyền HỖ TRỢ chứ không đóng cửa chợ nào. “the river has become much too dangerous now.” sai vì bài không hề nói con sông trở nên nguy hiểm. “farmers now grow much less fruit than before.” sai vì bài không nói nông dân trồng ít trái cây hơn; nguyên nhân là cách đi bán thay đổi, không phải sản lượng giảm."
         },
         {
           "id": "R3Q9",
@@ -658,7 +670,7 @@
             }
           ],
           "correct": "B",
-          "explain": "ĐÁP ÁN B. Bài đọc: \"Some traders worry that within a generation the boats will exist only for tourists\" — nỗi lo là chợ nổi chỉ còn tồn tại như một điểm tham quan chứ không còn là nơi buôn bán thật. C là bẫy chính vì cũng có chữ \"tourists\": nhưng người bán lo chợ CHỈ CÒN phục vụ du khách, chứ không lo du khách ngừng đến. A sai vì bài không nói gì về giá trái cây tăng hay giảm. D sai vì bài không hề đề cập chuyện ô nhiễm sông nước."
+          "explain": "Bài đọc: \"Some traders worry that within a generation the boats will exist only for tourists\" — nỗi lo là chợ nổi chỉ còn tồn tại như một điểm tham quan chứ không còn là nơi buôn bán thật. “That foreign tourists will stop coming here.” là bẫy chính vì cũng có chữ \"tourists\": nhưng người bán lo chợ CHỈ CÒN phục vụ du khách, chứ không lo du khách ngừng đến. “That the price of fruit will fall very sharply.” sai vì bài không nói gì về giá trái cây tăng hay giảm. “That the river will become badly polluted.” sai vì bài không hề đề cập chuyện ô nhiễm sông nước."
         },
         {
           "id": "R3Q10",
@@ -683,7 +695,7 @@
             }
           ],
           "correct": "D",
-          "explain": "ĐÁP ÁN D. Đoạn cuối mở đầu bằng \"Others are more hopeful\", rồi dẫn chứng chính quyền địa phương hỗ trợ các gia đình buôn bán theo lối cũ và nhiều người bán trẻ đã quay lại — tác giả kết bài bằng việc ghi nhận vẫn còn người lạc quan. A là bẫy chính: bài chỉ nói \"Some traders worry\" (một số người lo), tác giả không hề khẳng định chắc chắn chợ sẽ biến mất, và câu cuối còn nghiêng về hướng tích cực. B sai vì chính quyền được nhắc tới theo hướng tốt (hỗ trợ), không có chi tiết nào thể hiện sự tức giận. C sai vì cả hai đoạn cuối đều bàn về tương lai của chợ, nên không thể nói tác giả không quan tâm."
+          "explain": "Đoạn cuối mở đầu bằng \"Others are more hopeful\", rồi dẫn chứng chính quyền địa phương hỗ trợ các gia đình buôn bán theo lối cũ và nhiều người bán trẻ đã quay lại — tác giả kết bài bằng việc ghi nhận vẫn còn người lạc quan. “sure that the markets will soon disappear.” là bẫy chính: bài chỉ nói \"Some traders worry\" (một số người lo), tác giả không hề khẳng định chắc chắn chợ sẽ biến mất, và câu cuối còn nghiêng về hướng tích cực. “angry about the government's new policy.” sai vì chính quyền được nhắc tới theo hướng tốt (hỗ trợ), không có chi tiết nào thể hiện sự tức giận. “uninterested in the future of the boats.” sai vì cả hai đoạn cuối đều bàn về tương lai của chợ, nên không thể nói tác giả không quan tâm."
         }
       ]
     },
@@ -697,13 +709,25 @@
         {
           "id": "P3",
           "title": "Learning a language online",
-          "forItems": ["R4Q1", "R4Q2", "R4Q3", "R4Q4", "R4Q5"],
+          "forItems": [
+            "R4Q1",
+            "R4Q2",
+            "R4Q3",
+            "R4Q4",
+            "R4Q5"
+          ],
           "body": "Ten years ago, anyone who wanted to learn English had to attend a class. Today millions of people study (1)________ from home using a phone. The choice is enormous, (2)________ this creates its own difficulty: many learners spend more time choosing an app than actually using one.\n\nTeachers generally agree that the method matters (3)________ than consistency. Twenty minutes every day is far more useful than four hours on a Sunday. It also helps to practise skills you find uncomfortable. Most learners repeat the activities they are already good (4)________ , and quietly avoid speaking.\n\nFinally, do not study alone forever. Language exists between people, so at some point you have to (5)________ a real conversation, make mistakes in front of someone, and survive it."
         },
         {
           "id": "P4",
           "title": "Less plastic, please",
-          "forItems": ["R4Q6", "R4Q7", "R4Q8", "R4Q9", "R4Q10"],
+          "forItems": [
+            "R4Q6",
+            "R4Q7",
+            "R4Q8",
+            "R4Q9",
+            "R4Q10"
+          ],
           "body": "Our city produces around four hundred tonnes of rubbish every day, and a large (6)________ of it is plastic packaging. Much of this is used for only a few minutes before being thrown (7)________ .\n\nThe good news is that small changes add (8)________ quickly. If every household refused one plastic bag a day, the city would use forty million fewer bags a year. Several markets now offer a discount to customers who (9)________ their own container.\n\nNone of this solves the problem completely, and factories must change too. (10)________ , waiting for someone else to act has never made a single street cleaner."
         }
       ],
@@ -881,7 +905,7 @@
             }
           ],
           "correct": "A",
-          "explain": "throw away = vứt đi."
+          "explain": "throw away = vứt đi. Đây là cụm động từ cố định; ba giới từ kia đều ghép được với throw nhưng ra nghĩa khác hẳn: throw off là cởi phăng ra, throw over là ném qua, throw down là quăng xuống — không cái nào có nghĩa bỏ đi như văn cảnh đang nói về rác."
         },
         {
           "id": "R4Q8",
@@ -985,7 +1009,7 @@
             }
           ],
           "correct": "A",
-          "explain": "\"Out of order\" = hỏng, không dùng được, nên thang máy hiện không hoạt động. B sai vì cầu thang chính là lối thay thế được khuyên dùng (\"please use the stairs\"), không hề bị đóng; C sai vì thông báo chỉ dẫn đi cầu thang ở cuối hành lang, tức hành lang vẫn mở bình thường. \"Thursday\" chỉ là ngày thợ dự kiến đến sửa."
+          "explain": "\"Out of order\" = hỏng, không dùng được, nên thang máy hiện không hoạt động. “The stairs are closed until Thursday.” sai vì cầu thang chính là lối thay thế được khuyên dùng (\"please use the stairs\"), không hề bị đóng; “The corridor is closed to students.” sai vì thông báo chỉ dẫn đi cầu thang ở cuối hành lang, tức hành lang vẫn mở bình thường. \"Thursday\" chỉ là ngày thợ dự kiến đến sửa."
         },
         {
           "id": "R5Q2",
@@ -1006,7 +1030,7 @@
             }
           ],
           "correct": "A",
-          "explain": "Khoa viết \"Any chance we could do 5pm same place?\" — anh ấy đề nghị dời sang giờ muộn hơn. A sai vì anh ấy không huỷ, vẫn muốn gặp (còn đưa thêm phương án hôm sau); C sai vì \"same place\" nói rõ địa điểm không thay đổi, chỉ giờ thay đổi."
+          "explain": "Khoa viết \"Any chance we could do 5pm same place?\" — anh ấy đề nghị dời sang giờ muộn hơn. “To cancel their meeting completely.” sai vì anh ấy không huỷ, vẫn muốn gặp (còn đưa thêm phương án hôm sau); “To move the meeting to a new place.” sai vì \"same place\" nói rõ địa điểm không thay đổi, chỉ giờ thay đổi."
         },
         {
           "id": "R5Q3",
@@ -1027,7 +1051,7 @@
             }
           ],
           "correct": "B",
-          "explain": "\"Hot meals served 11:00–13:30 only\" nhưng \"sandwiches and drinks available all day\", nên sau 13:30 vẫn mua được sandwich và đồ uống. A sai vì món nóng mới là thứ ngừng bán sau 13:30, còn đồ uống thì bán cả ngày; C sai vì sandwich cũng là đồ ăn và vẫn được bán cả ngày."
+          "explain": "\"Hot meals served 11:00–13:30 only\" nhưng \"sandwiches and drinks available all day\", nên sau 13:30 vẫn mua được sandwich và đồ uống. “buy a hot meal but not a drink.” sai vì món nóng mới là thứ ngừng bán sau 13:30, còn đồ uống thì bán cả ngày; “buy drinks but no food at all.” sai vì sandwich cũng là đồ ăn và vẫn được bán cả ngày."
         },
         {
           "id": "R5Q4",
@@ -1048,7 +1072,7 @@
             }
           ],
           "correct": "C",
-          "explain": "\"Forms handed in after this date cannot be accepted for the June exam\" — nộp muộn thì đơn không được nhận nên không được dự kỳ thi tháng 6. A sai vì thông báo không nói gì đến phí nộp muộn, đơn bị từ chối chứ không phải phạt tiền; C sai vì không có chuyện đổi sang mẫu đơn khác, mẫu này chỉ hết hạn."
+          "explain": "\"Forms handed in after this date cannot be accepted for the June exam\" — nộp muộn thì đơn không được nhận nên không được dự kỳ thi tháng 6. “You have to pay an extra late fee.” sai vì thông báo không nói gì đến phí nộp muộn, đơn bị từ chối chứ không phải phạt tiền; “You must fill in a different form.” sai vì không có chuyện đổi sang mẫu đơn khác, mẫu này chỉ hết hạn nộp."
         },
         {
           "id": "R5Q5",
@@ -1069,7 +1093,7 @@
             }
           ],
           "correct": "A",
-          "explain": "\"Buy any two books and get a third free\" — điều kiện là mua hai cuốn cùng lúc thì được tặng cuốn thứ ba (cuốn rẻ nhất). B sai vì ưu đãi tính theo SỐ LƯỢNG sách chứ không theo số tiền chi ra, bài không nêu mức tiền nào; C sai vì hạn cuối là 30 April, không phải 30 March."
+          "explain": "\"Buy any two books and get a third free\" — điều kiện là mua hai cuốn cùng lúc thì được tặng cuốn thứ ba (cuốn rẻ nhất). “spend at least 300,000 dong here.” sai vì ưu đãi tính theo SỐ LƯỢNG sách chứ không theo số tiền chi ra, bài không nêu mức tiền nào; “visit the shop before 30 March.” sai vì hạn cuối là 30 April, không phải 30 March."
         },
         {
           "id": "R5Q6",
@@ -1090,7 +1114,7 @@
             }
           ],
           "correct": "B",
-          "explain": "\"Vehicles will be removed at the owner's expense\" — xe bị kéo đi và chủ xe phải chịu chi phí. B sai vì \"at any time\" nghĩa là cấm đỗ mọi lúc, kể cả đỗ vài phút; C sai vì \"the owner\" ở đây là chủ chiếc xe bị kéo, không phải chủ toà nhà/chủ cổng — đây là lỗi dịch word-by-word thường gặp."
+          "explain": "\"Vehicles will be removed at the owner's expense\" — xe bị kéo đi và chủ xe phải chịu chi phí. “you can leave the car for a short time.” sai vì \"at any time\" nghĩa là cấm đỗ mọi lúc, kể cả đỗ vài phút; “the owner of the building pays the cost.” sai vì \"the owner\" ở đây là chủ chiếc xe bị kéo, không phải chủ toà nhà — đây là lỗi dịch word-by-word thường gặp."
         },
         {
           "id": "R5Q7",
@@ -1111,7 +1135,7 @@
             }
           ],
           "correct": "C",
-          "explain": "Thư viện mở cửa nhưng \"unstaffed\": \"You can study and return books, but you cannot borrow.\" A sai vì thứ Bảy không có nhân viên nên không mượn sách được; C sai vì bài ghi rõ \"You can study\" — sinh viên vẫn được ngồi học bên trong, chỉ dịch vụ mượn là ngừng."
+          "explain": "Thư viện mở cửa nhưng \"unstaffed\": \"You can study and return books, but you cannot borrow.\" “borrow books from the staff as usual.” sai vì thứ Bảy không có nhân viên nên không mượn sách được; “return books but not study inside.” sai vì bài ghi rõ \"You can study\" — sinh viên vẫn được ngồi học bên trong."
         },
         {
           "id": "R5Q8",
@@ -1132,7 +1156,7 @@
             }
           ],
           "correct": "A",
-          "explain": "\"Your jacket is at reception... Don't leave it till Monday\" — Ly muốn Nga đến lấy áo trước thứ Hai vì hộp đồ thất lạc bị dọn hằng tuần. A sai vì áo đã được mang xuống lễ tân, phòng 204 chỉ là nơi có người nhặt được; C sai vì lễ tân đóng cửa lúc 6 giờ (\"They close at 6\"), gọi sau 6 giờ thì không ai nghe."
+          "explain": "\"Your jacket is at reception... Don't leave it till Monday\" — Ly muốn Nga đến lấy áo trước thứ Hai vì hộp đồ thất lạc bị dọn hằng tuần. “Look for her jacket in room 204.” sai vì áo đã được mang xuống lễ tân, phòng 204 chỉ là nơi có người nhặt được; “Phone the reception desk after six.” sai vì lễ tân đóng cửa lúc 6 giờ (\"They close at 6\"), gọi sau 6 giờ thì không ai nghe."
         },
         {
           "id": "R5Q9",
@@ -1153,7 +1177,7 @@
             }
           ],
           "correct": "B",
-          "explain": "\"Passengers holding tickets may travel on the 15:35 service instead\" — hành khách được dùng chính tấm vé đó cho chuyến 15:35. A sai vì \"may travel... instead\" cho phép lựa chọn, họ không bắt buộc phải ngồi chờ chuyến 14:20 trễ 40 phút; C sai vì thông báo không hề nhắc tới hoàn tiền, chỉ đổi sang chuyến sau."
+          "explain": "\"Passengers holding tickets may travel on the 15:35 service instead\" — hành khách được dùng chính tấm vé đó cho chuyến 15:35. “must wait for the 14:20 train.” sai vì \"may travel... instead\" cho phép lựa chọn, họ không bắt buộc phải ngồi chờ chuyến 14:20 trễ 40 phút; “can get their money back.” sai vì thông báo không hề nhắc tới hoàn tiền, chỉ đổi sang chuyến sau."
         },
         {
           "id": "R5Q10",
@@ -1174,7 +1198,7 @@
             }
           ],
           "correct": "C",
-          "explain": "\"Swimming caps compulsory\" — compulsory = bắt buộc, nên mọi người đều phải đội mũ bơi. B sai vì trẻ dưới 12 vẫn được bơi, chỉ cần có người lớn đi cùng (\"must be with an adult\"), không phải bị cấm; C sai vì nội quy yêu cầu tắm TRƯỚC khi xuống nước (\"shower before entering the water\") — bẫy nhầm giới từ before/after."
+          "explain": "\"Swimming caps compulsory\" — compulsory = bắt buộc, nên mọi người đều phải đội mũ bơi. “Children under 12 cannot swim here.” sai vì trẻ dưới 12 vẫn được bơi, chỉ cần có người lớn đi cùng (\"must be with an adult\"); “You should shower after swimming.” sai vì nội quy yêu cầu tắm TRƯỚC khi xuống nước (\"shower before entering the water\") — bẫy nhầm before/after."
         }
       ]
     }

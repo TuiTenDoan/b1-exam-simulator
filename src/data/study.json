@@ -123,6 +123,7 @@
           "signals": [
             "than → so sánh hơn",
             "the … in / of / ever → so sánh nhất",
+            "the most … / …-est → so sánh nhất",
             "as … as → so sánh bằng",
             "not as … as → không bằng",
             "the same … as → giống nhau"
@@ -135,14 +136,49 @@
           "rule": "Tính từ 1 âm tiết (và 2 âm tiết kết thúc bằng -y) thêm -er / -est. Tính từ từ 2 âm tiết trở lên dùng more / the most.",
           "table": {
             "caption": "Bảng bất quy tắc — tài liệu trang 30",
-            "head": ["Tính từ / trạng từ", "Nghĩa", "So sánh hơn", "So sánh nhất"],
+            "head": [
+              "Tính từ / trạng từ",
+              "Nghĩa",
+              "So sánh hơn",
+              "So sánh nhất"
+            ],
             "rows": [
-              ["good / well", "tốt, giỏi", "better", "the best"],
-              ["bad", "tệ, dốt", "worse", "the worst"],
-              ["much / many", "nhiều", "more", "the most"],
-              ["little", "ít", "less", "the least"],
-              ["far", "xa", "farther / further", "the farthest / furthest"],
-              ["old", "già, cũ", "older / elder", "the oldest / eldest"]
+              [
+                "good / well",
+                "tốt, giỏi",
+                "better",
+                "the best"
+              ],
+              [
+                "bad",
+                "tệ, dốt",
+                "worse",
+                "the worst"
+              ],
+              [
+                "much / many",
+                "nhiều",
+                "more",
+                "the most"
+              ],
+              [
+                "little",
+                "ít",
+                "less",
+                "the least"
+              ],
+              [
+                "far",
+                "xa",
+                "farther / further",
+                "the farthest / furthest"
+              ],
+              [
+                "old",
+                "già, cũ",
+                "older / elder",
+                "the oldest / eldest"
+              ]
             ]
           },
           "traps": [
@@ -175,7 +211,9 @@
             "en": "It is raining so we don't go to the cinema.",
             "vi": "Trời mưa là nguyên nhân, nên vế sau “so” phải là kết quả."
           },
-          "traps": ["Đừng viết lý do sau “so” — đó là chỗ của kết quả."]
+          "traps": [
+            "Đừng viết lý do sau “so” — đó là chỗ của kết quả."
+          ]
         },
         {
           "type": "pattern",
@@ -210,7 +248,9 @@
             "en": "John said nothing when he heard the bad news.",
             "vi": "said (quá khứ) → heard (quá khứ). Không trộn thì hiện tại vào."
           },
-          "traps": ["Vế đề đã ở quá khứ mà vế bạn viết ở hiện tại là mất điểm."]
+          "traps": [
+            "Vế đề đã ở quá khứ mà vế bạn viết ở hiện tại là mất điểm."
+          ]
         },
         {
           "type": "pattern",
@@ -260,7 +300,9 @@
           "name": "Nhóm 6 — Điều kiện loại 2",
           "trigger": "If only I had …",
           "rule": "Giả định không có thật ở hiện tại: vế if dùng quá khứ đơn, vế chính dùng would / could / might + động từ nguyên thể.",
-          "stems": ["If only I had a lot of money, …"],
+          "stems": [
+            "If only I had a lot of money, …"
+          ],
           "example": {
             "en": "If only I had a lot of money, I would help the poor.",
             "vi": "had (quá khứ) ở vế giả định → would help ở vế chính."

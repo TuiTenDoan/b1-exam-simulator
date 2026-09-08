@@ -426,7 +426,7 @@
             }
           ],
           "correct": "B",
-          "explain": "Loa nói \"Engineers need to repair the air conditioning on the second floor\" → thư viện đóng cửa sớm vì có thợ đến sửa chữa (bị động tiếp diễn: is being done). A sai: tiếng ồn là do thợ sửa gây ra và sẽ làm phiền độc giả (\"the noise would disturb readers\"), chứ không phải độc giả gây ồn — bẫy dành cho người chỉ chộp được hai từ \"noise\" và \"readers\". C sai: câu \"take any books you need to the front desk before ten to four\" chỉ là dặn ra quầy mượn sách xong trước 3 giờ 50; bài không hề nói đến chuyện kiểm kê hay đếm sách."
+          "explain": "Loa nói \"Engineers need to repair the air conditioning on the second floor\" → thư viện đóng cửa sớm vì có thợ đến sửa chữa (bị động tiếp diễn: is being done). “Because the readers are making noise” sai: tiếng ồn là do thợ sửa gây ra và sẽ làm phiền độc giả (\"the noise would disturb readers\"), chứ không phải độc giả gây ồn — bẫy dành cho người chỉ chộp được hai từ \"noise\" và \"readers\". “Because the books are being counted” sai: câu \"take any books you need to the front desk before ten to four\" chỉ là dặn ra quầy mượn sách xong trước 3 giờ 50; bài không hề nói đến chuyện kiểm kê hay đếm sách."
         },
         {
           "id": "L3Q2",
@@ -452,7 +452,7 @@
             }
           ],
           "correct": "A",
-          "explain": "Bài nói \"Bags larger than a small backpack must be left in the lockers by the entrance\" → lời khuyên là để túi lớn vào tủ khoá. B sai: đồng xu mười nghìn chỉ để dùng tủ và được lấy lại (\"The lockers are free, but you will need a ten thousand dong coin, which you get back afterwards\"), không phải tiền vào cửa. C sai ngược hoàn toàn: tầng trên cùng (phòng tranh) lại đúng là nơi DUY NHẤT cấm chụp ảnh vì ánh sáng làm hỏng tranh cũ (\"allowed in every room except the gallery on the top floor\") — bẫy cho ai chỉ nghe thấy \"photography is allowed\" và \"top floor\"."
+          "explain": "Bài nói \"Bags larger than a small backpack must be left in the lockers by the entrance\" → lời khuyên là để túi lớn vào tủ khoá. “Pay ten thousand dong to enter” sai: đồng xu mười nghìn chỉ để dùng tủ và được lấy lại (\"The lockers are free, but you will need a ten thousand dong coin, which you get back afterwards\"), không phải tiền vào cửa. “Take photographs on the top floor” sai ngược hoàn toàn: tầng trên cùng (phòng tranh) lại đúng là nơi DUY NHẤT cấm chụp ảnh vì ánh sáng làm hỏng tranh cũ (\"allowed in every room except the gallery on the top floor\") — bẫy cho ai chỉ nghe thấy \"photography is allowed\" và \"top floor\"."
         },
         {
           "id": "L3Q3",
@@ -478,7 +478,7 @@
             }
           ],
           "correct": "C",
-          "explain": "\"From next week the lesson moves from room B2 to room C14\" → thay đổi duy nhất là phòng học. A và B sai vì bài khẳng định rõ \"The day and the time stay exactly the same\" — thứ và giờ giữ nguyên; người nghe lướt chỉ bắt được \"Thursday\" và \"from next week\" nên dễ tưởng lớp đổi thứ hoặc đổi giờ. Lớp đông lên (\"our group has grown\") chỉ là lý do phải đổi phòng, không phải bản thân thay đổi được thông báo."
+          "explain": "\"From next week the lesson moves from room B2 to room C14\" → thay đổi duy nhất là phòng học. “The time the class starts” và “The day the class is held” sai vì bài khẳng định rõ \"The day and the time stay exactly the same\" — thứ và giờ giữ nguyên; người nghe lướt chỉ bắt được \"Thursday\" và \"from next week\" nên dễ tưởng lớp đổi thứ hoặc đổi giờ. Lớp đông lên (\"our group has grown\") chỉ là lý do phải đổi phòng, không phải bản thân thay đổi được thông báo."
         },
         {
           "id": "L3Q4",
@@ -504,7 +504,7 @@
             }
           ],
           "correct": "B",
-          "explain": "\"I ordered a blue jacket ... but you have sent me a green one\" → Nam đặt áo xanh dương nhưng nhận áo xanh lá, nên vấn đề là sai màu, vì thế anh muốn đổi (\"exchange it for the colour I ordered\"). A sai: chính người gọi khẳng định \"The size is right\" — bẫy cho ai chỉ nghe thấy từ \"size\". C sai: người gọi cũng nói \"the quality is fine\", chất lượng không có vấn đề; anh ấy không đòi hoàn tiền (\"I don't want a refund\") mà chỉ muốn đổi đúng màu."
+          "explain": "\"I ordered a blue jacket ... but you have sent me a green one\" → Nam đặt áo xanh dương nhưng nhận áo xanh lá, nên vấn đề là sai màu, vì thế anh muốn đổi (\"exchange it for the colour I ordered\"). “The jacket is the wrong size” sai: chính người gọi khẳng định \"The size is right\" — bẫy cho ai chỉ nghe thấy từ \"size\". “The jacket is of poor quality” sai: người gọi cũng nói \"the quality is fine\", chất lượng không có vấn đề; anh ấy không đòi hoàn tiền (\"I don't want a refund\") mà chỉ muốn đổi đúng màu."
         },
         {
           "id": "L3Q5",
@@ -530,7 +530,7 @@
             }
           ],
           "correct": "A",
-          "explain": "\"Tickets for Saturday's concert are still available, but only online\" → chỉ mua được trên mạng, vì phòng vé đóng cửa để sửa chữa. B sai: vé vẫn còn (\"still available\"), chưa bán hết — bẫy cho người nghe lướt chỉ bắt được cụm \"the box office ... is closed\". C sai: phòng vé đóng đến cuối tháng nên không mua được ở đó, và mức giảm ba mươi phần trăm là dành cho sinh viên khi tải ảnh thẻ lên mạng, không liên quan đến giá tại phòng vé."
+          "explain": "\"Tickets for Saturday's concert are still available, but only online\" → chỉ mua được trên mạng, vì phòng vé đóng cửa để sửa chữa. “They have completely sold out” sai: vé vẫn còn (\"still available\"), chưa bán hết — bẫy cho người nghe lướt chỉ bắt được cụm \"the box office ... is closed\". “They cost less at the box office” sai: phòng vé đóng đến cuối tháng nên không mua được ở đó, và mức giảm ba mươi phần trăm là dành cho sinh viên khi tải ảnh thẻ lên mạng, không liên quan đến giá tại phòng vé."
         }
       ]
     },
@@ -570,7 +570,10 @@
           "prompt": "Lessons are on Tuesday and ________ evenings.",
           "type": "gap",
           "correct": "Thursday",
-          "accepts": ["thursday", "thurs"],
+          "accepts": [
+            "thursday",
+            "thurs"
+          ],
           "explain": "\"Tuesday and Thursday evenings\"."
         },
         {
@@ -578,7 +581,10 @@
           "prompt": "Each lesson lasts ________ minutes.",
           "type": "gap",
           "correct": "90",
-          "accepts": ["ninety", "90 minutes"],
+          "accepts": [
+            "ninety",
+            "90 minutes"
+          ],
           "explain": "\"Each lesson lasts ninety minutes.\""
         },
         {
@@ -586,7 +592,10 @@
           "prompt": "The course lasts ________ weeks in total.",
           "type": "gap",
           "correct": "10",
-          "accepts": ["ten", "10 weeks"],
+          "accepts": [
+            "ten",
+            "10 weeks"
+          ],
           "explain": "\"The full course is ten weeks\"."
         },
         {
@@ -594,7 +603,10 @@
           "prompt": "The price does not include ________.",
           "type": "gap",
           "correct": "parking",
-          "accepts": ["the parking", "car parking"],
+          "accepts": [
+            "the parking",
+            "car parking"
+          ],
           "explain": "\"That includes the use of the changing rooms but not the parking.\""
         },
         {
@@ -602,7 +614,10 @@
           "prompt": "Students must bring a swimming ________.",
           "type": "gap",
           "correct": "cap",
-          "accepts": ["hat", "swimming cap"],
+          "accepts": [
+            "hat",
+            "swimming cap"
+          ],
           "explain": "\"Please bring a swimming cap — it is compulsory\"."
         }
       ]

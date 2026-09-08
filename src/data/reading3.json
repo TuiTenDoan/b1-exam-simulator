@@ -1,0 +1,1207 @@
+{
+  "sectionId": "reading",
+  "title": "Reading, Grammar & Vocabulary",
+  "label": "Đề 3",
+  "totalQuestions": 50,
+  "durationSeconds": 3600,
+  "parts": [
+    {
+      "id": "R1",
+      "title": "Part 1 — Grammar",
+      "vi": "Ngữ pháp: thì hiện tại, quá khứ đơn, so sánh",
+      "instructions": "Choose the correct answer, A, B, C or D.",
+      "items": [
+        {
+          "id": "D3R1Q1",
+          "prompt": "Listen! Someone ________ the piano in the room upstairs.",
+          "options": [
+            {
+              "key": "A",
+              "text": "is playing"
+            },
+            {
+              "key": "B",
+              "text": "plays"
+            },
+            {
+              "key": "C",
+              "text": "played"
+            },
+            {
+              "key": "D",
+              "text": "are playing"
+            }
+          ],
+          "correct": "A",
+          "explain": "\"Listen!\" báo việc đang diễn ra ngay lúc nói → hiện tại tiếp diễn. \"someone\" là số ít nên dùng is, không dùng are."
+        },
+        {
+          "id": "D3R1Q2",
+          "prompt": "Mai ________ her bike to school every day because the bus is always full.",
+          "options": [
+            {
+              "key": "A",
+              "text": "ride"
+            },
+            {
+              "key": "B",
+              "text": "rides"
+            },
+            {
+              "key": "C",
+              "text": "is riding"
+            },
+            {
+              "key": "D",
+              "text": "rode"
+            }
+          ],
+          "correct": "B",
+          "explain": "\"every day\" là thói quen → hiện tại đơn. Chủ ngữ Mai là ngôi thứ ba số ít nên động từ thêm s."
+        },
+        {
+          "id": "D3R1Q3",
+          "prompt": "Where is Hoa? She ________ in the garden at the moment.",
+          "options": [
+            {
+              "key": "A",
+              "text": "is working"
+            },
+            {
+              "key": "B",
+              "text": "worked"
+            },
+            {
+              "key": "C",
+              "text": "works"
+            },
+            {
+              "key": "D",
+              "text": "are working"
+            }
+          ],
+          "correct": "A",
+          "explain": "\"at the moment\" → hiện tại tiếp diễn. Chủ ngữ She đi với is, không đi với are."
+        },
+        {
+          "id": "D3R1Q4",
+          "prompt": "We ________ a lot of photographs when we visited Ha Long Bay last year.",
+          "options": [
+            {
+              "key": "A",
+              "text": "take"
+            },
+            {
+              "key": "B",
+              "text": "took"
+            },
+            {
+              "key": "C",
+              "text": "are taking"
+            },
+            {
+              "key": "D",
+              "text": "takes"
+            }
+          ],
+          "correct": "B",
+          "explain": "\"last year\" là mốc đã qua → quá khứ đơn. take là động từ bất quy tắc, quá khứ là took."
+        },
+        {
+          "id": "D3R1Q5",
+          "prompt": "The shop ________ open yesterday, so I came home with nothing.",
+          "options": [
+            {
+              "key": "A",
+              "text": "isn't"
+            },
+            {
+              "key": "B",
+              "text": "weren't"
+            },
+            {
+              "key": "C",
+              "text": "wasn't"
+            },
+            {
+              "key": "D",
+              "text": "doesn't"
+            }
+          ],
+          "correct": "C",
+          "explain": "\"yesterday\" → quá khứ, chủ ngữ \"the shop\" số ít nên dùng wasn't. weren't dành cho chủ ngữ số nhiều."
+        },
+        {
+          "id": "D3R1Q6",
+          "prompt": "They ________ finish the report on time because the computer broke.",
+          "options": [
+            {
+              "key": "A",
+              "text": "don't"
+            },
+            {
+              "key": "B",
+              "text": "weren't"
+            },
+            {
+              "key": "C",
+              "text": "doesn't"
+            },
+            {
+              "key": "D",
+              "text": "didn't"
+            }
+          ],
+          "correct": "D",
+          "explain": "Phủ định quá khứ đơn với động từ thường: didn't + nguyên thể. \"weren't\" chỉ đi với to be, không đi với finish."
+        },
+        {
+          "id": "D3R1Q7",
+          "prompt": "This bag is ________ than that one, but the two cost the same.",
+          "options": [
+            {
+              "key": "A",
+              "text": "bigger"
+            },
+            {
+              "key": "B",
+              "text": "big"
+            },
+            {
+              "key": "C",
+              "text": "the biggest"
+            },
+            {
+              "key": "D",
+              "text": "as big"
+            }
+          ],
+          "correct": "A",
+          "explain": "Có \"than\" → so sánh hơn. big là tính từ ngắn nên gấp đôi phụ âm và thêm -er: bigger."
+        },
+        {
+          "id": "D3R1Q8",
+          "prompt": "Ha Noi is one of ________ cities in Viet Nam.",
+          "options": [
+            {
+              "key": "A",
+              "text": "busier"
+            },
+            {
+              "key": "B",
+              "text": "the busiest"
+            },
+            {
+              "key": "C",
+              "text": "the most busy"
+            },
+            {
+              "key": "D",
+              "text": "busiest"
+            }
+          ],
+          "correct": "B",
+          "explain": "\"one of\" luôn đi với so sánh nhất và phải có \"the\". busy kết thúc bằng -y nên đổi thành busiest, không dùng \"the most busy\"."
+        },
+        {
+          "id": "D3R1Q9",
+          "prompt": "My new phone is ________ my old one: both of them cost two million dong.",
+          "options": [
+            {
+              "key": "A",
+              "text": "the most expensive"
+            },
+            {
+              "key": "B",
+              "text": "more expensive than"
+            },
+            {
+              "key": "C",
+              "text": "as expensive as"
+            },
+            {
+              "key": "D",
+              "text": "expensive than"
+            }
+          ],
+          "correct": "C",
+          "explain": "Hai máy giá bằng nhau → so sánh bằng: as + tính từ + as. “more expensive than” đúng ngữ pháp nhưng sai nghĩa vì vế sau nói hai máy cùng giá."
+        },
+        {
+          "id": "D3R1Q10",
+          "prompt": "This dictionary is much ________ than the one I had before.",
+          "options": [
+            {
+              "key": "A",
+              "text": "good"
+            },
+            {
+              "key": "B",
+              "text": "well"
+            },
+            {
+              "key": "C",
+              "text": "the best"
+            },
+            {
+              "key": "D",
+              "text": "better"
+            }
+          ],
+          "correct": "D",
+          "explain": "good có dạng so sánh hơn bất quy tắc là better. Có \"than\" nên không dùng dạng nguyên hay dạng so sánh nhất."
+        }
+      ]
+    },
+    {
+      "id": "R2",
+      "title": "Part 2 — Vocabulary",
+      "vi": "Từ vựng B1",
+      "instructions": "Choose the word or phrase that best completes each sentence.",
+      "items": [
+        {
+          "id": "D3R2Q1",
+          "prompt": "Our neighbour is very ________ — she feeds our cat every time we go away.",
+          "options": [
+            {
+              "key": "A",
+              "text": "kind"
+            },
+            {
+              "key": "B",
+              "text": "quiet"
+            },
+            {
+              "key": "C",
+              "text": "lazy"
+            },
+            {
+              "key": "D",
+              "text": "funny"
+            }
+          ],
+          "correct": "A",
+          "explain": "kind = tốt bụng, nghĩ cho người khác — khớp với việc trông mèo giúp hàng xóm. Ba từ kia không giải thích được hành động đó."
+        },
+        {
+          "id": "D3R2Q2",
+          "prompt": "My cousin is really ________ — he turns old bottles into lamps and bowls.",
+          "options": [
+            {
+              "key": "A",
+              "text": "active"
+            },
+            {
+              "key": "B",
+              "text": "creative"
+            },
+            {
+              "key": "C",
+              "text": "helpful"
+            },
+            {
+              "key": "D",
+              "text": "polite"
+            }
+          ],
+          "correct": "B",
+          "explain": "creative = sáng tạo, nghĩ ra cái mới từ vật cũ. active là năng động (thể chất), helpful là hay giúp đỡ."
+        },
+        {
+          "id": "D3R2Q3",
+          "prompt": "The ________ says which museums open on Mondays and how much a ticket costs.",
+          "options": [
+            {
+              "key": "A",
+              "text": "guidebook"
+            },
+            {
+              "key": "B",
+              "text": "suitcase"
+            },
+            {
+              "key": "C",
+              "text": "luggage"
+            },
+            {
+              "key": "D",
+              "text": "map"
+            }
+          ],
+          "correct": "A",
+          "explain": "guidebook = sách hướng dẫn du lịch, có giờ mở cửa và giá vé. Bản đồ chỉ cho biết đường đi, không có những thông tin đó."
+        },
+        {
+          "id": "D3R2Q4",
+          "prompt": "Every summer thousands of ________ come to Hoi An to see the old town.",
+          "options": [
+            {
+              "key": "A",
+              "text": "guests"
+            },
+            {
+              "key": "B",
+              "text": "tourists"
+            },
+            {
+              "key": "C",
+              "text": "luggage"
+            },
+            {
+              "key": "D",
+              "text": "receptionist"
+            }
+          ],
+          "correct": "B",
+          "explain": "tourists = khách du lịch đến một nơi để tham quan. guests là khách trọ của một khách sạn cụ thể, không dùng cho cả một thành phố."
+        },
+        {
+          "id": "D3R2Q5",
+          "prompt": "The lift was broken, so we carried every box up the ________ ourselves.",
+          "options": [
+            {
+              "key": "A",
+              "text": "roof"
+            },
+            {
+              "key": "B",
+              "text": "drawer"
+            },
+            {
+              "key": "C",
+              "text": "stairs"
+            },
+            {
+              "key": "D",
+              "text": "seat"
+            }
+          ],
+          "correct": "C",
+          "explain": "stairs = cầu thang bộ, thứ thay thế khi thang máy hỏng. Ba phương án còn lại không phải lối đi giữa các tầng."
+        },
+        {
+          "id": "D3R2Q6",
+          "prompt": "The flat is freezing in January because the ________ has not worked since December.",
+          "options": [
+            {
+              "key": "A",
+              "text": "air conditioning"
+            },
+            {
+              "key": "B",
+              "text": "washing machine"
+            },
+            {
+              "key": "C",
+              "text": "bin"
+            },
+            {
+              "key": "D",
+              "text": "heating"
+            }
+          ],
+          "correct": "D",
+          "explain": "heating = hệ thống sưởi, hỏng thì nhà lạnh. air conditioning là điều hoà làm mát — bẫy nghĩa ngược."
+        },
+        {
+          "id": "D3R2Q7",
+          "prompt": "After she won the speaking prize, Mai felt much more ________ in class.",
+          "options": [
+            {
+              "key": "A",
+              "text": "confident"
+            },
+            {
+              "key": "B",
+              "text": "miserable"
+            },
+            {
+              "key": "C",
+              "text": "careless"
+            },
+            {
+              "key": "D",
+              "text": "friendly"
+            }
+          ],
+          "correct": "A",
+          "explain": "confident = tự tin, đúng cảm giác sau khi thắng giải. miserable là buồn khổ, đi ngược hẳn ý câu."
+        },
+        {
+          "id": "D3R2Q8",
+          "prompt": "I like to ________ time with my grandparents in the countryside at the weekend.",
+          "options": [
+            {
+              "key": "A",
+              "text": "make"
+            },
+            {
+              "key": "B",
+              "text": "spend"
+            },
+            {
+              "key": "C",
+              "text": "do"
+            },
+            {
+              "key": "D",
+              "text": "take"
+            }
+          ],
+          "correct": "B",
+          "explain": "spend time = dành thời gian. Đây là cụm cố định; không nói \"make time with\" hay \"do time with\"."
+        },
+        {
+          "id": "D3R2Q9",
+          "prompt": "My brother and I had an ________ about whose turn it was to cook dinner.",
+          "options": [
+            {
+              "key": "A",
+              "text": "opinion"
+            },
+            {
+              "key": "B",
+              "text": "accident"
+            },
+            {
+              "key": "C",
+              "text": "argument"
+            },
+            {
+              "key": "D",
+              "text": "excuse"
+            }
+          ],
+          "correct": "C",
+          "explain": "have an argument = cãi nhau. \"have an accident\" là gặp tai nạn, \"have an opinion\" là có ý kiến — không hợp với việc tranh nhau nấu ăn."
+        },
+        {
+          "id": "D3R2Q10",
+          "prompt": "We get on well because we have a lot in ________ : books, films and football.",
+          "options": [
+            {
+              "key": "A",
+              "text": "similar"
+            },
+            {
+              "key": "B",
+              "text": "same"
+            },
+            {
+              "key": "C",
+              "text": "together"
+            },
+            {
+              "key": "D",
+              "text": "common"
+            }
+          ],
+          "correct": "D",
+          "explain": "have a lot in common = có nhiều điểm chung. similar và same là tính từ, không đứng sau \"in\" theo cách này."
+        }
+      ]
+    },
+    {
+      "id": "R3",
+      "title": "Part 3 — Reading comprehension",
+      "vi": "Đọc hiểu: Đúng/Sai và chọn đáp án đúng nhất",
+      "instructions": "Read the two texts and answer the questions.",
+      "passages": [
+        {
+          "id": "D3P1",
+          "title": "The night bus",
+          "forItems": [
+            "D3R3Q1",
+            "D3R3Q2",
+            "D3R3Q3",
+            "D3R3Q4",
+            "D3R3Q5"
+          ],
+          "body": "I had never taken a night bus before last April. My sister booked two seats to Da Lat because the train was full, and she promised me it was the cheapest way to travel. She was right about the price. She was wrong about almost everything else.\n\nThe bus left at nine in the evening. Our seats were at the back, next to the door, and every time someone got on the cold air came in with them. I had brought a thin jacket only, because the weather in the city that afternoon had been hot.\n\nAt about two in the morning the driver stopped at a small restaurant and woke everybody up. I was too tired to eat, but my sister had noodles and made friends with a woman who was going to the same street as us. That woman later helped us find a taxi, so I stopped complaining.\n\nWe arrived at half past five. The sky was still dark and the air smelled of pine trees. My sister says she will book the night bus again in December. I have told her that next time I am taking a blanket."
+        },
+        {
+          "id": "D3P2",
+          "title": "Cooking with my father",
+          "forItems": [
+            "D3R3Q6",
+            "D3R3Q7",
+            "D3R3Q8",
+            "D3R3Q9",
+            "D3R3Q10"
+          ],
+          "body": "My father learned to cook late. For thirty years my mother made every meal in our house, and he did the washing up. Then she went to look after my grandmother in another province for four months, and he was on his own with two teenagers.\n\nThe first week was terrible. He burnt rice twice, which we did not think was possible. On Friday he telephoned my mother and asked her to explain, step by step, how she made pork with eggs. He wrote it down in a small notebook, and that notebook is now full.\n\nWhat surprised me was how much he enjoyed it. He started watching cooking videos in the evening instead of the news. He bought a heavy pan that nobody is allowed to wash in the machine. When my mother came home he did not give the kitchen back to her, and now they cook together on Sundays, which they never did before.\n\nHe still cannot make soup as well as she can. He says this is because she has had forty years of practice, and he has had two."
+        }
+      ],
+      "items": [
+        {
+          "id": "D3R3Q1",
+          "passage": "D3P1",
+          "prompt": "The writer chose the night bus because it was cheaper than the train.",
+          "type": "rightwrong",
+          "correct": "B",
+          "explain": "SAI. Chị gái đặt xe khách vì \"the train was full\" — tàu hết vé. Giá rẻ là điều chị nói thêm, không phải lý do phải đi xe."
+        },
+        {
+          "id": "D3R3Q2",
+          "passage": "D3P1",
+          "prompt": "The writer felt cold during the journey.",
+          "type": "rightwrong",
+          "correct": "A",
+          "explain": "ĐÚNG. Ghế cạnh cửa nên \"every time someone got on the cold air came in\", và người viết chỉ mang áo khoác mỏng."
+        },
+        {
+          "id": "D3R3Q3",
+          "passage": "D3P1",
+          "prompt": "The writer ate at the restaurant in the middle of the night.",
+          "type": "rightwrong",
+          "correct": "B",
+          "explain": "SAI. \"I was too tired to eat\" — người viết mệt quá không ăn; chỉ có chị gái ăn phở."
+        },
+        {
+          "id": "D3R3Q4",
+          "passage": "D3P1",
+          "prompt": "Someone the writer's sister met on the bus helped them afterwards.",
+          "type": "rightwrong",
+          "correct": "A",
+          "explain": "ĐÚNG. Người phụ nữ quen ở quán ăn \"later helped us find a taxi\"."
+        },
+        {
+          "id": "D3R3Q5",
+          "passage": "D3P1",
+          "prompt": "The writer refuses to travel by night bus again.",
+          "type": "rightwrong",
+          "correct": "B",
+          "explain": "SAI. Người viết không từ chối đi nữa, chỉ nói lần sau sẽ mang theo chăn."
+        },
+        {
+          "id": "D3R3Q6",
+          "passage": "D3P2",
+          "prompt": "Why did the writer's father start cooking?",
+          "options": [
+            {
+              "key": "A",
+              "text": "His wife had to leave home for months."
+            },
+            {
+              "key": "B",
+              "text": "He wanted to give his wife a rest."
+            },
+            {
+              "key": "C",
+              "text": "He had always wanted to learn."
+            },
+            {
+              "key": "D",
+              "text": "His children asked him to do it."
+            }
+          ],
+          "correct": "A",
+          "explain": "Mẹ đi chăm bà ở tỉnh khác bốn tháng, bố ở nhà một mình với hai đứa con. Bài không nói ông muốn học từ trước hay các con nhờ."
+        },
+        {
+          "id": "D3R3Q7",
+          "passage": "D3P2",
+          "prompt": "How did the father learn his first proper dish?",
+          "options": [
+            {
+              "key": "A",
+              "text": "His wife explained it on the phone."
+            },
+            {
+              "key": "B",
+              "text": "He copied a recipe from a video."
+            },
+            {
+              "key": "C",
+              "text": "He found it in an old notebook."
+            },
+            {
+              "key": "D",
+              "text": "A neighbour showed him how to."
+            }
+          ],
+          "correct": "A",
+          "explain": "\"he telephoned my mother and asked her to explain, step by step\". Ông xem video nấu ăn, nhưng đó là về sau; cuốn sổ là do ông tự viết chứ không tìm thấy."
+        },
+        {
+          "id": "D3R3Q8",
+          "passage": "D3P2",
+          "prompt": "What surprised the writer most?",
+          "options": [
+            {
+              "key": "A",
+              "text": "How quickly his father improved."
+            },
+            {
+              "key": "B",
+              "text": "How much his father liked cooking."
+            },
+            {
+              "key": "C",
+              "text": "How often his father burnt the rice."
+            },
+            {
+              "key": "D",
+              "text": "How little his mother helped him."
+            }
+          ],
+          "correct": "B",
+          "explain": "\"What surprised me was how much he enjoyed it\" — câu nói thẳng điều làm người viết ngạc nhiên."
+        },
+        {
+          "id": "D3R3Q9",
+          "passage": "D3P2",
+          "prompt": "What changed after the mother came home?",
+          "options": [
+            {
+              "key": "A",
+              "text": "The children took over the cooking."
+            },
+            {
+              "key": "B",
+              "text": "The father stopped cooking again."
+            },
+            {
+              "key": "C",
+              "text": "The parents began cooking together."
+            },
+            {
+              "key": "D",
+              "text": "The family ate out at the weekend."
+            }
+          ],
+          "correct": "C",
+          "explain": "\"now they cook together on Sundays, which they never did before\". Bố không trả bếp lại cho mẹ, tức là vẫn nấu."
+        },
+        {
+          "id": "D3R3Q10",
+          "passage": "D3P2",
+          "prompt": "How does the father explain his soup?",
+          "options": [
+            {
+              "key": "A",
+              "text": "He says the pan is the wrong size."
+            },
+            {
+              "key": "B",
+              "text": "He says soup is harder than rice."
+            },
+            {
+              "key": "C",
+              "text": "He says he does not like making it."
+            },
+            {
+              "key": "D",
+              "text": "He says his wife has practised longer."
+            }
+          ],
+          "correct": "D",
+          "explain": "\"she has had forty years of practice, and he has had two\" — ông giải thích bằng số năm luyện tập, không đổ cho cái chảo hay độ khó của món."
+        }
+      ]
+    },
+    {
+      "id": "R4",
+      "title": "Part 4 — Gap fill",
+      "vi": "Điền từ vào đoạn văn",
+      "lockOrder": true,
+      "instructions": "Read the texts and choose the best word for each gap.",
+      "passages": [
+        {
+          "id": "D3P3",
+          "title": "Moving to a smaller flat",
+          "forItems": [
+            "D3R4Q1",
+            "D3R4Q2",
+            "D3R4Q3",
+            "D3R4Q4",
+            "D3R4Q5"
+          ],
+          "body": "When my rent went up, I moved into a flat half the size of the old one. The hardest part was deciding what to throw in the (1)________ . I filled six bags in one afternoon.\n\nThe new place has no lift, so everything went up four floors of (2)________ . My friend Tuan came to help and did not complain once, which was a real (3)________ . The kitchen is tiny: there is a fridge, but there is nowhere to put a (4)________ machine, so I wash my shirts in the bath.\n\nStill, I am (5)________ that I moved. The rent is lower, the neighbours say hello, and I no longer own things I never use."
+        },
+        {
+          "id": "D3P4",
+          "title": "The neighbour I never spoke to",
+          "forItems": [
+            "D3R4Q6",
+            "D3R4Q7",
+            "D3R4Q8",
+            "D3R4Q9",
+            "D3R4Q10"
+          ],
+          "body": "For two years the woman in flat 9 and I said nothing to each other. Then one evening the (6)________ in the corridor went out and we met in the dark, both holding our phones up.\n\nWe started talking. It turned out we (7)________ a lot in common: the same university, the same terrible bus to work, the same opinion about the man who parks across the gate. Now she rings my bell when she cooks too much.\n\nI keep thinking how easy it would have been to (8)________ nothing that evening and go back inside. Two years of living on my (9)________ , twenty steps from someone I now count as a friend. If you want to (10)________ friends, it seems, you mostly have to be there when the lights go out."
+        }
+      ],
+      "items": [
+        {
+          "id": "D3R4Q1",
+          "passage": "D3P3",
+          "gapNumber": 1,
+          "options": [
+            {
+              "key": "A",
+              "text": "bin"
+            },
+            {
+              "key": "B",
+              "text": "roof"
+            },
+            {
+              "key": "C",
+              "text": "seat"
+            },
+            {
+              "key": "D",
+              "text": "drawer"
+            }
+          ],
+          "correct": "A",
+          "explain": "throw something in the bin = vứt vào thùng rác. Câu sau nói \"filled six bags\" nên đây đúng là chuyện bỏ đồ đi."
+        },
+        {
+          "id": "D3R4Q2",
+          "passage": "D3P3",
+          "gapNumber": 2,
+          "options": [
+            {
+              "key": "A",
+              "text": "lights"
+            },
+            {
+              "key": "B",
+              "text": "stairs"
+            },
+            {
+              "key": "C",
+              "text": "heating"
+            },
+            {
+              "key": "D",
+              "text": "bookcase"
+            }
+          ],
+          "correct": "B",
+          "explain": "Không có thang máy thì phải đi cầu thang: four floors of stairs. Ba từ kia không phải lối lên tầng."
+        },
+        {
+          "id": "D3R4Q3",
+          "passage": "D3P3",
+          "gapNumber": 3,
+          "options": [
+            {
+              "key": "A",
+              "text": "favour"
+            },
+            {
+              "key": "B",
+              "text": "argument"
+            },
+            {
+              "key": "C",
+              "text": "problem"
+            },
+            {
+              "key": "D",
+              "text": "mistake"
+            }
+          ],
+          "correct": "A",
+          "explain": "a real favour = một sự giúp đỡ thật sự. Bạn đến khuân đồ mà không than phiền là giúp, không phải vấn đề hay cãi vã."
+        },
+        {
+          "id": "D3R4Q4",
+          "passage": "D3P3",
+          "gapNumber": 4,
+          "options": [
+            {
+              "key": "A",
+              "text": "cleaning"
+            },
+            {
+              "key": "B",
+              "text": "washing"
+            },
+            {
+              "key": "C",
+              "text": "water"
+            },
+            {
+              "key": "D",
+              "text": "clothes"
+            }
+          ],
+          "correct": "B",
+          "explain": "washing machine = máy giặt, tên gọi cố định. Câu sau nói phải giặt áo trong bồn tắm nên đúng là thiếu máy giặt."
+        },
+        {
+          "id": "D3R4Q5",
+          "passage": "D3P3",
+          "gapNumber": 5,
+          "options": [
+            {
+              "key": "A",
+              "text": "annoyed"
+            },
+            {
+              "key": "B",
+              "text": "miserable"
+            },
+            {
+              "key": "C",
+              "text": "glad"
+            },
+            {
+              "key": "D",
+              "text": "careless"
+            }
+          ],
+          "correct": "C",
+          "explain": "be glad that … = mừng vì đã làm gì. Cả câu liệt kê toàn điều tốt nên phải là cảm xúc tích cực."
+        },
+        {
+          "id": "D3R4Q6",
+          "passage": "D3P4",
+          "gapNumber": 6,
+          "options": [
+            {
+              "key": "A",
+              "text": "roofs"
+            },
+            {
+              "key": "B",
+              "text": "seats"
+            },
+            {
+              "key": "C",
+              "text": "stairs"
+            },
+            {
+              "key": "D",
+              "text": "lights"
+            }
+          ],
+          "correct": "D",
+          "explain": "the lights went out = đèn tắt, khớp với chi tiết hai người soi điện thoại trong bóng tối."
+        },
+        {
+          "id": "D3R4Q7",
+          "passage": "D3P4",
+          "gapNumber": 7,
+          "options": [
+            {
+              "key": "A",
+              "text": "had"
+            },
+            {
+              "key": "B",
+              "text": "did"
+            },
+            {
+              "key": "C",
+              "text": "made"
+            },
+            {
+              "key": "D",
+              "text": "took"
+            }
+          ],
+          "correct": "A",
+          "explain": "have a lot in common = có nhiều điểm chung. Cụm này luôn đi với have, ở đây chia quá khứ thành had."
+        },
+        {
+          "id": "D3R4Q8",
+          "passage": "D3P4",
+          "gapNumber": 8,
+          "options": [
+            {
+              "key": "A",
+              "text": "make"
+            },
+            {
+              "key": "B",
+              "text": "say"
+            },
+            {
+              "key": "C",
+              "text": "have"
+            },
+            {
+              "key": "D",
+              "text": "take"
+            }
+          ],
+          "correct": "B",
+          "explain": "say nothing = không nói gì. Đầu bài cũng dùng chính cụm này: \"said nothing to each other\"."
+        },
+        {
+          "id": "D3R4Q9",
+          "passage": "D3P4",
+          "gapNumber": 9,
+          "options": [
+            {
+              "key": "A",
+              "text": "one"
+            },
+            {
+              "key": "B",
+              "text": "self"
+            },
+            {
+              "key": "C",
+              "text": "own"
+            },
+            {
+              "key": "D",
+              "text": "alone"
+            }
+          ],
+          "correct": "C",
+          "explain": "on my own = một mình. Đây là cụm cố định, không nói \"on my alone\" hay \"on my self\"."
+        },
+        {
+          "id": "D3R4Q10",
+          "passage": "D3P4",
+          "gapNumber": 10,
+          "options": [
+            {
+              "key": "A",
+              "text": "do"
+            },
+            {
+              "key": "B",
+              "text": "have"
+            },
+            {
+              "key": "C",
+              "text": "take"
+            },
+            {
+              "key": "D",
+              "text": "make"
+            }
+          ],
+          "correct": "D",
+          "explain": "make friends = kết bạn. Người Việt hay dịch thành \"do friends\" hoặc \"have friends\" — nhưng \"have friends\" là đã có bạn rồi, không phải kết bạn mới."
+        }
+      ]
+    },
+    {
+      "id": "R5",
+      "title": "Part 5 — Short texts",
+      "vi": "Đọc thông báo, tin nhắn và chọn nghĩa đúng",
+      "instructions": "Read each short text and choose the answer that says the same thing.",
+      "items": [
+        {
+          "id": "D3R5Q1",
+          "notice": "GYM MEMBERS\nFrom June the gym opens at 05:30, one hour earlier than now.\nClosing time is not changing.",
+          "prompt": "What does this notice tell members?",
+          "options": [
+            {
+              "key": "A",
+              "text": "The gym will open earlier in June."
+            },
+            {
+              "key": "B",
+              "text": "The gym will close later in June."
+            },
+            {
+              "key": "C",
+              "text": "The gym will be open for less time."
+            }
+          ],
+          "correct": "A",
+          "explain": "Mở sớm hơn một tiếng, giờ đóng giữ nguyên. Vậy giờ mở cửa dài thêm chứ không ngắn đi, nên “The gym will be open for less time.” sai."
+        },
+        {
+          "id": "D3R5Q2",
+          "notice": "Chị ơi — em để quên cái ô ở lớp chiều nay. Tomorrow I have no class. Could you keep it for me until Thursday? — Vy",
+          "prompt": "What does Vy ask her friend to do?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Keep the umbrella until Thursday."
+            },
+            {
+              "key": "B",
+              "text": "Look for an umbrella she has lost."
+            },
+            {
+              "key": "C",
+              "text": "Bring the umbrella to class tomorrow."
+            }
+          ],
+          "correct": "A",
+          "explain": "Vy biết ô ở đâu và mai không đi học, nên chỉ nhờ giữ hộ đến thứ Năm. Cô ấy không nhờ tìm hay mang đến ngày mai."
+        },
+        {
+          "id": "D3R5Q3",
+          "notice": "PRINTER — ROOM 12\nOut of paper. Staff will refill it on Monday morning.\nThe printer in the library still works.",
+          "prompt": "If you need to print today, you should",
+          "options": [
+            {
+              "key": "A",
+              "text": "wait until Monday morning."
+            },
+            {
+              "key": "B",
+              "text": "use the printer in the library."
+            },
+            {
+              "key": "C",
+              "text": "bring your own paper to room 12."
+            }
+          ],
+          "correct": "B",
+          "explain": "Thông báo chỉ rõ máy in thư viện vẫn chạy. Nó không mời ai mang giấy đến, và chờ tới thứ Hai thì không in được hôm nay."
+        },
+        {
+          "id": "D3R5Q4",
+          "notice": "CLASS TRIP\nA deposit of 200,000 dong is due by 15 October.\nThe rest can be paid on the day we travel.",
+          "prompt": "What must students do by 15 October?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Say whether they want to travel."
+            },
+            {
+              "key": "B",
+              "text": "Pay the whole cost of the trip."
+            },
+            {
+              "key": "C",
+              "text": "Pay part of the money for the trip."
+            }
+          ],
+          "correct": "C",
+          "explain": "deposit = tiền đặt cọc, tức một phần. Phần còn lại trả vào ngày đi, nên “Pay the whole cost of the trip.” sai."
+        },
+        {
+          "id": "D3R5Q5",
+          "notice": "CYCLE PATH CLOSED\nWork on the bridge until 20 May.\nCyclists please use Tran Hung Dao street.",
+          "prompt": "During the work, cyclists must",
+          "options": [
+            {
+              "key": "A",
+              "text": "go by a different street."
+            },
+            {
+              "key": "B",
+              "text": "walk across the bridge instead."
+            },
+            {
+              "key": "C",
+              "text": "leave their bicycles at the bridge."
+            }
+          ],
+          "correct": "A",
+          "explain": "Thông báo chỉ đường thay thế là Trần Hưng Đạo. Nó không bảo ai để xe lại hay dắt bộ qua cầu."
+        },
+        {
+          "id": "D3R5Q6",
+          "notice": "Duy — I can't do the Saturday shift, my sister's wedding is that day. Could you swap with my Tuesday? I'll ask Linh if you can't. — Khanh",
+          "prompt": "Why has Khanh written this message?",
+          "options": [
+            {
+              "key": "A",
+              "text": "To tell Duy that he has left the job."
+            },
+            {
+              "key": "B",
+              "text": "To ask Duy to change shifts with him."
+            },
+            {
+              "key": "C",
+              "text": "To invite Duy to his sister's wedding."
+            }
+          ],
+          "correct": "B",
+          "explain": "\"Could you swap with my Tuesday?\" — đề nghị đổi ca. Đám cưới chỉ là lý do, không phải lời mời."
+        },
+        {
+          "id": "D3R5Q7",
+          "notice": "RECYCLING\nGreen bin: paper only. Blue bin: bottles and cans.\nFood waste does not go in either bin.",
+          "prompt": "What does this notice tell you?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Paper and bottles go in one bin."
+            },
+            {
+              "key": "B",
+              "text": "Only bottles can be recycled here."
+            },
+            {
+              "key": "C",
+              "text": "Food waste needs a different bin."
+            }
+          ],
+          "correct": "C",
+          "explain": "Rác thức ăn không bỏ vào cả hai thùng, nghĩa là phải có chỗ khác. Giấy và chai để riêng hai thùng nên “Paper and bottles go in one bin.” sai."
+        },
+        {
+          "id": "D3R5Q8",
+          "notice": "QUIET ZONE — FIRST FLOOR\nNo talking and no phone calls.\nGroup work is welcome on the ground floor.",
+          "prompt": "Students who want to work together should",
+          "options": [
+            {
+              "key": "A",
+              "text": "stay downstairs to do the work."
+            },
+            {
+              "key": "B",
+              "text": "speak quietly on the first floor."
+            },
+            {
+              "key": "C",
+              "text": "book a room before they arrive."
+            }
+          ],
+          "correct": "A",
+          "explain": "Làm việc nhóm được hoan nghênh ở tầng trệt, tức là ở dưới. Tầng một cấm nói chuyện hẳn, không phải nói khẽ."
+        },
+        {
+          "id": "D3R5Q9",
+          "notice": "SWIMMING LESSONS\nThe Wednesday class is full. Put your name on the list for a place in the next course.\nDo not pay yet.",
+          "prompt": "What should you do if you want this class?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Pay for the course this week."
+            },
+            {
+              "key": "B",
+              "text": "Add your name to a waiting list."
+            },
+            {
+              "key": "C",
+              "text": "Come to the pool on Wednesday."
+            }
+          ],
+          "correct": "B",
+          "explain": "Lớp đã đầy nên chỉ ghi tên chờ khoá sau. Thông báo dặn rõ \"Do not pay yet\", nên “Pay for the course this week.” sai."
+        },
+        {
+          "id": "D3R5Q10",
+          "notice": "Mẹ ơi — Lan's birthday is Sunday. She already has headphones, so I was thinking of a book instead. Is 300,000 dong too much? — Thu",
+          "prompt": "What does Thu want to know?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Whether the party is really on Sunday."
+            },
+            {
+              "key": "B",
+              "text": "Whether Lan would like headphones."
+            },
+            {
+              "key": "C",
+              "text": "Whether the present costs too much."
+            }
+          ],
+          "correct": "C",
+          "explain": "Câu hỏi duy nhất trong tin nhắn là \"Is 300,000 dong too much?\" — hỏi về giá. Chuyện tai nghe và ngày sinh nhật đều đã chốt."
+        }
+      ]
+    }
+  ]
+}

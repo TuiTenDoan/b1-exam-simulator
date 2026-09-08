@@ -497,7 +497,7 @@
             }
           ],
           "correct": "B",
-          "explain": "do somebody a favour = giúp ai một việc. Người Việt hay dịch thẳng thành \"make a favour\" — đó chính là bẫy ở phương án A."
+          "explain": "do somebody a favour = giúp ai một việc. Người Việt hay dịch thẳng thành \"make a favour\" — đó chính là bẫy ở phương án “make”."
         }
       ]
     },
@@ -510,13 +510,25 @@
         {
           "id": "D2P1",
           "title": "A week in a homestay",
-          "forItems": ["D2R3Q1", "D2R3Q2", "D2R3Q3", "D2R3Q4", "D2R3Q5"],
+          "forItems": [
+            "D2R3Q1",
+            "D2R3Q2",
+            "D2R3Q3",
+            "D2R3Q4",
+            "D2R3Q5"
+          ],
           "body": "Last summer my cousin and I spent a week in a homestay near Sa Pa. We chose a homestay instead of a hotel because we wanted to see how a local family really lives. The house belonged to a woman called Mrs Sung, who has three children and a very large kitchen.\n\nThere was no air conditioning in our room, and before we arrived I was worried about the heat. In fact the nights were so cold that Mrs Sung gave us two extra blankets. There was no washing machine either, so we washed our clothes by hand in the yard.\n\nWe ate every meal with the family. Mrs Sung is a wonderful cook, but she is also very quiet, so most of the talking was done by her son, Vinh. He is seventeen and wants to be a guide. On the second day he walked with us to the market and showed us a path that no guidebook mentions.\n\nThe only difficult thing was the stairs. Our room was at the top of the house and the steps were narrow and steep. My cousin fell on the last evening and hurt her arm, although luckily it was not serious."
         },
         {
           "id": "D2P2",
           "title": "The Repair Café",
-          "forItems": ["D2R3Q6", "D2R3Q7", "D2R3Q8", "D2R3Q9", "D2R3Q10"],
+          "forItems": [
+            "D2R3Q6",
+            "D2R3Q7",
+            "D2R3Q8",
+            "D2R3Q9",
+            "D2R3Q10"
+          ],
           "body": "Every Saturday morning a small group of people meets in the hall behind our school. They call it the Repair Café. Anyone can bring something broken — a lamp, a bag, a bicycle, a coffee machine — and a volunteer will try to mend it with them. Nothing is thrown away before somebody looks at it.\n\nThe idea came from Mr Phuc, a retired electrician. He started it two years ago because he was annoyed by how much people throw away. \"A machine stops working, and the same week people buy a new one,\" he says. \"Very often the problem is one small part.\"\n\nThe café is free, but visitors are asked to leave something in a box if they can. That money pays for tools and tea. About forty people come every week, and the busiest table is always the one for clothes.\n\nMr Phuc is careful about what he promises. \"We cannot mend everything,\" he says. \"Sometimes a thing is finished. But people leave knowing why it broke, and that is worth something too.\" His daughter now runs the website, and three schools have asked him for advice about starting their own."
         }
       ],
@@ -584,7 +596,7 @@
             }
           ],
           "correct": "B",
-          "explain": "\"he was annoyed by how much people throw away\" — ông bực vì người ta vứt bỏ quá nhiều. D sai vì các trường chỉ hỏi xin lời khuyên SAU khi quán đã mở."
+          "explain": "\"he was annoyed by how much people throw away\" — ông bực vì người ta vứt bỏ quá nhiều. “was asked to do it by a local school.” sai vì các trường chỉ hỏi xin lời khuyên SAU khi quán đã mở."
         },
         {
           "id": "D2R3Q7",
@@ -684,7 +696,7 @@
             }
           ],
           "correct": "B",
-          "explain": "\"three schools have asked him for advice about starting their own\". Quán vẫn miễn phí và vẫn ở hội trường sau trường, nên A và C sai."
+          "explain": "\"three schools have asked him for advice about starting their own\". Quán vẫn miễn phí và vẫn ở hội trường sau trường, nên “It has moved to a larger building.” và “It has started to charge for repairs.” sai."
         }
       ]
     },
@@ -698,13 +710,25 @@
         {
           "id": "D2P3",
           "title": "Sharing a flat",
-          "forItems": ["D2R4Q1", "D2R4Q2", "D2R4Q3", "D2R4Q4", "D2R4Q5"],
+          "forItems": [
+            "D2R4Q1",
+            "D2R4Q2",
+            "D2R4Q3",
+            "D2R4Q4",
+            "D2R4Q5"
+          ],
           "body": "When I moved to the city, I could not afford to live (1)________ my own, so I shared a flat with two other students. It was cheaper, but it was not always easy. We had one small fridge and one (2)________ machine between three people, and there was an argument almost every week about whose turn it was to empty the (3)________ .\n\nWhat saved us was a list on the kitchen door. Every Sunday we wrote down who would do what. It sounds silly, but it worked. After a month we stopped shouting at each other and started to (4)________ fun instead. Two years later one of those flatmates is still my closest friend — we have a lot (5)________ common."
         },
         {
           "id": "D2P4",
           "title": "A weekend without my phone",
-          "forItems": ["D2R4Q6", "D2R4Q7", "D2R4Q8", "D2R4Q9", "D2R4Q10"],
+          "forItems": [
+            "D2R4Q6",
+            "D2R4Q7",
+            "D2R4Q8",
+            "D2R4Q9",
+            "D2R4Q10"
+          ],
           "body": "Last month my sister made me (6)________ something I never do: a whole weekend without my phone. She put it in a (7)________ in her desk on Friday evening and kept the key.\n\nThe first hours were terrible. I kept reaching into my empty pocket. By Saturday afternoon, though, something changed. I read forty pages of a book I bought in January and never opened. I cooked, I cleaned under the (8)________ , and I put every book back in the (9)________ .\n\nOn Sunday evening my sister gave the phone back. There were nineteen messages and not one of them was urgent. It was a strange weekend, but I am (10)________ that I did it once."
         }
       ],
@@ -986,7 +1010,7 @@
             }
           ],
           "correct": "A",
-          "explain": "22:00 đổi thành 21:00 là sớm hơn một tiếng. C sai vì thông báo ghi rõ \"All other times stay the same\"."
+          "explain": "22:00 đổi thành 21:00 là sớm hơn một tiếng. “All the other bus times will change too.” sai vì thông báo ghi rõ \"All other times stay the same\"."
         },
         {
           "id": "D2R5Q2",
@@ -1007,7 +1031,7 @@
             }
           ],
           "correct": "A",
-          "explain": "\"I'll bring it to class on Thursday\" — Mai báo thời điểm trả sách. Sách vẫn còn, chỉ là trả muộn, nên C sai."
+          "explain": "\"I'll bring it to class on Thursday\" — Mai báo thời điểm trả sách. Sách vẫn còn, chỉ là trả muộn, nên “To explain why she cannot find the book.” sai."
         },
         {
           "id": "D2R5Q3",
@@ -1049,7 +1073,7 @@
             }
           ],
           "correct": "C",
-          "explain": "\"You do not need to do anything\" — không phải làm gì cả. Ngày 8/5 chính là ngày cũ đã bị đổi nên C sai."
+          "explain": "\"You do not need to do anything\" — khách không phải làm gì cả. “Collect the order on 8 May as planned.” sai vì 8/5 chính là ngày cũ đã bị dời sang 12/5; “Contact the shop about the delay.” sai vì cửa hàng đã chủ động báo trước và nói rõ khách không cần liên hệ."
         },
         {
           "id": "D2R5Q5",
@@ -1112,7 +1136,7 @@
             }
           ],
           "correct": "C",
-          "explain": "Giữ bốn tuần rồi đem cho cửa hàng từ thiện — tức là không giữ mãi. A sai vì đồ không bị vứt ngay, và cũng không bị vứt mà được đem cho."
+          "explain": "Giữ bốn tuần rồi đem cho cửa hàng từ thiện — tức là không giữ mãi. “Lost items are thrown away at once.” sai vì đồ không bị vứt ngay, và cũng không bị vứt mà được đem cho."
         },
         {
           "id": "D2R5Q8",
@@ -1133,7 +1157,7 @@
             }
           ],
           "correct": "A",
-          "explain": "\"We no longer accept cash\" — không nhận tiền mặt nữa. C sai ngược hẳn: tiền xu cũng là tiền mặt."
+          "explain": "\"We no longer accept cash\" — không nhận tiền mặt nữa. “They can only pay with coins here.” sai ngược hẳn: tiền xu cũng là tiền mặt."
         },
         {
           "id": "D2R5Q9",

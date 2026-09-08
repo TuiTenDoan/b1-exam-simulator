@@ -524,6 +524,11 @@ select {
   color: var(--paper);
 }
 
+.chip--ai {
+  font-family: var(--font-ui);
+  letter-spacing: 0.03em;
+}
+
 .switch {
   width: 44px;
   height: 25px;
@@ -2049,6 +2054,93 @@ select {
   overflow-wrap: anywhere;
 }
 
+/* Sinh đề bằng AI — năm phần chạy song song nên thanh này nhích
+   theo từng phần xong, không phải theo thời gian đoán mò. */
+.aiProgress {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.aiProgress__bar {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--card-sunk);
+  border: 1px solid var(--rule);
+  overflow: hidden;
+}
+
+.aiProgress__bar span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.aiProgress__count {
+  font-size: 12.5px;
+  color: var(--ink-3);
+  flex: none;
+}
+
+/* ============================================================
+   Chế độ thi học — gạch chân dấu hiệu nhận biết ngay trong đề.
+   Dùng gạch chân chứ không chỉ dùng màu: người mù màu vẫn phải
+   thấy được, và dòng chú thích bên dưới nói rõ dấu hiệu đó trỏ
+   tới thì nào nên màu không phải mang nghĩa một mình.
+   ============================================================ */
+.cue {
+  background: var(--accent-weak);
+  color: inherit;
+  border-radius: 3px;
+  padding: 0 2px;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.cueNote {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin: 10px 0 0 38px;
+  font-size: 12.5px;
+  color: var(--ink-3);
+}
+
+.cueNote__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cueNote__arrow {
+  color: var(--rule-strong);
+}
+
+.studyHint {
+  margin: 14px 0 0 38px;
+  padding: 11px 14px;
+  border-radius: var(--radius);
+  font-size: 13.5px;
+  line-height: 1.65;
+  border: 1px solid var(--rule);
+  background: var(--card-sunk);
+}
+
+.studyHint--ok {
+  background: var(--accent-weak);
+  border-color: color-mix(in srgb, var(--accent) 34%, transparent);
+}
+
+.studyHint--no {
+  background: var(--wrong-weak);
+  border-color: color-mix(in srgb, var(--wrong) 34%, transparent);
+}
+
 /* ============================================================
    Học — tài liệu tra cứu, không phải bài thi. Ưu tiên đọc lướt:
    công thức tách khỏi lời giải thích, dấu hiệu nhận biết nổi lên
@@ -2362,6 +2454,12 @@ select {
 }
 
 @media (max-width: 640px) {
+  /* Chỗ hẹp thì bỏ thụt lề canh theo số câu, lấy chỗ cho chữ. */
+  .cueNote,
+  .studyHint {
+    margin-left: 0;
+  }
+
   .shell {
     padding: 0 16px;
   }

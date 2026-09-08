@@ -50,19 +50,24 @@ export class GeminiError extends Error {
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
 
 /**
- * Ask Gemini to mark one essay. The free tier returns 503 under load often
- * enough that a single attempt is not worth showing the user, so transient
- * failures are retried before surfacing.
+ * One JSON round trip to Gemini, with the retry the free tier needs.
+ *
+ * Shared by essay marking and paper generation so both behave the same when
+ * Google is busy: a single 503 is not worth telling the user about, four in a
+ * row is.
  */
-export async function gradeEssay(opts: {
+export async function askGemini(opts: {
   key: string
-  topic: string
-  essay: string
+  prompt: string
+  temperature?: number
   signal?: AbortSignal
-}): Promise<AiMark> {
+}): Promise<unknown> {
   const body = JSON.stringify({
-    contents: [{ parts: [{ text: buildPrompt(opts.topic, opts.essay) }] }],
-    generationConfig: { temperature: 0.2, responseMimeType: 'application/json' },
+    contents: [{ parts: [{ text: opts.prompt }] }],
+    generationConfig: {
+      temperature: opts.temperature ?? 0.2,
+      responseMimeType: 'application/json',
+    },
   })
 
   let lastBusy = ''
@@ -86,7 +91,7 @@ export async function gradeEssay(opts: {
       const text: string | undefined = data?.candidates?.[0]?.content?.parts?.[0]?.text
       if (!text) throw new GeminiError('Model trả về rỗng. Thử lại lần nữa.', 'reply')
       try {
-        return parseAiMark(JSON.parse(text))
+        return JSON.parse(text)
       } catch {
         throw new GeminiError('Model trả về nội dung không đọc được. Thử lại lần nữa.', 'reply')
       }
@@ -109,3 +114,27 @@ export async function gradeEssay(opts: {
 
   throw new GeminiError(`${lastBusy} Đã thử 4 lượt. Chờ một phút rồi bấm lại.`, 'busy')
 }
+
+/**
+ * Ask Gemini to mark one essay. The free tier returns 503 under load often
+ * enough that a single attempt is not worth showing the user, so transient
+ * failures are retried before surfacing.
+ */
+export async function gradeEssay(opts: {
+  key: string
+  topic: string
+  essay: string
+  signal?: AbortSignal
+}): Promise<AiMark> {
+  const reply = await askGemini({
+    key: opts.key,
+    prompt: buildPrompt(opts.topic, opts.essay),
+    signal: opts.signal,
+  })
+  try {
+    return parseAiMark(reply)
+  } catch {
+    throw new GeminiError('Model chấm sai định dạng. Thử lại lần nữa.', 'reply')
+  }
+}
+

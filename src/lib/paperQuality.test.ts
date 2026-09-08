@@ -238,3 +238,54 @@ describe.each([
     }
   })
 })
+
+/* --------------------------------------------------------------------------
+   Explanations are read after the paper is marked, when the options have
+   already been shuffled into a new order. An explanation that names a letter
+   is therefore pointing at whatever landed there this time — usually the wrong
+   option, sometimes the right one, and always confusing.
+   -------------------------------------------------------------------------- */
+
+describe.each([
+  ['reading', readingPapers],
+  ['listening', listeningPapers],
+])('%s explanations', (_name, papers) => {
+  const withOptions = papers.flatMap((p) =>
+    p.questions.filter((q) => q.options.length > 0 && q.options.every((o) => o.text)),
+  )
+
+  it('actually has explanations to check', () => {
+    // Without this the two checks below would pass on an empty list. The
+    // listening paper has only one part with worded options, so the floor is
+    // low on purpose; what matters is that nothing is silently skipped.
+    expect(withOptions.length).toBeGreaterThan(0)
+    const unexplained = withOptions.filter((q) => (q.explain ?? '').trim().length < 25)
+    expect(unexplained.map((q) => q.id), 'câu thiếu giải thích tử tế').toEqual([])
+  })
+
+  it('never refers to an option by its letter', () => {
+    // Only a letter used AS an option name counts: "phương án B", "C sai".
+    // Room codes and dates ("room B2", "8/5") must not trip this.
+    const named = /(?:phương án|đáp án)\s+[A-D]|(?:^|[\s"“(])[A-D]\s+(?:sai|đúng|là bẫy)/
+    const offenders = withOptions
+      .filter((q) => named.test(q.explain ?? ''))
+      .map((q) => q.id)
+    expect(offenders, 'giải thích gọi tên phương án bằng chữ cái, mà đáp án lại bị đảo').toEqual([])
+  })
+
+  it('never calls the correct answer wrong', () => {
+    // The trap this catches: rebalancing which letter is correct moves the
+    // options, and an explanation written against the old order ends up
+    // quoting the right answer and saying "sai".
+    const offenders: string[] = []
+    for (const q of withOptions) {
+      const right = q.options.find((o) => o.key === q.correct)?.text
+      if (!right) continue
+      // Plain string search: the option text is arbitrary prose, and escaping
+      // it into a regex is more ways to be wrong than this needs.
+      if ((q.explain ?? '').includes(`“${right}” sai`)) offenders.push(q.id)
+    }
+    expect(offenders, 'giải thích trích đúng đáp án rồi bảo nó sai').toEqual([])
+  })
+})
+

@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { AudioPlayer } from './AudioPlayer'
 import { QuestionNav } from './QuestionNav'
 import { Scene } from '../art/Scene'
+import { CUE_LABEL, splitByCues, summariseCues } from '../domain/cues'
 import { ExamResults } from './ExamResults'
 import { answer, createSession, goTo, next, prev, toggleFlag } from '../domain/examSession'
 import { gradeSection } from '../domain/scoring'
@@ -15,6 +16,12 @@ type Props = {
   maxPlays?: number
   /** Randomise question order and answer options for this sitting. */
   shuffle: boolean
+  /**
+   * Underline the time markers and show the explanation as soon as an answer
+   * is picked. Turns the paper into a drill rather than a test, which is why
+   * it is off unless the learner asks for it.
+   */
+  studyMode?: boolean
   onExit: () => void
   onFinished: (sectionId: string, result: SectionResult) => void
   /**
@@ -60,6 +67,45 @@ function ClockPill({ seconds }: { seconds: number }) {
       <span className="clock__dot" />
       {formatClock(seconds)}
     </span>
+  )
+}
+
+/**
+ * The question with its time markers underlined. This is the study aid: it
+ * shows where to look, not what to answer — a learner who cannot name the
+ * tense still has to work it out.
+ */
+function CuedPrompt({ text }: { text: string }) {
+  return (
+    <>
+      {splitByCues(text).map((seg, i) =>
+        seg.kind ? (
+          <mark key={i} className={`cue cue--${seg.kind}`} title={CUE_LABEL[seg.kind]}>
+            {seg.text}
+          </mark>
+        ) : (
+          <span key={i}>{seg.text}</span>
+        ),
+      )}
+    </>
+  )
+}
+
+/** Spells the underlining out, because a colour alone teaches nothing. */
+function CueNote({ text }: { text: string }) {
+  const cues = summariseCues(text)
+  if (cues.length === 0) return null
+
+  return (
+    <p className="cueNote">
+      {cues.map((c) => (
+        <span key={`${c.text}|${c.kind}`} className="cueNote__item">
+          <mark className={`cue cue--${c.kind}`}>{c.text}</mark>
+          <span className="cueNote__arrow" aria-hidden="true">→</span>
+          {c.label}
+        </span>
+      ))}
+    </p>
   )
 }
 
@@ -134,6 +180,7 @@ function Attempt({
   maxPlays,
   shuffled,
   redraws,
+  studyMode,
   onExit,
   onRetry,
   onFinished,
@@ -143,6 +190,7 @@ function Attempt({
   shuffled: boolean
   /** True when retrying draws a different paper, not just a new order. */
   redraws: boolean
+  studyMode: boolean
   onExit: () => void
   onRetry: () => void
   onFinished: (sectionId: string, result: SectionResult) => void
@@ -292,7 +340,9 @@ function Attempt({
               >
                 <div className="qHead">
                   <span className="qHead__num">{String(q.number).padStart(2, '0')}</span>
-                  <h2 className="qHead__prompt">{q.prompt}</h2>
+                  <h2 className="qHead__prompt">
+                    {studyMode ? <CuedPrompt text={q.prompt} /> : q.prompt}
+                  </h2>
                   <button
                     className={`flagBtn${isFlagged ? ' flagBtn--on' : ''}`}
                     onClick={() => setSession((s) => toggleFlag(s, q.id))}
@@ -308,6 +358,8 @@ function Attempt({
                   <AudioPlayer src={q.audio} maxPlays={maxPlays} label={`Câu ${q.number}`} />
                 )}
 
+                {studyMode && <CueNote text={q.prompt} />}
+
                 {q.notice && <pre className="notice">{q.notice}</pre>}
 
                 <QuestionBody
@@ -316,6 +368,17 @@ function Attempt({
                   onAnswer={(value) => setSession((s) => answer(s, q.id, value))}
                   locked={false}
                 />
+
+                {studyMode && given && q.explain && (
+                  <p
+                    className={`studyHint${
+                      given === q.correct ? ' studyHint--ok' : ' studyHint--no'
+                    }`}
+                  >
+                    <strong>{given === q.correct ? 'Đúng. ' : 'Chưa đúng. '}</strong>
+                    {q.explain}
+                  </p>
+                )}
               </article>
             )
           })}
@@ -340,6 +403,7 @@ export function ExamRunner({
   onExit,
   onFinished,
   onRedraw,
+  studyMode = false,
 }: Props) {
   const [sitting, setSitting] = useState(() => ({ no: 1, seed: (Date.now() % 2147483647) + 1 }))
 
@@ -370,6 +434,7 @@ export function ExamRunner({
       maxPlays={maxPlays}
       shuffled={shuffle}
       redraws={Boolean(onRedraw)}
+      studyMode={studyMode}
       onExit={onExit}
       onRetry={retry}
       onFinished={onFinished}

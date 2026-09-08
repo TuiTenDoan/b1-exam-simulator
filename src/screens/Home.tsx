@@ -37,6 +37,8 @@ type Props = {
   onShuffleChange: (value: boolean) => void
   paperChoice: PaperChoice
   onPaperChange: (value: PaperChoice) => void
+  studyMode: boolean
+  onStudyModeChange: (value: boolean) => void
 }
 
 function Arrow() {
@@ -109,7 +111,16 @@ const sections = [
   },
 ]
 
-export function Home({ onGo, best, shuffle, onShuffleChange, paperChoice, onPaperChange }: Props) {
+export function Home({
+  onGo,
+  best,
+  shuffle,
+  onShuffleChange,
+  paperChoice,
+  onPaperChange,
+  studyMode,
+  onStudyModeChange,
+}: Props) {
   return (
     <div className="shell">
       <section className="cover">
@@ -194,10 +205,13 @@ export function Home({ onGo, best, shuffle, onShuffleChange, paperChoice, onPape
                 <div className="setting__label">
                   <span className="setting__name">Bộ đề</span>
                   <span className="setting__hint">
-                    {paperChoice === 'random'
-                      ? `Mỗi lần vào thi bốc ngẫu nhiên một trong ${paperCount} đề.`
-                      : `Đang cố định Đề ${paperChoice + 1} — làm mãi một đề là thuộc lòng.`}
-                    {listeningPapers.length !== readingPapers.length &&
+                    {paperChoice === 'ai'
+                      ? 'Phần Đọc được Gemini soạn mới 50 câu mỗi lần, nên không có đề nào để học thuộc. Cần key riêng của bạn; các phần khác vẫn dùng đề có sẵn.'
+                      : paperChoice === 'random'
+                        ? `Mỗi lần vào thi bốc ngẫu nhiên một trong ${paperCount} đề.`
+                        : `Đang cố định Đề ${paperChoice + 1} — làm mãi một đề là thuộc lòng.`}
+                    {paperChoice !== 'ai' &&
+                      listeningPapers.length !== readingPapers.length &&
                       ` Nghe có ${listeningPapers.length} đề, Đọc có ${readingPapers.length} đề.`}
                   </span>
                 </div>
@@ -219,9 +233,37 @@ export function Home({ onGo, best, shuffle, onShuffleChange, paperChoice, onPape
                   >
                     Ngẫu nhiên
                   </button>
+                  <button
+                    className={`chip chip--ai${paperChoice === 'ai' ? ' chip--on' : ''}`}
+                    aria-pressed={paperChoice === 'ai'}
+                    onClick={() => onPaperChange('ai')}
+                    title="Phần Đọc sẽ được AI soạn mới mỗi lần"
+                  >
+                    AI
+                  </button>
                 </div>
               </div>
             )}
+
+            <div className="setting">
+              <label className="setting__label" htmlFor="studyMode">
+                <span className="setting__name">Chế độ thi học</span>
+                <span className="setting__hint">
+                  {studyMode
+                    ? 'Gạch chân dấu hiệu nhận biết trong đề và hiện giải thích ngay khi bạn chọn đáp án. Quen rồi thì tắt đi để thi thật.'
+                    : 'Đang thi như thật: không gạch chân, không giải thích cho tới khi nộp bài.'}
+                </span>
+              </label>
+              <button
+                id="studyMode"
+                role="switch"
+                aria-checked={studyMode}
+                className={`switch${studyMode ? ' switch--on' : ''}`}
+                onClick={() => onStudyModeChange(!studyMode)}
+              >
+                <span className="switch__dot" />
+              </button>
+            </div>
 
             <div className="setting">
               <label className="setting__label" htmlFor="shuffle">
