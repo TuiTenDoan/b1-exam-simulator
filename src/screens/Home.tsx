@@ -1,4 +1,5 @@
 import type { PaperChoice, Route } from '../App'
+import { mark } from '../lib/format'
 import { listeningPaper, listeningPapers, readingPaper, readingPapers } from '../lib/paper'
 import speaking from '../data/speaking.json'
 import writing from '../data/writing.json'
@@ -164,7 +165,7 @@ export function Home({ onGo, best, shuffle, onShuffleChange, paperChoice, onPape
                     </span>
                   ) : best[s.route] !== undefined ? (
                     <span className="section__score">
-                      {best[s.route].toFixed(1)}
+                      {mark(best[s.route])}
                       <span className="section__scoreLabel">điểm cao nhất</span>
                     </span>
                   ) : (

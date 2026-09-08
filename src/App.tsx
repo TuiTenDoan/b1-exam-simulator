@@ -171,6 +171,18 @@ export default function App() {
 
   const home = useCallback(() => go('home'), [go])
 
+  /**
+   * Sitting again. Bumping the counter remounts the runner — fresh clock,
+   * fresh answers, fresh shuffle — and, when the paper is left on random,
+   * draws a different paper as well. A section with only one paper gets no
+   * redraw hook, so the runner reshuffles on its own.
+   */
+  const redraw = useCallback(
+    (section: 'listening' | 'reading') =>
+      papersFor(section).length > 1 ? () => setSitting((n) => n + 1) : undefined,
+    [],
+  )
+
   return (
     <div className="app">
       <header className="topbar">
@@ -212,6 +224,7 @@ export default function App() {
             shuffle={shuffle}
             onExit={home}
             onFinished={record}
+            onRedraw={redraw('listening')}
           />
         )}
         {route === 'reading' && (
@@ -222,6 +235,7 @@ export default function App() {
             shuffle={shuffle}
             onExit={home}
             onFinished={record}
+            onRedraw={redraw('reading')}
           />
         )}
         {route === 'writing' && <Writing onExit={home} />}

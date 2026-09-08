@@ -56,7 +56,7 @@ function textOptions(q: QuestionLike): { key: string; text: string }[] {
 }
 
 /** Items whose options are all plain text; picture and Right/Wrong items opt out. */
-export function scorableItems(part: PartLike): QuestionLike[] {
+function scorableItems(part: PartLike): QuestionLike[] {
   return part.items.filter((q) => {
     const opts = textOptions(q)
     return opts.length >= 2 && opts.length === (q.options ?? []).length
@@ -146,8 +146,4 @@ export function reportPart(part: PartLike): PartReport | null {
     unusedKeys: [...keysInUse].filter((k) => !keysUsedAsAnswer.has(k)).sort(),
     lopsided: lopsidedItems(part),
   }
-}
-
-export function reportPaper(parts: PartLike[]): PartReport[] {
-  return parts.map(reportPart).filter((r): r is PartReport => r !== null)
 }

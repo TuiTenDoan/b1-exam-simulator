@@ -3,6 +3,7 @@ import writing from '../data/writing.json'
 import { analyseEssay, checkSentence, type SentenceRule } from '../domain/writingCheck'
 import { gradeEssay, loadKey, saveKey, GeminiError } from '../lib/gemini'
 import type { AiMark } from '../domain/aiMark'
+import { mark } from '../lib/format'
 
 type Props = { onExit: () => void }
 type Tab = 1 | 2
@@ -138,7 +139,7 @@ export function Writing({ onExit }: Props) {
                             : 'no'
                       }`}
                     >
-                      <span className="mono">{sentenceMarks[n].mark.toFixed(2)}đ</span>{' '}
+                      <span className="mono">{mark(sentenceMarks[n].mark, 2)}đ</span>{' '}
                       {sentenceMarks[n].message}
                     </p>
                   )}
@@ -160,7 +161,7 @@ export function Writing({ onExit }: Props) {
               </button>
               {marked && (
                 <span className="mono" style={{ fontSize: 15, fontWeight: 600 }}>
-                  {part1Score.toFixed(1)} / 4,0
+                  {mark(part1Score)} / 4,0
                 </span>
               )}
               <button className="btn" onClick={() => setShowSamples((v) => !v)}>
@@ -321,10 +322,10 @@ export function Writing({ onExit }: Props) {
             {aiMark && (
               <div className="essayReport">
                 <div className="essayReport__head">
-                  <span className="mono essayReport__score">{aiMark.total.toFixed(1)} / 6.0</span>
+                  <span className="mono essayReport__score">{mark(aiMark.total)} / 6,0</span>
                   <span>
-                    Ý tưởng <strong className="mono">{aiMark.ideas.toFixed(1)}/3</strong> · Ngôn ngữ{' '}
-                    <strong className="mono">{aiMark.language.toFixed(1)}/3</strong>. Đây là{' '}
+                    Ý tưởng <strong className="mono">{mark(aiMark.ideas)}/3</strong> · Ngôn ngữ{' '}
+                    <strong className="mono">{mark(aiMark.language)}/3</strong>. Đây là{' '}
                     <strong>điểm AI gợi ý</strong>, không phải điểm chính thức — dùng để biết mình
                     yếu chỗ nào, đừng coi là điểm thi.
                   </span>
@@ -361,11 +362,11 @@ export function Writing({ onExit }: Props) {
               <div className="essayReport">
                 <div className="essayReport__head">
                   <span className="mono essayReport__score">
-                    {essayReport.autoScore.toFixed(1)} / {essayReport.maxAutoScore.toFixed(1)}
+                    {mark(essayReport.autoScore)} / {mark(essayReport.maxAutoScore)}
                   </span>
                   <span>
                     điểm máy chấm được. Còn{' '}
-                    <strong className="mono">{essayReport.humanMarks.toFixed(1)} điểm</strong> về ý
+                    <strong className="mono">{mark(essayReport.humanMarks)} điểm</strong> về ý
                     tưởng và độ chính xác ngữ pháp — phần này máy không đánh giá được, cần bạn hoặc
                     giáo viên đọc.
                   </span>

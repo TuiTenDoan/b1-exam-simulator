@@ -1,3 +1,4 @@
+import { mark } from '../lib/format'
 import { PASS_MARK } from '../domain/scoring'
 import type { SectionResult } from '../domain/types'
 import type { Paper } from '../lib/paper'
@@ -6,6 +7,8 @@ type Props = {
   paper: Paper
   result: SectionResult
   answers: Record<string, string>
+  /** True when retrying draws a different paper, not merely a new order. */
+  redraws?: boolean
   /** True when this sitting was randomised, so the retry can promise a new order. */
   shuffled: boolean
   onRetry: () => void
@@ -33,7 +36,7 @@ function Dial({ score }: { score: number }) {
           style={{ transition: 'stroke-dasharray 0.9s cubic-bezier(0.16, 1, 0.3, 1)' }}
         />
       </svg>
-      <span className="scoreDial__value">{score.toFixed(1)}</span>
+      <span className="scoreDial__value">{mark(score)}</span>
       <span className="scoreDial__of">trên 10 điểm</span>
     </div>
   )
@@ -47,7 +50,15 @@ function describeAnswer(given: string | null, options: Paper['questions'][number
   return match.text ? `${given} — ${match.text}` : given
 }
 
-export function ExamResults({ paper, result, answers, shuffled, onRetry, onExit }: Props) {
+export function ExamResults({
+  paper,
+  result,
+  answers,
+  shuffled,
+  redraws,
+  onRetry,
+  onExit,
+}: Props) {
   const byId = new Map(paper.questions.map((q) => [q.id, q]))
   const wrong = result.questions.filter((g) => !g.isCorrect)
 
@@ -62,8 +73,8 @@ export function ExamResults({ paper, result, answers, shuffled, onRetry, onExit 
           <h1 style={{ fontSize: 30, marginBottom: 8 }}>{paper.title}</h1>
           <p style={{ color: 'var(--ink-2)', maxWidth: '46ch' }}>
             {result.passed
-              ? `Bạn đã vượt mức đạt ${PASS_MARK.toFixed(1)} điểm. Xem lại ${wrong.length} câu sai bên dưới để chắc chắn hơn.`
-              : `Mức đạt là ${PASS_MARK.toFixed(1)} điểm. Hãy xem kỹ ${wrong.length} câu sai bên dưới rồi làm lại đề này.`}
+              ? `Bạn đã vượt mức đạt ${mark(PASS_MARK)} điểm. Xem lại ${wrong.length} câu sai bên dưới để chắc chắn hơn.`
+              : `Mức đạt là ${mark(PASS_MARK)} điểm. Hãy xem kỹ ${wrong.length} câu sai bên dưới rồi làm lại đề này.`}
           </p>
 
           <div className="statRow">
@@ -87,7 +98,11 @@ export function ExamResults({ paper, result, answers, shuffled, onRetry, onExit 
 
           <div className="qNav" style={{ marginTop: 24 }}>
             <button className="btn btn--primary" onClick={onRetry}>
-              {shuffled ? 'Làm lại — đảo đề mới' : 'Làm lại đề này'}
+              {redraws
+                ? 'Làm lại — bốc đề khác'
+                : shuffled
+                  ? 'Làm lại — đảo đề mới'
+                  : 'Làm lại đề này'}
             </button>
             <button className="btn" onClick={onExit}>
               Về trang chính

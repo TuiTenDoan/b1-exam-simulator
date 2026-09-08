@@ -17,6 +17,12 @@ type Props = {
   shuffle: boolean
   onExit: () => void
   onFinished: (sectionId: string, result: SectionResult) => void
+  /**
+   * Ask the app for a fresh sitting. Provided when the section has more than
+   * one paper, so "làm lại" can draw a different one instead of reshuffling
+   * the same fifty questions.
+   */
+  onRedraw?: () => void
 }
 
 /**
@@ -127,6 +133,7 @@ function Attempt({
   attempt,
   maxPlays,
   shuffled,
+  redraws,
   onExit,
   onRetry,
   onFinished,
@@ -134,6 +141,8 @@ function Attempt({
   attempt: Paper
   maxPlays: number
   shuffled: boolean
+  /** True when retrying draws a different paper, not just a new order. */
+  redraws: boolean
   onExit: () => void
   onRetry: () => void
   onFinished: (sectionId: string, result: SectionResult) => void
@@ -208,6 +217,7 @@ function Attempt({
               result={result}
               answers={session.answers}
               shuffled={shuffled}
+              redraws={redraws}
               onRetry={onRetry}
               onExit={onExit}
             />
@@ -323,7 +333,14 @@ function Attempt({
   )
 }
 
-export function ExamRunner({ paper, maxPlays = 2, shuffle, onExit, onFinished }: Props) {
+export function ExamRunner({
+  paper,
+  maxPlays = 2,
+  shuffle,
+  onExit,
+  onFinished,
+  onRedraw,
+}: Props) {
   const [sitting, setSitting] = useState(() => ({ no: 1, seed: (Date.now() % 2147483647) + 1 }))
 
   const attempt = useMemo(
@@ -331,10 +348,20 @@ export function ExamRunner({ paper, maxPlays = 2, shuffle, onExit, onFinished }:
     [paper, shuffle, sitting.seed],
   )
 
+  /**
+   * Reshuffling alone would hand back the same fifty questions. When the app
+   * holds more than one paper it redraws instead, so "làm lại" can actually
+   * mean a different paper — otherwise a learner could sit the same paper all
+   * week and mistake recall for reading.
+   */
   const retry = useCallback(() => {
-    setSitting((s) => ({ no: s.no + 1, seed: (s.seed * 48271) % 2147483647 }))
     window.scrollTo({ top: 0 })
-  }, [])
+    if (onRedraw) {
+      onRedraw()
+      return
+    }
+    setSitting((s) => ({ no: s.no + 1, seed: (s.seed * 48271) % 2147483647 }))
+  }, [onRedraw])
 
   return (
     <Attempt
@@ -342,6 +369,7 @@ export function ExamRunner({ paper, maxPlays = 2, shuffle, onExit, onFinished }:
       attempt={attempt}
       maxPlays={maxPlays}
       shuffled={shuffle}
+      redraws={Boolean(onRedraw)}
       onExit={onExit}
       onRetry={retry}
       onFinished={onFinished}

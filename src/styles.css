@@ -2179,6 +2179,22 @@ select {
     padding: 10px 14px;
   }
 
+  /* The toggle is 44x25 by design — a taller track would look wrong — so the
+     tap target is grown with an invisible overlay instead of the visible box. */
+  .switch {
+    position: relative;
+  }
+
+  .switch::after {
+    content: '';
+    position: absolute;
+    inset: -10px -6px;
+  }
+
+  .pqRow__input {
+    min-height: 44px;
+  }
+
   .btn--icon {
     width: 44px;
     height: 44px;

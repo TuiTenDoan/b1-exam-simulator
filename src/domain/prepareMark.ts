@@ -91,7 +91,7 @@ export function choicesFor(group: PrepareGroup, i: number): { key: string; label
 }
 
 /** A tick group is one mark for the whole set, not one per box. */
-export function groupItemCount(group: PrepareGroup): number {
+function groupItemCount(group: PrepareGroup): number {
   return group.type === 'tick' ? 1 : group.answers.length
 }
 

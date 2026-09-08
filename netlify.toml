@@ -1,0 +1,20 @@
+# Netlify phục vụ site từ gốc tên miền, khác GitHub Pages (phục vụ từ /<repo>/).
+# Biến NETLIFY=true do Netlify tự đặt khi build, vite.config.ts đọc nó để đặt base='/'.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# App định tuyến bằng hash (#/reading) nên mọi đường dẫn đều phải trả về index.html.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
