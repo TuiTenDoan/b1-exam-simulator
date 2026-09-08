@@ -7,6 +7,7 @@ import prepare from '../data/prepare.json'
 import prepareReading from '../data/prepareReading.json'
 import study from '../data/study.json'
 import { taskQuestionCount, type PrepareBoard } from '../domain/prepareMark'
+import { BANK_SIZE } from '../lib/bank'
 
 const listeningBoard = prepare as unknown as PrepareBoard
 const readingBoard = prepareReading as unknown as PrepareBoard
@@ -71,9 +72,7 @@ const sections = [
     route: 'reading' as Route,
     num: 'III',
     name: 'Reading, Grammar & Vocabulary',
-    desc: `${readingPaper.questions.length} câu · ${paperCountLabel(
-      readingPapers.length,
-    )} · ngữ pháp, từ vựng, đọc hiểu, điền từ`,
+    desc: `${readingPaper.questions.length} câu · kho ${BANK_SIZE} câu · ngữ pháp, từ vựng, đọc hiểu, điền từ`,
     marks: '10đ',
   },
   {
@@ -208,9 +207,9 @@ export function Home({
                     {paperChoice === 'ai'
                       ? 'Phần Đọc được Gemini soạn mới 50 câu mỗi lần, nên không có đề nào để học thuộc. Cần key riêng của bạn; các phần khác vẫn dùng đề có sẵn.'
                       : paperChoice === 'random'
-                        ? `Mỗi lần vào thi bốc ngẫu nhiên một trong ${paperCount} đề.`
+                        ? `Mỗi lần thi bốc 50 câu mới từ kho ${BANK_SIZE} câu, nên gần như không bao giờ gặp lại đúng một đề.`
                         : `Đang cố định Đề ${paperChoice + 1} — làm mãi một đề là thuộc lòng.`}
-                    {paperChoice !== 'ai' &&
+                    {typeof paperChoice === 'number' &&
                       listeningPapers.length !== readingPapers.length &&
                       ` Nghe có ${listeningPapers.length} đề, Đọc có ${readingPapers.length} đề.`}
                   </span>

@@ -1,0 +1,48 @@
+{
+  "partId": "R4",
+  "note": "Kho đoạn điền từ. Mỗi đoạn 5 chỗ trống đánh số 1-5; khi ghép vào đề, đoạn thứ hai sẽ được đánh lại thành 6-10.",
+  "passages": [
+    {
+      "id": "BKF1",
+      "title": "The room above the bakery",
+      "body": "My first room in the city was above a bakery, and it was so small that the door hit the bed when it opened. There was no wardrobe, only a single (1)________ under the window for all my clothes.\n\nThe worst part was the heat. The ovens ran from three in the morning, and by nine the walls were warm. There was no (2)________ , so I slept with the window open and woke up to the smell of bread every day of that year.\n\nStill, I was (3)________ that I took it. The rent was low, the landlady was (4)________ enough to lend me a fan in July, and after six months I knew everyone on the street. I lived on my (5)________ for the first time and found out I quite liked it."
+    },
+    {
+      "id": "BKF2",
+      "title": "Learning to say no",
+      "body": "For years I said yes to everything. If a colleague asked me to (1)________ them a favour on a Friday evening, I said yes. If my cousin needed a lift across the city, I said yes.\n\nThe problem was that saying yes to everyone meant I had (2)________ with my own work. I stayed late, I missed meals, and small things started to (3)________ me angry — the sort of things I would have laughed at a year earlier.\n\nA friend told me to try one sentence: \"I can't this week, but ask me again.\" It sounded rude to me at first. It was not. Most people simply said fine.\n\nI now (4)________ far more time on the work that matters, and, oddly, I have not lost a single friend. I am (5)________ that somebody made me try it."
+    },
+    {
+      "id": "BKF3",
+      "title": "A wedding in the rain",
+      "body": "My sister planned her wedding for April and booked a garden. On the morning of the day it began to rain, and it did not stop. The (1)________ of the marquee leaked in two places and water ran down onto the tables.\n\nNobody had a plan. Then my uncle went home and came back with every plastic chair and every umbrella he owned, and the (2)________ started moving the tables themselves. One of them, a man nobody knew well, spent an hour holding a sheet of plastic over the cake.\n\nBy the evening the rain had stopped. The photographs from that day are terrible: everyone's hair is wet and the ground is grey. But my sister says she had a (3)________ time, and she keeps one of those photographs on the (4)________ in her living room, next to the good ones. She says the wet one is the only picture where you can see who her friends really are, and she is (5)________ it rained."
+    },
+    {
+      "id": "BKF4",
+      "title": "The neighbour's cat",
+      "body": "A cat began visiting our kitchen last spring. It came in through the window, sat on the (1)________ by the table, and left again after twenty minutes. It did this every day for a month.\n\nWe assumed it was hungry, so we put food down. It never touched it. My mother thought it was lost and put a note on the (2)________ downstairs asking who owned a grey cat.\n\nA woman from the third floor came to the door. She explained that her flat gets no sun in the morning and that the cat had probably worked out that ours does. She apologised. My mother said there was nothing to apologise for and that the cat could (3)________ as much time with us as it liked.\n\nThat is how we (4)________ friends with the woman upstairs. We had lived in the same building for four years and had never once spoken. Now she has dinner with us on Sundays, and the cat still sits by the table, and still refuses to eat anything we (5)________ it."
+    }
+  ],
+  "items": [
+    { "id": "BKF1Q1", "passage": "BKF1", "gapNumber": 1, "options": [{ "key": "A", "text": "drawer" }, { "key": "B", "text": "roof" }, { "key": "C", "text": "bin" }, { "key": "D", "text": "seat" }], "correct": "A", "explain": "drawer = ngăn kéo, chỗ cất quần áo khi không có tủ." },
+    { "id": "BKF1Q2", "passage": "BKF1", "gapNumber": 2, "options": [{ "key": "A", "text": "heating" }, { "key": "B", "text": "air conditioning" }, { "key": "C", "text": "washing machine" }, { "key": "D", "text": "bookcase" }], "correct": "B", "explain": "Phòng nóng nên thứ thiếu là điều hoà. heating là máy sưởi, dùng khi lạnh." },
+    { "id": "BKF1Q3", "passage": "BKF1", "gapNumber": 3, "options": [{ "key": "A", "text": "annoyed" }, { "key": "B", "text": "miserable" }, { "key": "C", "text": "glad" }, { "key": "D", "text": "careless" }], "correct": "C", "explain": "be glad that … = mừng vì đã làm gì. Cả đoạn sau liệt kê điều tốt." },
+    { "id": "BKF1Q4", "passage": "BKF1", "gapNumber": 4, "options": [{ "key": "A", "text": "lazy" }, { "key": "B", "text": "kind" }, { "key": "C", "text": "quiet" }, { "key": "D", "text": "careless" }], "correct": "B", "explain": "kind = tốt bụng. Cho mượn quạt giữa tháng Bảy là hành động tốt bụng." },
+    { "id": "BKF1Q5", "passage": "BKF1", "gapNumber": 5, "options": [{ "key": "A", "text": "alone" }, { "key": "B", "text": "self" }, { "key": "C", "text": "own" }, { "key": "D", "text": "one" }], "correct": "C", "explain": "on my own = một mình, tự lo. Đây là cụm cố định." },
+    { "id": "BKF2Q1", "passage": "BKF2", "gapNumber": 1, "options": [{ "key": "A", "text": "make" }, { "key": "B", "text": "do" }, { "key": "C", "text": "have" }, { "key": "D", "text": "take" }], "correct": "B", "explain": "do somebody a favour = giúp ai một việc. Cụm này đi với do." },
+    { "id": "BKF2Q2", "passage": "BKF2", "gapNumber": 2, "options": [{ "key": "A", "text": "mistakes" }, { "key": "B", "text": "answers" }, { "key": "C", "text": "problems" }, { "key": "D", "text": "questions" }], "correct": "C", "explain": "have problems with something = gặp khó khăn với việc gì." },
+    { "id": "BKF2Q3", "passage": "BKF2", "gapNumber": 3, "options": [{ "key": "A", "text": "make" }, { "key": "B", "text": "do" }, { "key": "C", "text": "have" }, { "key": "D", "text": "give" }], "correct": "A", "explain": "make somebody angry = làm ai đó tức giận. Cụm này luôn đi với make." },
+    { "id": "BKF2Q4", "passage": "BKF2", "gapNumber": 4, "options": [{ "key": "A", "text": "make" }, { "key": "B", "text": "spend" }, { "key": "C", "text": "take" }, { "key": "D", "text": "do" }], "correct": "B", "explain": "spend time on something = dành thời gian cho việc gì." },
+    { "id": "BKF2Q5", "passage": "BKF2", "gapNumber": 5, "options": [{ "key": "A", "text": "annoyed" }, { "key": "B", "text": "careless" }, { "key": "C", "text": "miserable" }, { "key": "D", "text": "glad" }], "correct": "D", "explain": "be glad that … = mừng vì điều gì. Câu kết mang ý tích cực." },
+    { "id": "BKF3Q1", "passage": "BKF3", "gapNumber": 1, "options": [{ "key": "A", "text": "roof" }, { "key": "B", "text": "stairs" }, { "key": "C", "text": "drawer" }, { "key": "D", "text": "bin" }], "correct": "A", "explain": "roof = phần mái, chỗ bị dột cho nước chảy xuống bàn." },
+    { "id": "BKF3Q2", "passage": "BKF3", "gapNumber": 2, "options": [{ "key": "A", "text": "luggage" }, { "key": "B", "text": "guests" }, { "key": "C", "text": "receptionist" }, { "key": "D", "text": "map" }], "correct": "B", "explain": "guests = khách mời. Chính khách dự tiệc bắt tay dọn bàn." },
+    { "id": "BKF3Q3", "passage": "BKF3", "gapNumber": 3, "options": [{ "key": "A", "text": "miserable" }, { "key": "B", "text": "careless" }, { "key": "C", "text": "brilliant" }, { "key": "D", "text": "quiet" }], "correct": "C", "explain": "have a brilliant time = có quãng thời gian tuyệt vời, hợp với ý cả đoạn." },
+    { "id": "BKF3Q4", "passage": "BKF3", "gapNumber": 4, "options": [{ "key": "A", "text": "bin" }, { "key": "B", "text": "fridge" }, { "key": "C", "text": "bookcase" }, { "key": "D", "text": "stairs" }], "correct": "C", "explain": "bookcase = kệ sách trong phòng khách, chỗ bày ảnh." },
+    { "id": "BKF3Q5", "passage": "BKF3", "gapNumber": 5, "options": [{ "key": "A", "text": "annoyed" }, { "key": "B", "text": "glad" }, { "key": "C", "text": "careless" }, { "key": "D", "text": "confident" }], "correct": "B", "explain": "be glad + mệnh đề = mừng vì chuyện gì đã xảy ra." },
+    { "id": "BKF4Q1", "passage": "BKF4", "gapNumber": 1, "options": [{ "key": "A", "text": "roof" }, { "key": "B", "text": "seat" }, { "key": "C", "text": "bin" }, { "key": "D", "text": "stairs" }], "correct": "B", "explain": "seat = chỗ ngồi cạnh bàn, nơi con mèo ngồi." },
+    { "id": "BKF4Q2", "passage": "BKF4", "gapNumber": 2, "options": [{ "key": "A", "text": "fridge" }, { "key": "B", "text": "drawer" }, { "key": "C", "text": "stairs" }, { "key": "D", "text": "roof" }], "correct": "C", "explain": "Dán giấy nhắn ở cầu thang dưới nhà là chỗ mọi cư dân đi qua." },
+    { "id": "BKF4Q3", "passage": "BKF4", "gapNumber": 3, "options": [{ "key": "A", "text": "spend" }, { "key": "B", "text": "make" }, { "key": "C", "text": "do" }, { "key": "D", "text": "take" }], "correct": "A", "explain": "spend time with somebody = ở chơi với ai. Cụm này đi với spend." },
+    { "id": "BKF4Q4", "passage": "BKF4", "gapNumber": 4, "options": [{ "key": "A", "text": "did" }, { "key": "B", "text": "made" }, { "key": "C", "text": "took" }, { "key": "D", "text": "had" }], "correct": "B", "explain": "make friends with somebody = kết bạn với ai, ở đây chia quá khứ thành made." },
+    { "id": "BKF4Q5", "passage": "BKF4", "gapNumber": 5, "options": [{ "key": "A", "text": "make" }, { "key": "B", "text": "do" }, { "key": "C", "text": "offer" }, { "key": "D", "text": "have" }], "correct": "C", "explain": "offer somebody something = mời ai thứ gì. Con mèo từ chối mọi thứ được mời." }
+  ]
+}

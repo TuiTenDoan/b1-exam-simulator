@@ -219,13 +219,22 @@ function Attempt({
       : undefined
 
   const submit = useCallback(() => {
-    setResult((existing) => {
-      if (existing) return existing
-      const marked = gradeSection(attempt.answerKey, session.answers)
-      onFinished(attempt.sectionId, marked)
-      return marked
-    })
-  }, [attempt, session.answers, onFinished])
+    setResult((existing) => existing ?? gradeSection(attempt.answerKey, session.answers))
+  }, [attempt, session.answers])
+
+  /**
+   * Report the score after it is committed, not from inside the state updater.
+   * React may run an updater during the render phase, and calling the parent's
+   * setState from there is the "cannot update a component while rendering a
+   * different component" warning — and, under concurrent rendering, an update
+   * that can be dropped.
+   */
+  const reported = useRef(false)
+  useEffect(() => {
+    if (!result || reported.current) return
+    reported.current = true
+    onFinished(attempt.sectionId, result)
+  }, [result, attempt.sectionId, onFinished])
 
   useEffect(() => {
     if (submitted) return

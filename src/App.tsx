@@ -6,7 +6,8 @@ import { Prepare } from './screens/Prepare'
 import { Study } from './screens/Study'
 import { AiPaper } from './screens/AiPaper'
 import { ExamRunner } from './components/ExamRunner'
-import { paperFor, papersFor } from './lib/paper'
+import { buildPaper, paperFor, papersFor } from './lib/paper'
+import { buildBankPaper } from './lib/bank'
 import prepareListening from './data/prepare.json'
 import prepareReading from './data/prepareReading.json'
 import type { PrepareBoard } from './domain/prepareMark'
@@ -124,11 +125,20 @@ export default function App() {
   // Bumped on every entry into an exam, so 'random' draws again rather than
   // sticking on whichever paper came up first.
   const [sitting, setSitting] = useState(0)
+  // Fixed for the life of the tab, so a reload gives a different draw but a
+  // re-render during one sitting does not change the questions underfoot.
+  const [drawBase] = useState(() => (Date.now() % 2147483647) + 1)
+
+  const bankPaper = useMemo(
+    () => buildPaper(buildBankPaper((drawBase + sitting * 7919) % 2147483647)),
+    [drawBase, sitting],
+  )
 
   const paperIndex = useMemo(() => {
     const resolve = (section: string) => {
       const count = papersFor(section).length
-      // 'ai' only applies to Reading; Listening falls back to a random paper.
+      // 'random' and 'ai' only change the Reading paper; Listening still picks
+      // one of its own papers at random.
       if (paperChoice === 'random' || paperChoice === 'ai') {
         return Math.floor(Math.random() * count)
       }
@@ -266,7 +276,19 @@ export default function App() {
             onFinished={record}
           />
         )}
-        {route === 'reading' && paperChoice !== 'ai' && (
+        {route === 'reading' && paperChoice === 'random' && (
+          <ExamRunner
+            key={`bank-${sitting}`}
+            paper={bankPaper}
+            maxPlays={0}
+            shuffle={shuffle}
+            studyMode={studyMode}
+            onExit={home}
+            onFinished={record}
+            onRedraw={() => setSitting((n) => n + 1)}
+          />
+        )}
+        {route === 'reading' && typeof paperChoice === 'number' && (
           <ExamRunner
             key={`reading-${paperIndex.reading}-${sitting}`}
             paper={paperFor('reading', paperIndex.reading)}
