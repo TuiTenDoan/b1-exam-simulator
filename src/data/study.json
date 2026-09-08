@@ -1,0 +1,349 @@
+{
+  "title": "Học",
+  "vi": "Dấu hiệu nhận biết và cách viết — bám đúng phạm vi tài liệu ôn thi",
+  "note": "Công thức và bảng bất quy tắc chép từ tài liệu ôn thi (trang 28–30, 45–48). Phần dấu hiệu nhận biết và mẹo tránh bẫy là phần thêm vào để dễ nhớ, không có trong tài liệu.",
+  "lessons": [
+    {
+      "id": "tenses",
+      "title": "Dấu hiệu nhận biết thì",
+      "vi": "Nhìn vào đâu để biết câu này chia thì gì",
+      "source": "Tài liệu ôn thi, trang 28–30",
+      "intro": "Đề thi chỉ hỏi bốn điểm ngữ pháp này, không hỏi gì khác. Mẹo chung: đừng dịch cả câu rồi đoán — hãy tìm từ chỉ thời gian trước, vì chính nó quyết định thì.",
+      "blocks": [
+        {
+          "type": "tense",
+          "name": "Hiện tại đơn",
+          "en": "Present simple",
+          "use": "Thói quen lặp đi lặp lại, sự thật luôn đúng, lịch cố định.",
+          "forms": [
+            "S + V(s/es) + O",
+            "S + don't / doesn't + V(nguyên thể)",
+            "Do / Does + S + V(nguyên thể)?",
+            "Với to be: S + am / is / are"
+          ],
+          "signals": [
+            "always",
+            "usually",
+            "often",
+            "sometimes",
+            "rarely",
+            "never",
+            "every day / week / morning",
+            "twice a week",
+            "on Mondays",
+            "in the evening"
+          ],
+          "signalNote": "Tất cả đều trả lời câu hỏi “bao lâu một lần?”. Thấy tần suất là hiện tại đơn.",
+          "example": {
+            "en": "Nam is very active. He plays football with his classmates twice a week.",
+            "vi": "“twice a week” = hai lần một tuần → thói quen → hiện tại đơn, chủ ngữ He nên thêm s."
+          },
+          "traps": [
+            "Chủ ngữ he / she / it phải thêm s: “He play” là sai.",
+            "Sau don't / doesn't giữ nguyên động từ: “doesn't plays” là sai.",
+            "Trong câu hỏi có Does rồi thì động từ chính bỏ s: “Does he plays?” là sai."
+          ]
+        },
+        {
+          "type": "tense",
+          "name": "Hiện tại tiếp diễn",
+          "en": "Present continuous",
+          "use": "Việc đang diễn ra ngay lúc nói.",
+          "forms": [
+            "S + am / is / are + V-ing",
+            "S + am / is / are + not + V-ing",
+            "Am / Is / Are + S + V-ing?"
+          ],
+          "signals": [
+            "now",
+            "right now",
+            "at the moment",
+            "at present",
+            "today",
+            "this week",
+            "Look!",
+            "Listen!",
+            "Be quiet!"
+          ],
+          "signalNote": "Ba dấu hiệu cuối là câu mệnh lệnh mở đầu — đề rất hay dùng để báo “đang xảy ra trước mắt”. Thấy “Look!” gần như chắc chắn là tiếp diễn.",
+          "example": {
+            "en": "Look! The bus is coming. Let's run.",
+            "vi": "“Look!” báo việc đang xảy ra ngay trước mắt → is coming."
+          },
+          "traps": [
+            "Chia am / is / are theo chủ ngữ: “my sister are doing” là sai.",
+            "Động từ chỉ trạng thái hầu như không dùng tiếp diễn: know, like, want, need, understand.",
+            "Có “now” nhưng đi với “usually” ở vế kia thì vế “usually” vẫn là hiện tại đơn."
+          ]
+        },
+        {
+          "type": "tense",
+          "name": "Quá khứ đơn",
+          "en": "Past simple",
+          "use": "Việc đã xong hẳn trong quá khứ, thường kèm mốc thời gian.",
+          "forms": [
+            "S + V2 / V-ed + O",
+            "S + didn't + V(nguyên thể)",
+            "Did + S + V(nguyên thể)?",
+            "Với to be: S + was / were"
+          ],
+          "signals": [
+            "yesterday",
+            "last night / week / summer",
+            "… ago",
+            "in 1920",
+            "when I was a child",
+            "this morning (đã qua)"
+          ],
+          "signalNote": "Bất kỳ mốc thời gian nào đã trôi qua đều kéo câu về quá khứ đơn, kể cả khi không có từ “ago”.",
+          "example": {
+            "en": "Last weekend we visited our grandparents and had a barbecue.",
+            "vi": "“Last weekend” là mốc đã qua → visited. Động từ “had” ở vế sau xác nhận thêm."
+          },
+          "traps": [
+            "Sau didn't dùng nguyên thể: “didn't took” là sai, phải là “didn't take”.",
+            "was đi với I / he / she / it; were đi với you / we / they.",
+            "Động từ bất quy tắc phải học thuộc: go → went, buy → bought, see → saw."
+          ]
+        },
+        {
+          "type": "tense",
+          "name": "So sánh",
+          "en": "Comparative & Superlative",
+          "use": "So hai vật, so nhiều vật, hoặc nói hai vật ngang nhau.",
+          "forms": [
+            "Hơn — tính từ ngắn: S + be + adj-er + than …",
+            "Hơn — tính từ dài: S + be + more + adj + than …",
+            "Nhất — ngắn: S + be + the adj-est …",
+            "Nhất — dài: S + be + the most + adj …",
+            "Bằng: S + be + as + adj + as …",
+            "Không bằng: S + be + not as + adj + as …",
+            "Giống nhau: S + V + the same + (N) + as …"
+          ],
+          "signals": [
+            "than → so sánh hơn",
+            "the … in / of / ever → so sánh nhất",
+            "as … as → so sánh bằng",
+            "not as … as → không bằng",
+            "the same … as → giống nhau"
+          ],
+          "signalNote": "Đây là điểm dễ ăn điểm nhất cả đề: chỉ cần nhìn thấy “than” hay “as … as” là biết ngay phải chọn dạng nào, không cần hiểu nghĩa câu.",
+          "example": {
+            "en": "The traffic is worse in the evening than in the morning.",
+            "vi": "Có “than” → so sánh hơn. bad là bất quy tắc nên dùng worse, không phải “badder”."
+          },
+          "rule": "Tính từ 1 âm tiết (và 2 âm tiết kết thúc bằng -y) thêm -er / -est. Tính từ từ 2 âm tiết trở lên dùng more / the most.",
+          "table": {
+            "caption": "Bảng bất quy tắc — tài liệu trang 30",
+            "head": ["Tính từ / trạng từ", "Nghĩa", "So sánh hơn", "So sánh nhất"],
+            "rows": [
+              ["good / well", "tốt, giỏi", "better", "the best"],
+              ["bad", "tệ, dốt", "worse", "the worst"],
+              ["much / many", "nhiều", "more", "the most"],
+              ["little", "ít", "less", "the least"],
+              ["far", "xa", "farther / further", "the farthest / furthest"],
+              ["old", "già, cũ", "older / elder", "the oldest / eldest"]
+            ]
+          },
+          "traps": [
+            "“more colder” sai — đã có -er thì không thêm more.",
+            "“the most old” sai — tính từ ngắn dùng -est: the oldest.",
+            "So sánh nhất phải có “the”: “This is oldest house” là thiếu.",
+            "as … as luôn có “as” ở cả hai đầu, không được thay bằng than."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "writing-1",
+      "title": "Writing phần 1 — viết tiếp 8 câu",
+      "vi": "4 điểm · mỗi câu 0,5 điểm",
+      "source": "Tài liệu ôn thi, trang 45 và 47",
+      "intro": "Đề cho sẵn nửa câu, bạn viết nốt nửa còn lại. Trong phòng thi phải CHÉP LẠI cả đề rồi mới viết tiếp. Toàn bộ 20 câu trong ngân hàng đề chỉ rơi vào sáu nhóm dưới đây — nhận ra nhóm là biết ngay phải chia thì gì.",
+      "blocks": [
+        {
+          "type": "pattern",
+          "name": "Nhóm 1 — Nguyên nhân và kết quả",
+          "trigger": "so · because",
+          "rule": "so + KẾT QUẢ. because + LÝ DO. Đọc vế đề cho, tự hỏi: vế mình viết là nguyên nhân hay hệ quả?",
+          "stems": [
+            "It is raining so …",
+            "I do not want to go to the movies because …",
+            "Because the security guard slept, …"
+          ],
+          "example": {
+            "en": "It is raining so we don't go to the cinema.",
+            "vi": "Trời mưa là nguyên nhân, nên vế sau “so” phải là kết quả."
+          },
+          "traps": ["Đừng viết lý do sau “so” — đó là chỗ của kết quả."]
+        },
+        {
+          "type": "pattern",
+          "name": "Nhóm 2 — Tương phản",
+          "trigger": "but · although · though",
+          "rule": "Vế bạn viết phải NGƯỢC với vế đề cho. although và though nghĩa như nhau, sau nó là một mệnh đề đủ chủ ngữ và động từ.",
+          "stems": [
+            "Although she tried very hard, …",
+            "My wife loves cats but …",
+            "I will not talk to her though …"
+          ],
+          "example": {
+            "en": "Although she tried very hard, she didn't pass the exam.",
+            "vi": "Cố gắng nhiều (vế đề) nhưng vẫn trượt (vế bạn viết) — đúng nghĩa nhượng bộ."
+          },
+          "traps": [
+            "Trong một câu đã có although thì KHÔNG dùng thêm but: “Although … , but …” là sai.",
+            "Sau although phải là mệnh đề, không phải danh từ đơn lẻ."
+          ]
+        },
+        {
+          "type": "pattern",
+          "name": "Nhóm 3 — Mốc thời gian trong quá khứ",
+          "trigger": "when",
+          "rule": "Cả hai vế cùng chia quá khứ đơn, vì đây là kể chuyện đã xảy ra.",
+          "stems": [
+            "John said nothing when …",
+            "When he appeared on the stage, …",
+            "My parents were very happy when …"
+          ],
+          "example": {
+            "en": "John said nothing when he heard the bad news.",
+            "vi": "said (quá khứ) → heard (quá khứ). Không trộn thì hiện tại vào."
+          },
+          "traps": ["Vế đề đã ở quá khứ mà vế bạn viết ở hiện tại là mất điểm."]
+        },
+        {
+          "type": "pattern",
+          "name": "Nhóm 4 — Thói quen",
+          "trigger": "whenever · before",
+          "rule": "whenever = mỗi khi → cả hai vế đều hiện tại đơn. before + lời khuyên thì dùng should hoặc câu mệnh lệnh.",
+          "stems": [
+            "Whenever she watches that movie, …",
+            "Whenever I have money, …",
+            "Whenever I feel tired, …",
+            "Lina listens to music whenever …",
+            "Before you go to the beach, …"
+          ],
+          "example": {
+            "en": "Whenever I have money, I go shopping with my friends.",
+            "vi": "Việc lặp đi lặp lại → hiện tại đơn ở cả hai vế."
+          },
+          "traps": [
+            "Không dùng will sau whenever.",
+            "Nhớ thêm s khi chủ ngữ là she / he: “Whenever she watches …, she cries.”"
+          ]
+        },
+        {
+          "type": "pattern",
+          "name": "Nhóm 5 — Tương lai",
+          "trigger": "after · as soon as · until · in case",
+          "rule": "LUẬT QUAN TRỌNG NHẤT CỦA CẢ PHẦN VIẾT: mệnh đề chỉ thời gian dùng HIỆN TẠI ĐƠN, mệnh đề chính dùng WILL. Không bao giờ có will ở cả hai vế.",
+          "stems": [
+            "After I graduate from university, …",
+            "In case it rains, …",
+            "As soon as the exam is over, …",
+            "As soon as the weather gets better, …",
+            "I will not get married until …"
+          ],
+          "example": {
+            "en": "As soon as the exam is over, I will take a holiday.",
+            "vi": "“the exam is over” là mệnh đề thời gian → hiện tại đơn. “I will take” là mệnh đề chính → will."
+          },
+          "traps": [
+            "“until I will be 30” là sai — phải là “until I am 30”.",
+            "Ngược lại, câu bắt đầu bằng “As soon as …” thì vế bạn viết BẮT BUỘC có will hoặc be going to.",
+            "Nhìn xem đề cho bạn vế nào: nếu đề đã có will thì vế bạn viết là hiện tại đơn, và ngược lại."
+          ]
+        },
+        {
+          "type": "pattern",
+          "name": "Nhóm 6 — Điều kiện loại 2",
+          "trigger": "If only I had …",
+          "rule": "Giả định không có thật ở hiện tại: vế if dùng quá khứ đơn, vế chính dùng would / could / might + động từ nguyên thể.",
+          "stems": ["If only I had a lot of money, …"],
+          "example": {
+            "en": "If only I had a lot of money, I would help the poor.",
+            "vi": "had (quá khứ) ở vế giả định → would help ở vế chính."
+          },
+          "traps": [
+            "“I will help” là sai — loại 2 dùng would, không dùng will.",
+            "Sau would là động từ nguyên thể, không chia: “would helps” là sai."
+          ]
+        },
+        {
+          "type": "note",
+          "name": "Máy chấm trong app kiểm đúng những luật này",
+          "body": "Khi bạn bấm “Chấm 8 câu”, app kiểm ba thứ: câu có phải chép lại đề không, có đủ chủ ngữ và động từ không, và có đúng thì mà nhóm câu đó đòi hỏi không (will cho nhóm 5, không-will sau until/whenever, would cho nhóm 6). App không chấm được hay dở về ý — phần đó bạn tự đọc lại câu mẫu để so."
+        }
+      ]
+    },
+    {
+      "id": "writing-2",
+      "title": "Writing phần 2 — bài luận",
+      "vi": "6 điểm · 120–180 từ",
+      "source": "Tài liệu ôn thi, trang 46 và 48",
+      "intro": "Tài liệu chỉ có bốn đề luận, và đề thi lấy trong đó. Học thuộc dàn ý và bộ câu mở sẵn thì vào phòng thi chỉ còn việc điền ý.",
+      "blocks": [
+        {
+          "type": "steps",
+          "name": "Dàn ý bốn đoạn",
+          "items": [
+            {
+              "label": "Mở bài",
+              "hint": "Nhắc lại đề bằng lời của bạn, rồi nói bạn sẽ bàn mấy ý. Hai đến ba câu là đủ."
+            },
+            {
+              "label": "Thân bài 1",
+              "hint": "Ý thứ nhất + giải thích + một ví dụ cụ thể. Ví dụ càng đời thường càng dễ viết."
+            },
+            {
+              "label": "Thân bài 2",
+              "hint": "Ý thứ hai + giải thích + ví dụ. Mở đoạn bằng từ nối: Moreover, Furthermore, In addition."
+            },
+            {
+              "label": "Kết bài",
+              "hint": "Tóm lại hai ý vừa nêu, không thêm ý mới. Mở đầu bằng To conclude hoặc In conclusion."
+            }
+          ]
+        },
+        {
+          "type": "checklist",
+          "name": "Bốn thứ app chấm được, kiểm trước khi nộp",
+          "items": [
+            "Đủ 120–180 từ. Ngắn quá hay dài quá đều mất điểm, không phải cứ dài là hơn.",
+            "Đủ bốn đoạn, ngăn cách bằng một dòng trống. Viết liền một khối là mất điểm bố cục.",
+            "Có ít nhất hai từ nối dẫn dắt: In my opinion, Moreover, However, To conclude…",
+            "Nhắc lại từ khoá của đề ít nhất hai lần, để người chấm thấy bạn bám đề."
+          ]
+        },
+        {
+          "type": "phrases",
+          "name": "Câu mở sẵn — học thuộc là dùng được cho cả bốn đề",
+          "items": [
+            "Nowadays, … has become an important part of our life.",
+            "There are two main problems which people usually deal with.",
+            "The first advantage is … The second advantage is …",
+            "Moreover, … / Furthermore, … / In addition, …",
+            "The solution suggested to overcome this problem is …",
+            "To conclude, … / In conclusion, …"
+          ]
+        },
+        {
+          "type": "topics",
+          "name": "Bốn đề luận trong tài liệu",
+          "items": [
+            "Internet mang lại nhiều lợi ích nhưng cũng tạo ra nhiều vấn đề. Theo bạn đâu là vấn đề nghiêm trọng nhất và giải pháp là gì?",
+            "Ngày nay nhiều người thích đi du lịch bằng xe máy hơn ô tô hay máy bay. Ưu và nhược điểm của xu hướng này là gì?",
+            "Máy móc đang giúp con người ở nhiều mặt. Bạn có đồng ý rằng một ngày nào đó máy móc sẽ thay thế con người trong nhà máy?",
+            "Xã hội phát triển khiến người ta phải làm việc nhiều, ít thời gian rảnh. Bạn sẽ làm gì trong quỹ thời gian ít ỏi đó?"
+          ]
+        },
+        {
+          "type": "note",
+          "name": "Một điều tài liệu ghi không thống nhất",
+          "body": "Trang 45 ghi bài luận cần 150–180 từ, còn tiêu đề trang 46 ghi 120–150 từ. App lấy khoảng 120–180 để phủ cả hai. Khi thi, viết quanh 150 từ là an toàn nhất."
+        }
+      ]
+    }
+  ]
+}

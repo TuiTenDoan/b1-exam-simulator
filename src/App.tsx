@@ -3,6 +3,7 @@ import { Home } from './screens/Home'
 import { Speaking } from './screens/Speaking'
 import { Writing } from './screens/Writing'
 import { Prepare } from './screens/Prepare'
+import { Study } from './screens/Study'
 import { ExamRunner } from './components/ExamRunner'
 import { paperFor, papersFor } from './lib/paper'
 import prepareListening from './data/prepare.json'
@@ -18,6 +19,7 @@ export type Route =
   | 'speaking'
   | 'prepare'
   | 'prepare-reading'
+  | 'study'
 
 const ROUTES: Route[] = [
   'home',
@@ -27,6 +29,7 @@ const ROUTES: Route[] = [
   'speaking',
   'prepare',
   'prepare-reading',
+  'study',
 ]
 
 /* JSON keeps every string wide (`string`, not `'gap' | 'mcq3'`), so the shape
@@ -238,6 +241,7 @@ export default function App() {
             onRedraw={redraw('reading')}
           />
         )}
+        {route === 'study' && <Study onExit={home} />}
         {route === 'writing' && <Writing onExit={home} />}
         {route === 'speaking' && <Speaking onExit={home} />}
         {route === 'prepare' && <Prepare key="pl" data={LISTENING_BOARD} onExit={home} />}

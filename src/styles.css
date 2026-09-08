@@ -1744,6 +1744,13 @@ select {
   align-items: start;
 }
 
+/* A grid item still defaults to min-width:auto, so one wide child — the
+   irregular-comparatives table — would stretch this column and push the whole
+   page sideways instead of scrolling inside its own wrapper. */
+.prepareMain {
+  min-width: 0;
+}
+
 .prepareList {
   display: grid;
   gap: 4px;
@@ -2040,6 +2047,279 @@ select {
   border-radius: 4px;
   background: color-mix(in srgb, var(--amber) 16%, transparent);
   overflow-wrap: anywhere;
+}
+
+/* ============================================================
+   Học — tài liệu tra cứu, không phải bài thi. Ưu tiên đọc lướt:
+   công thức tách khỏi lời giải thích, dấu hiệu nhận biết nổi lên
+   thành từng mảnh nhỏ để mắt bắt được ngay.
+   ============================================================ */
+.studyIntro {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin-bottom: 4px;
+}
+
+.studyCard {
+  padding-top: 22px;
+  margin-top: 22px;
+  border-top: 1px solid var(--rule);
+}
+
+.studyCard__head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.studyCard__name {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.studyCard__en {
+  margin-left: 9px;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--ink-3);
+}
+
+.studyCard__trigger {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--accent);
+  background: var(--accent-weak);
+  border-radius: 999px;
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+
+.studyCard__use {
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.studyCard__sub {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 16px 0 8px;
+}
+
+.studyCard__note,
+.studyCard__rule {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  margin-top: 10px;
+}
+
+.studyCard__rule {
+  padding: 10px 14px;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-weak);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--ink);
+}
+
+.studyForms {
+  display: grid;
+  gap: 6px;
+  list-style: none;
+}
+
+.studyForms li {
+  font-size: 13.5px;
+  line-height: 1.5;
+  padding: 7px 12px;
+  border-radius: 8px;
+  background: var(--card-sunk);
+  border: 1px solid var(--rule);
+}
+
+.signals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+}
+
+.signal {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--rule-strong);
+  background: var(--card);
+  color: var(--ink);
+}
+
+.studyEg {
+  margin-top: 14px;
+  padding: 12px 15px;
+  border-radius: var(--radius);
+  background: var(--card-sunk);
+  border: 1px solid var(--rule);
+}
+
+.studyEg__en {
+  font-size: 14.5px;
+  line-height: 1.55;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.studyEg__vi {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+
+.studyTraps {
+  margin-top: 14px;
+  display: grid;
+  gap: 7px;
+  list-style: none;
+}
+
+.studyTraps li {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 9px;
+  align-items: start;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+
+.studyTraps__mark {
+  color: var(--amber);
+  display: flex;
+  padding-top: 2px;
+}
+
+.studyTableWrap {
+  margin-top: 14px;
+  overflow-x: auto;
+}
+
+.studyTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  min-width: 420px;
+}
+
+.studyTable th,
+.studyTable td {
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.studyTable th {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-bottom-color: var(--rule-strong);
+}
+
+.studyTable tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.studySteps {
+  display: grid;
+  gap: 12px;
+  list-style: none;
+  counter-reset: none;
+}
+
+.studySteps li {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.studySteps__n {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  background: var(--accent-weak);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.studySteps__hint {
+  display: block;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  margin-top: 2px;
+}
+
+.studyChecks {
+  display: grid;
+  gap: 9px;
+  list-style: none;
+}
+
+.studyChecks li {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 9px;
+  align-items: start;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.studyChecks__mark {
+  color: var(--accent);
+  display: flex;
+  padding-top: 3px;
+}
+
+.studyPhrases {
+  display: grid;
+  gap: 6px;
+  list-style: none;
+}
+
+.studyPhrases li {
+  font-size: 13.5px;
+  line-height: 1.55;
+  padding: 8px 13px;
+  border-radius: 8px;
+  background: var(--card-sunk);
+  border: 1px solid var(--rule);
+}
+
+.studyTopics {
+  display: grid;
+  gap: 9px;
+  padding-left: 20px;
+}
+
+.studyTopics li {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink-2);
 }
 
 /* ============================================================

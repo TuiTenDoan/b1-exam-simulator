@@ -5,6 +5,7 @@ import speaking from '../data/speaking.json'
 import writing from '../data/writing.json'
 import prepare from '../data/prepare.json'
 import prepareReading from '../data/prepareReading.json'
+import study from '../data/study.json'
 import { taskQuestionCount, type PrepareBoard } from '../domain/prepareMark'
 
 const listeningBoard = prepare as unknown as PrepareBoard
@@ -80,6 +81,13 @@ const sections = [
     desc: `8 câu hoàn thành (4đ) + 1 bài luận ${writing.part2.minWords}–${writing.part2.maxWords} từ (6đ)`,
     marks: '10đ',
     selfGraded: true,
+  },
+  {
+    route: 'study' as Route,
+    num: '★',
+    name: 'Học — dấu hiệu nhận biết & cách viết',
+    desc: `${study.lessons.length} bài · nhận biết thì qua từ khoá · cách làm hai phần Viết`,
+    marks: 'ôn trước',
   },
   {
     route: 'prepare' as Route,
