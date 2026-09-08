@@ -1,8 +1,11 @@
 # Netlify phục vụ site từ gốc tên miền, khác GitHub Pages (phục vụ từ /<repo>/).
 # Biến NETLIFY=true do Netlify tự đặt khi build, vite.config.ts đọc nó để đặt base='/'.
 
+# Chạy test trước khi build, giống hệt workflow GitHub Pages. Các chốt kiểm
+# trong paperQuality/aiPaperCheck tồn tại để đề sai không tới tay người học,
+# nên deploy phải dừng khi chúng đỏ chứ không đăng đè lên bản đang chạy.
 [build]
-  command = "npm run build"
+  command = "npm test && npm run build"
   publish = "dist"
 
 [build.environment]
