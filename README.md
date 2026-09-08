@@ -5,6 +5,8 @@ cấu trúc đề cương của trường.
 
 **Bản chạy thử: https://tuitendoan.github.io/b1-exam-simulator/**
 
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/TuiTenDoan/b1-exam-simulator)
+
 Không cần API key, không gọi dịch vụ ngoài nào. Toàn bộ audio được sinh sẵn bằng
 [edge-tts](https://github.com/rany2/edge-tts) và nằm ngay trong repo.
 
@@ -140,3 +142,29 @@ Phần logic ảnh hưởng tới điểm số được viết theo TDD (33 test
   so sánh hơn/nhất và `not as ... as`.
 
 Điểm cao nhất mỗi phần lưu trong `localStorage` của trình duyệt, chỉ nằm trên máy bạn.
+
+## Đưa lên mạng
+
+Repo build được cho cả hai chỗ; khác nhau duy nhất ở đường dẫn gốc.
+
+**GitHub Pages** — đã tự động: mỗi lần đẩy lên `main`, GitHub Actions build và
+đăng lại. Site nằm dưới `/b1-exam-simulator/` nên `vite.config.ts` đặt base
+tương ứng.
+
+**Netlify** — bấm nút "Deploy to Netlify" ở đầu trang này, đăng nhập rồi chọn
+repo là xong; `netlify.toml` đã khai sẵn lệnh build, thư mục `dist` và
+redirect. Netlify phục vụ từ gốc tên miền, và vì Netlify tự đặt biến môi
+trường `NETLIFY=true` khi build nên base tự chuyển thành `/`.
+
+Hoặc làm bằng dòng lệnh:
+
+```bash
+npx netlify-cli login
+npx netlify-cli deploy --build --prod
+```
+
+Muốn build cho một host khác thì chỉ cần nói base ở đâu:
+
+```bash
+BASE_PATH=/ npm run build
+```
